@@ -16,8 +16,8 @@
 * :white_check_mark: UBJSON
 * :grey_question: TOML
 * :x: CapnProto
-* :white_check_mark: Apache Parquet
-* :grey_question: CBOR
+* :grey_question: Apache Parquet
+* :white_check_mark: CBOR
 * :x: FlatBuffers
 * :white_check_mark: FlexBuffers
 
@@ -37,8 +37,8 @@
 * :white_check_mark: UBJSON
 * :grey_question: TOML
 * :white_check_mark: CapnProto
-* :white_check_mark: Apache Parquet
-* :grey_question: CBOR
+* :grey_question: Apache Parquet
+* :white_check_mark: CBOR
 * :white_check_mark: FlatBuffers
 * :white_check_mark: FlexBuffers
 
@@ -58,8 +58,8 @@
 * :white_check_mark: UBJSON
 * :grey_question: TOML
 * :white_check_mark: CapnProto
-* :white_check_mark: Apache Parquet
-* :grey_question: CBOR
+* :grey_question: Apache Parquet
+* :white_check_mark: CBOR
 * :white_check_mark: FlatBuffers
 * :white_check_mark: FlexBuffers
 
