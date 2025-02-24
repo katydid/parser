@@ -1,5 +1,9 @@
 # Types supported by each serialization format
 
+## Undefined
+
+`undefined` is only supported by BSON where it is deprecated and in CBOR where it is substitute for a data item with an encoding problem.
+
 ## Null
 
 * :white_check_mark: ASN.1
@@ -20,6 +24,10 @@
 * :white_check_mark: CBOR
 * :x: FlatBuffers
 * :white_check_mark: FlexBuffers
+
+## Void
+
+`void` is only supported by CapnProto, but can also be emulated by an empty Object in JSON and many other formats or a message without fields in for example Protocol Buffers via the [empty](https://github.com/protocolbuffers/protobuf/blob/main/src/google/protobuf/empty.proto) message.
 
 ## Boolean
 
