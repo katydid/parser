@@ -99,6 +99,10 @@
 * :x: FlatBuffers
 * :white_check_mark: FlexBuffers (blob)
 
+## Arbitrary-length big array
+
+Only ASN.1
+
 ## Arbitrary-precision Decimal Values
 
 * :white_check_mark: ASN.1
@@ -228,6 +232,31 @@ TODO
 * Little Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers
 * Little Endian 8-bit, 16-bit, 32-bit, and 64-bit unsigned integers
 * Little Endian 16-bit, 32-bit, and 64-bit IEEE 764 floating-point numbers
+
+## Date/Time/Duration
+
+* :white_check_mark: ASN.1 (Date, Time and Date-time)
+* :x: JSON
+* :grey_question: XML
+* :white_check_mark: Protocol Buffers (Timestamp, Duration)
+* :grey_question: YAML
+* :x: Facebook Thrift
+* :white_check_mark: MessagePack (32-bit, 64-bit, and 96-bit UNIX seconds and nanoseconds Epoch timestamps)
+* :white_check_mark: Apache Avro
+  + Date (days from the UNIX Epoch)
+  + Time (milliseconds and microseconds)
+  + Timestamp (milliseconds and microseconds)
+  + Duration
+* :white_check_mark: BSON (MongoDB Timestamp)
+* :x: Smile
+* :x: Microsoft Bond (also Little Endian UTF-16)
+* :x: UBJSON
+* :grey_question: TOML
+* :x: CapnProto
+* :grey_question: Apache Parquet
+* :white_check_mark: CBOR (Datetime, Epoch)
+* :x: FlatBuffers
+* :x: FlexBuffers
 
 ## Choice
 
