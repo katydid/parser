@@ -2,7 +2,7 @@
 
 ## TODO
 
-* XML
+* XML (each XML element has unordered attributes, which can be modeled as a Map followed by an ordered List of elements)
 * YAML
 * TOML
 * Apache Parquet
