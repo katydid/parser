@@ -51,7 +51,7 @@
 * Boolean
 * Null
 
-## Other
+## More
 
 * Octet string (byte array)
 * Bit-string (arbitrary-length bit array)
@@ -84,7 +84,7 @@
 * Boolean
 * Null
 
-## Other
+## More
 
 * Bytes (variable-length byte array)
 * Fixed (fixed-length byte array)
@@ -122,7 +122,7 @@
 
 * Boolean
 
-## Other
+## More
 
 * Blob (byte array)
 
@@ -150,7 +150,7 @@
 * Bool
 * Void
 
-## Other
+## More
 
 * Data (byte array)
 
@@ -208,7 +208,7 @@
 
 * Boolean
 
-## Other
+## More
 
 * Bytes (byte array)
 * Timestamp
@@ -237,7 +237,7 @@
 
 * Boolean
 
-## Other
+## More
 
 * Binary (byte array)
 * Byte
@@ -264,7 +264,7 @@
 * Null
 * Undefined
 
-## Other
+## More
 
 * Binary data (byte array)
 * ObjectId
@@ -302,7 +302,7 @@
 * Null
 * Undefined
 
-## Other
+## More
 
 * Byte string
 * Datetime
@@ -333,7 +333,7 @@
 * Boolean
 * Null
 
-## Other
+## More
 
 * Blob (byte array)
 
@@ -359,7 +359,7 @@
 * Boolean
 * Nil
 
-## Other
+## More
 
 * Bin (byte array)
 * 32-bit, 64-bit, and 96-bit UNIX seconds and nanoseconds Epoch timestamps
@@ -388,7 +388,7 @@
 * Boolean
 * Null
 
-## Other
+## More
 
 * Binary (byte array)
 
