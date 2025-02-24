@@ -1,5 +1,26 @@
 # Types supported by each serialization format
 
+## Null
+
+* :white_check_mark: ASN.1
+* :white_check_mark: JSON
+* :grey_question: XML
+* :x: Protocol Buffers (null values are not serialized)
+* :grey_question: YAML
+* :x: Facebook Thrift
+* :white_check_mark: MessagePack
+* :white_check_mark: Apache Avro
+* :white_check_mark: BSON
+* :white_check_mark: Smile
+* :x: Microsoft Bond (also Little Endian UTF-16)
+* :white_check_mark: UBJSON
+* :grey_question: TOML
+* :x: CapnProto
+* :white_check_mark: Apache Parquet
+* :grey_question: CBOR
+* :x: FlatBuffers
+* :white_check_mark: FlexBuffers
+
 ## Boolean
 
 * :white_check_mark: ASN.1
