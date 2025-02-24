@@ -9,7 +9,10 @@
 
 ## Composite
 
-Choice, Enum, Set, Sequence
+Choice
+Enum
+Set
+Sequence
 
 ## Numeric
 
@@ -20,23 +23,31 @@ Arbitrary-length ASCII-encoded decimal numbers
 
 ## String
 
-ASCII, UTF-8
+ASCII
+UTF-8
 
 ## Scalars
 
-Boolean, Null
+Boolean
+Null
 
 ## Other
 
 Octet string (byte array)
 Bit-string (arbitrary-length bit array)
-Date, Time, Date-time
+Date
+Time
+Date-time
 
 # Apache Avro
 
 ## Composite
 
-Array, Enum, Map, Record, Union
+Array
+Enum
+Map
+Record
+Union
 
 ## Numeric
 
@@ -50,7 +61,8 @@ UTF-8
 
 ## Scalars
 
-Boolean, Null
+Boolean
+Null
 
 ## Other
 
@@ -62,13 +74,16 @@ Time (milliseconds and microseconds)
 Timestamp (milliseconds and microseconds)
 Duration
 
-
-
 # Microsoft Bond
 
 ## Composite
 
-List, Maybe, Nullable, Set, Struct, Vector
+List
+Maybe
+Nullable
+Set
+Struct
+Vector
 
 ## Numeric
 
@@ -80,7 +95,8 @@ Little Endian 32-bit and 64-bit IEEE 764 floating-point numbers
 
 ## String
 
-UTF-8, Little Endian UTF-16
+UTF-8
+Little Endian UTF-16
 
 ## Scalars
 
@@ -90,12 +106,14 @@ Boolean
 
 Blob (byte array)
 
-
 # CapnProto
 
 ## Composite
 
-Enum, List, Struct, Union
+Enum
+List
+Struct
+Union
 
 ## Numeric
 
@@ -109,19 +127,23 @@ UTF-8
 
 ## Scalars
 
-Bool, Void
+Bool
+Void
 
 ## Other
 
 Data (byte array)
 
-
-
 # FlatBuffers
 
 ## Composite
 
-Array, Enum, Struct, Table, Union, Vector
+Array
+Enum
+Struct
+Table
+Union
+Vector
 
 ## Numeric
 
@@ -139,16 +161,17 @@ Boolean
 
 ## Other
 
-
-
-
-
-
 # Protocol Buffers
 
 ## Composite
 
-Any, Enum, List, Map, Message, Oneof, Struct
+Any
+Enum
+List
+Map
+Message
+Oneof
+Struct
 
 ## Numeric
 
@@ -173,14 +196,15 @@ Bytes (byte array)
 Timestamp
 Duration 9
 
-
-
-
 # Apache Thrift
 
 ## Composite
 
-List, Map, Set, Struct, Union
+List
+Map
+Set
+Struct
+Union
 
 ## Numeric
 
@@ -200,8 +224,6 @@ Boolean
 Binary (byte array)
 Byte
 
-
-
 # BSON
 
 ## Composite
@@ -220,7 +242,9 @@ UTF-8
 
 ## Scalars
 
-Boolean, Null, Undefined
+Boolean
+Null
+Undefined
 
 ## Other
 
@@ -235,9 +259,6 @@ MD5
 Symbol
 MongoDB Timestamp
 Regular expression
-
-
-
 
 # CBOR
 
@@ -259,7 +280,9 @@ UTF-8
 
 ## Scalars
 
-Boolean, Null, Undefined
+Boolean
+Null
+Undefined
 
 ## Other
 
@@ -270,15 +293,12 @@ Base64
 Regular expression
 MIME message
 
-
-
-
-
 # FlexBuffers
 
 ## Composite
 
-Vector, Map
+Vector
+Map
 
 ## Numeric
 
@@ -292,19 +312,19 @@ UTF-8
 
 ## Scalars
 
-Boolean, Null
+Boolean
+Null
 
 ## Other
 
 Blob (byte array)
 
-
-
 # MessagePack
 
 ## Composite
 
-Array, Map
+Array
+Map
 
 ## Numeric
 
@@ -318,20 +338,20 @@ UTF-8
 
 ## Scalars
 
-Boolean, Nil
+Boolean
+Nil
 
 ## Other
 
 Bin (byte array)
 32-bit, 64-bit, and 96-bit UNIX seconds and nanoseconds Epoch timestamps
 
-
-
 # Smile
 
 ## Composite
 
-Array, Object
+Array
+Object
 
 ## Numeric
 
@@ -342,23 +362,24 @@ Arbitrary-precision decimals (with scale and stringified integral)
 
 ## String
 
-ASCII, UTF-8
+ASCII
+UTF-8
 
 ## Scalars
 
-Boolean, Null
+Boolean
+Null
 
 ## Other
 
 Binary (byte array)
 
-
-
 # UBJSON
 
 ## Composite
 
-Array, Object
+Array
+Object
 
 ## Numeric
 
@@ -373,6 +394,7 @@ UTF-8
 
 ## Scalars
 
-Boolean, Null
+Boolean
+Null
 
 ## Other
