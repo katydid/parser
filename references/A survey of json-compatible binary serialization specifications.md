@@ -1,25 +1,5 @@
 This data was originally sourced from "A survey of json-compatible binary serialization specifications - Juan Cruz Viotti and Mital Kinderkhedia (2022)"
 
-# JSON
-
-## Composite
-
-* Array
-* Object
-
-## Numeric
-
-* Arbitrary-precision ASCII-encoded numbers
-
-## String
-
-* UTF-8
-
-## Scalars
-
-* Boolean
-* Null
-
 # ASN.1
 
 ## Composite
@@ -54,21 +34,16 @@ This data was originally sourced from "A survey of json-compatible binary serial
 * Time
 * Date-time
 
-# Apache Avro
+# JSON
 
 ## Composite
 
 * Array
-* Enum
-* Map
-* Record
-* Union
+* Object
 
 ## Numeric
 
-* 32-bit and 64-bit ZigZag-encoded Little Endian Base 128 (LEB128) variable-length integers
-* Arbitrary-precision Two’s Complement signed decimal numbers
-* Little Endian 32-bit and 64-bit IEEE 764 floating-point numbers
+* Arbitrary-precision ASCII-encoded numbers
 
 ## String
 
@@ -79,100 +54,9 @@ This data was originally sourced from "A survey of json-compatible binary serial
 * Boolean
 * Null
 
-## More
+# XML 
 
-* Bytes (variable-length byte array)
-* Fixed (fixed-length byte array)
-* UUID
-* Date (days from the UNIX Epoch)
-* Time (milliseconds and microseconds)
-* Timestamp (milliseconds and microseconds)
-* Duration
-
-# Microsoft Bond
-
-## Composite
-
-* List
-* Maybe
-* Nullable
-* Set
-* Struct
-* Vector
-
-## Numeric
-
-* 16-bit, 32-bit, and 64-bit Little Endian Base 128 (LEB128) variable-length unsigned integers
-* 16-bit, 32-bit, and 64-bit ZigZag-encoded (4.2) Little Endian Base 128 (LEB128) variable-length signed integers
-* Fixed-length 8-bit unsigned integers
-* Fixed-length 8-bit Two’s Complement signed integers
-* Little Endian 32-bit and 64-bit IEEE 764 floating-point numbers
-
-## String
-
-* UTF-8
-* Little Endian UTF-16
-
-## Scalars
-
-* Boolean
-
-## More
-
-* Blob (byte array)
-
-# CapnProto
-
-## Composite
-
-* Enum
-* List
-* Struct
-* Union
-
-## Numeric
-
-* Little Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers
-* Little Endian 8-bit, 16-bit, 32-bit, and 64-bit unsigned integers
-* Little Endian 32-bit and 64-bit IEEE 764 floating-point numbers
-
-## String
-
-* UTF-8
-
-## Scalars
-
-* Bool
-* Void
-
-## More
-
-* Data (byte array)
-
-# FlatBuffers
-
-## Composite
-
-* Array
-* Enum
-* Struct
-* Table
-* Union
-* Vector
-
-## Numeric
-
-* Little Endian 8-bit, 16-bit, 32-bit, and 64-bit unsigned integers
-* Little Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers
-* Little Endian 32-bit and 64-bit IEEE 764 floating-point numbers
-
-## String
-
-* UTF-8
-
-## Scalars
-
-* Boolean
+Missing
 
 # Protocol Buffers
 
@@ -209,7 +93,11 @@ This data was originally sourced from "A survey of json-compatible binary serial
 * Timestamp
 * Duration
 
-# Apache Thrift
+# YAML
+
+Missing
+
+# Facebook Thrift
 
 ## Composite
 
@@ -221,7 +109,7 @@ This data was originally sourced from "A survey of json-compatible binary serial
 
 ## Numeric
 
-* 16-bit, 32-bit, and 64-bit ZigZag-encoded Little Endian Base 128 (4.1) variable-length signed integers
+* 16-bit, 32-bit, and 64-bit ZigZag-encoded Little Endian Base 128 variable-length signed integers
 * Little Endian 64-bit IEEE 764 floating-point numbers
 
 ## String
@@ -236,6 +124,68 @@ This data was originally sourced from "A survey of json-compatible binary serial
 
 * Binary (byte array)
 * Byte
+
+# MessagePack
+
+## Composite
+
+* Array
+* Map
+
+## Numeric
+
+* Big Endian 5-bit, 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers
+* Big Endian 7-bit, 8-bit, 16-bit, 32-bit, and 64-bit unsigned integers
+* Big Endian 32-bit and 64-bit IEEE 764 floating-point numbers
+
+## String
+
+* UTF-8
+
+## Scalars
+
+* Boolean
+* Nil
+
+## More
+
+* Bin (byte array)
+* 32-bit, 64-bit, and 96-bit UNIX seconds and nanoseconds Epoch timestamps
+
+# Apache Avro
+
+## Composite
+
+* Array
+* Enum
+* Map
+* Record
+* Union
+
+## Numeric
+
+* 32-bit and 64-bit ZigZag-encoded Little Endian Base 128 (LEB128) variable-length integers
+* Arbitrary-precision Two’s Complement signed decimal numbers
+* Little Endian 32-bit and 64-bit IEEE 764 floating-point numbers
+
+## String
+
+* UTF-8
+
+## Scalars
+
+* Boolean
+* Null
+
+## More
+
+* Bytes (variable-length byte array)
+* Fixed (fixed-length byte array)
+* UUID
+* Date (days from the UNIX Epoch)
+* Time (milliseconds and microseconds)
+* Timestamp (milliseconds and microseconds)
+* Duration
 
 # BSON
 
@@ -273,6 +223,125 @@ This data was originally sourced from "A survey of json-compatible binary serial
 * MongoDB Timestamp
 * Regular expression
 
+# Smile
+
+## Composite
+
+* Array
+* Object
+
+## Numeric
+
+* 5-bit, 32-bit, and 64-bit ZigZag-encoded signed Little Endian Base 128 (LEB128) variable-length integers
+* Little Endian 32-bit and 64-bit IEEE 764 floating-point numbers encoded using 7 bit groups
+* Arbitrary-length stringified signed integers
+* Arbitrary-precision decimals (with scale and stringified integral)
+
+## String
+
+* ASCII
+* UTF-8
+
+## Scalars
+
+* Boolean
+* Null
+
+## More
+
+* Binary (byte array)
+
+# Microsoft Bond
+
+## Composite
+
+* List
+* Maybe
+* Nullable
+* Set
+* Struct
+* Vector
+
+## Numeric
+
+* 16-bit, 32-bit, and 64-bit Little Endian Base 128 (LEB128) variable-length unsigned integers
+* 16-bit, 32-bit, and 64-bit ZigZag-encoded (4.2) Little Endian Base 128 (LEB128) variable-length signed integers
+* Fixed-length 8-bit unsigned integers
+* Fixed-length 8-bit Two’s Complement signed integers
+* Little Endian 32-bit and 64-bit IEEE 764 floating-point numbers
+
+## String
+
+* UTF-8
+* Little Endian UTF-16
+
+## Scalars
+
+* Boolean
+
+## More
+
+* Blob (byte array)
+
+# UBJSON
+
+## Composite
+
+* Array
+* Object
+
+## Numeric
+
+* Big Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers
+* Big Endian 8-bit unsigned integers
+* Big Endian 32-bit and 64-bit IEEE 764 floating-point numbers
+* Arbitrary-precision ASCII-encoded numbers
+
+## String
+
+* UTF-8
+
+## Scalars
+
+* Boolean
+* Null
+
+# TOML
+
+Missing
+
+# CapnProto
+
+## Composite
+
+* Enum
+* List
+* Struct
+* Union
+
+## Numeric
+
+* Little Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers
+* Little Endian 8-bit, 16-bit, 32-bit, and 64-bit unsigned integers
+* Little Endian 32-bit and 64-bit IEEE 764 floating-point numbers
+
+## String
+
+* UTF-8
+
+## Scalars
+
+* Bool
+* Void
+
+## More
+
+* Data (byte array)
+
+# Apache Parquet
+
+Missing
+
 # CBOR
 
 ## Composite
@@ -306,6 +375,31 @@ This data was originally sourced from "A survey of json-compatible binary serial
 * Regular expression
 * MIME message
 
+# FlatBuffers
+
+## Composite
+
+* Array
+* Enum
+* Struct
+* Table
+* Union
+* Vector
+
+## Numeric
+
+* Little Endian 8-bit, 16-bit, 32-bit, and 64-bit unsigned integers
+* Little Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers
+* Little Endian 32-bit and 64-bit IEEE 764 floating-point numbers
+
+## String
+
+* UTF-8
+
+## Scalars
+
+* Boolean
+
 # FlexBuffers
 
 ## Composite
@@ -332,81 +426,4 @@ This data was originally sourced from "A survey of json-compatible binary serial
 
 * Blob (byte array)
 
-# MessagePack
-
-## Composite
-
-* Array
-* Map
-
-## Numeric
-
-* Big Endian 5-bit, 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers
-* Big Endian 7-bit, 8-bit, 16-bit, 32-bit, and 64-bit unsigned integers
-* Big Endian 32-bit and 64-bit IEEE 764 floating-point numbers
-
-## String
-
-* UTF-8
-
-## Scalars
-
-* Boolean
-* Nil
-
-## More
-
-* Bin (byte array)
-* 32-bit, 64-bit, and 96-bit UNIX seconds and nanoseconds Epoch timestamps
-
-# Smile
-
-## Composite
-
-* Array
-* Object
-
-## Numeric
-
-* 5-bit, 32-bit, and 64-bit ZigZag-encoded signed Little Endian Base 128 (LEB128) variable-length integers
-* Little Endian 32-bit and 64-bit IEEE 764 floating-point numbers encoded using 7 bit groups
-* Arbitrary-length stringified signed integers
-* Arbitrary-precision decimals (with scale and stringified integral)
-
-## String
-
-* ASCII
-* UTF-8
-
-## Scalars
-
-* Boolean
-* Null
-
-## More
-
-* Binary (byte array)
-
-# UBJSON
-
-## Composite
-
-* Array
-* Object
-
-## Numeric
-
-* Big Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers
-* Big Endian 8-bit unsigned integers
-* Big Endian 32-bit and 64-bit IEEE 764 floating-point numbers
-* Arbitrary-precision ASCII-encoded numbers
-
-## String
-
-* UTF-8
-
-## Scalars
-
-* Boolean
-* Null
 
