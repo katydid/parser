@@ -5,6 +5,28 @@
   year={2022}
 }
 
+# JSON
+
+## Composite
+
+Array
+Object
+
+## Numeric
+
+Arbitrary-precision ASCII-encoded numbers
+
+## String
+
+UTF-8
+
+## Scalars
+
+Boolean
+Null
+
+## Other
+
 # ASN.1
 
 ## Composite
