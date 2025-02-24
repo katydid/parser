@@ -78,6 +78,27 @@
 * :white_check_mark: FlatBuffers
 * :white_check_mark: FlexBuffers
 
+## Byte Array
+
+* :white_check_mark: ASN.1 (Octet string)
+* :x: JSON (possible with base64 encoding)
+* :grey_question: XML
+* :white_check_mark: Protocol Buffers (bytes)
+* :grey_question: YAML
+* :white_check_mark: Facebook Thrift (binary)
+* :white_check_mark: MessagePack (bin)
+* :white_check_mark: Apache Avro (bytes)
+* :white_check_mark: BSON (binary data)
+* :white_check_mark: Smile (binary)
+* :white_check_mark: Microsoft Bond (blob)
+* :x: UBJSON
+* :grey_question: TOML
+* :white_check_mark: CapnProto (data)
+* :grey_question: Apache Parquet
+* :white_check_mark: CBOR (byte string)
+* :x: FlatBuffers
+* :white_check_mark: FlexBuffers (blob)
+
 ## Arbitrary-precision Decimal Values
 
 * :white_check_mark: ASN.1
