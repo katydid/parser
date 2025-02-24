@@ -1,9 +1,4 @@
-@article{viotti2022survey,
-  title={A survey of json-compatible binary serialization specifications},
-  author={Viotti, Juan Cruz and Kinderkhedia, Mital},
-  journal={arXiv preprint arXiv:2201.02089},
-  year={2022}
-}
+This data was originally sourced from "A survey of json-compatible binary serialization specifications - Juan Cruz Viotti and Mital Kinderkhedia (2022)"
 
 # JSON
 
