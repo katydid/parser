@@ -16,7 +16,7 @@
 * :white_check_mark: Apache Avro
 * :white_check_mark: BSON
 * :white_check_mark: Smile
-* :x: Microsoft Bond (also Little Endian UTF-16)
+* :x: Microsoft Bond
 * :white_check_mark: UBJSON
 * :grey_question: TOML
 * :x: CapnProto
@@ -41,7 +41,7 @@
 * :white_check_mark: Apache Avro
 * :white_check_mark: BSON
 * :white_check_mark: Smile
-* :white_check_mark: Microsoft Bond (also Little Endian UTF-16)
+* :white_check_mark: Microsoft Bond
 * :white_check_mark: UBJSON
 * :grey_question: TOML
 * :white_check_mark: CapnProto
@@ -80,7 +80,7 @@
 * :grey_question: YAML
 * :x: Facebook Thrift
 * :x: MessagePack
-* :white_check_mark: Apache Avro
+* :white_check_mark: Apache Avro ([Arbitrary-precision Two’s Complement signed decimal numbers](https://avro.apache.org/docs/1.12.0/specification/#decimal))
 * :x: BSON
 * :white_check_mark: Smile
 * :x: Microsoft Bond
@@ -88,7 +88,7 @@
 * :grey_question: TOML
 * :x: CapnProto
 * :grey_question: Apache Parquet
-* :white_check_mark: CBOR
+* :white_check_mark: CBOR ([Arbitrary-precision signed decimals (mantissa and scale-based)](https://www.rfc-editor.org/rfc/rfc7049#section-2.4.3))
 * :x: FlatBuffers
 * :x: FlexBuffers
 
