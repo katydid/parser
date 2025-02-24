@@ -252,27 +252,129 @@ TODO
 
 ## Struct / Message / Record / Object
 
-Protocol Buffers, JSON, Thrift, Avro, BSON, Smile, Bond, UBJSON, CapnProto, FlatBuffers
+* :x: ASN.1
+* :white_check_mark: JSON
+* :grey_question: XML
+* :white_check_mark: Protocol Buffers
+* :grey_question: YAML
+* :white_check_mark: Facebook Thrift
+* :x: MessagePack
+* :white_check_mark: Apache Avro
+* :white_check_mark: BSON
+* :white_check_mark: Smile
+* :white_check_mark: Microsoft Bond
+* :white_check_mark: UBJSON
+* :grey_question: TOML
+* :white_check_mark: CapnProto
+* :grey_question: Apache Parquet
+* :x: CBOR
+* :white_check_mark: FlatBuffers
+* :x: FlexBuffers
 
 ## List / Sequence / Array / Vector
 
-ASN.1, Protocol Buffers, JSON, Thrift, MessagePack, Avro, BSON, Smile, Bond, UBJSON, CapnProto, CBOR, FlatBuffers, FlexBuffers
+* :white_check_mark: ASN.1
+* :white_check_mark: JSON
+* :grey_question: XML
+* :white_check_mark: Protocol Buffers
+* :grey_question: YAML
+* :white_check_mark: Facebook Thrift
+* :white_check_mark: MessagePack
+* :white_check_mark: Apache Avro
+* :white_check_mark: BSON
+* :white_check_mark: Smile
+* :white_check_mark: Microsoft Bond
+* :white_check_mark: UBJSON
+* :grey_question: TOML
+* :white_check_mark: CapnProto
+* :grey_question: Apache Parquet
+* :white_check_mark: CBOR
+* :white_check_mark: FlatBuffers
+* :white_check_mark: FlexBuffers
 
 ## Enum
 
-ASN.1, Protocol Buffers, Thrift, Apache Avro, CapnProto, FlatBuffers
+* :white_check_mark: ASN.1
+* :x: JSON
+* :grey_question: XML
+* :white_check_mark: Protocol Buffers
+* :grey_question: YAML
+* :white_check_mark: Facebook Thrift
+* :x: MessagePack
+* :white_check_mark: Apache Avro
+* :x: BSON
+* :x: Smile
+* :x: Microsoft Bond
+* :x: UBJSON
+* :grey_question: TOML
+* :white_check_mark: CapnProto
+* :grey_question: Apache Parquet
+* :x: CBOR
+* :white_check_mark: FlatBuffers
+* :x: FlexBuffers
 
 ## Map
 
-Protocol Buffers, Thrift, MessagePack, Avro, CBOR, FlexBuffers
+* :x: ASN.1
+* :x: JSON
+* :grey_question: XML
+* :white_check_mark: Protocol Buffers
+* :grey_question: YAML
+* :white_check_mark: Facebook Thrift
+* :white_check_mark: MessagePack
+* :white_check_mark: Apache Avro
+* :x: BSON
+* :x: Smile
+* :x: Microsoft Bond
+* :x: UBJSON
+* :grey_question: TOML
+* :x: CapnProto
+* :grey_question: Apache Parquet
+* :white_check_mark: CBOR
+* :x: FlatBuffers
+* :white_check_mark: FlexBuffers
 
 ## Set
 
-ASN.1, Thrift, Bond
+* :white_check_mark: ASN.1
+* :x: JSON
+* :grey_question: XML
+* :x: Protocol Buffers
+* :grey_question: YAML
+* :white_check_mark: Facebook Thrift
+* :x: MessagePack
+* :x: Apache Avro
+* :white_check_mark: BSON
+* :x: Smile
+* :x: Microsoft Bond
+* :x: UBJSON
+* :grey_question: TOML
+* :x: CapnProto
+* :grey_question: Apache Parquet
+* :x: CBOR
+* :x: FlatBuffers
+* :x: FlexBuffers
 
 ## Union / Oneof / Choice
 
-ASN.1, Protocol Buffers, Thrift, Avro, CapnProto, FlatBuffers
+* :white_check_mark: ASN.1
+* :x: JSON
+* :grey_question: XML
+* :white_check_mark: Protocol Buffers
+* :grey_question: YAML
+* :white_check_mark: Facebook Thrift
+* :x: MessagePack
+* :white_check_mark: Apache Avro
+* :x: BSON
+* :x: Smile
+* :x: Microsoft Bond
+* :x: UBJSON
+* :grey_question: TOML
+* :white_check_mark: CapnProto
+* :grey_question: Apache Parquet
+* :x: CBOR
+* :white_check_mark: FlatBuffers
+* :x: FlexBuffers
 
 ## Table
 
