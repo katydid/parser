@@ -207,3 +207,71 @@ TODO
 * Little Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers
 * Little Endian 8-bit, 16-bit, 32-bit, and 64-bit unsigned integers
 * Little Endian 16-bit, 32-bit, and 64-bit IEEE 764 floating-point numbers
+
+## Choice
+
+ASN.1
+
+## Enum
+
+ASN.1, Protocol Buffers, Thrift, Apache Avro, CapnProto, FlatBuffers
+
+## Set
+
+ASN.1, Thrift, Bond
+
+## Sequence
+
+ASN.1
+
+## Array
+
+JSON, MessagePack, BSON, Avro, BSON, Smile, UBJSON, CBOR, FlatBuffers, 
+
+## Object
+
+JSON, BSON, Smile, UBJSON
+
+## List
+
+Protocol Buffers, Thrift, Bond, CapnProto
+
+## Map
+
+Protocol Buffers, Thrift, MessagePack, Avro, CBOR, FlexBuffers
+
+## Message
+
+Protocol Buffers
+
+## Oneof
+
+Protocol Buffers
+
+## Struct
+
+Protocol Buffers, Thrift, Bond, CapnProto, FlatBuffers
+
+## Union
+
+Thrift, Avro, CapnProto, FlatBuffers
+
+## Record
+
+Avro
+
+## Maybe
+
+Bond
+
+## Nullable
+
+Bond
+
+## Vector
+
+Bond, FlatBuffers, FlexBuffers
+
+## Table
+
+FlatBuffers

@@ -191,7 +191,8 @@ Missing
 
 ## Composite
 
-* Array, Document (object)
+* Array
+* Document (object)
 
 ## Numeric
 
