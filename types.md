@@ -95,7 +95,7 @@
 * :x: FlatBuffers
 * :white_check_mark: FlexBuffers (blob)
 
-## Arbitrary-precision Decimal Values
+## Arbitrary-precision Decimal Values (decimal)
 
 * :white_check_mark: ASN.1
 * :white_check_mark: JSON
@@ -105,7 +105,7 @@
 * :x: Facebook Thrift
 * :x: MessagePack
 * :white_check_mark: Apache Avro ([Arbitrary-precision Two’s Complement signed decimal numbers](https://avro.apache.org/docs/1.12.0/specification/#decimal))
-* :x: BSON
+* :x: BSON (float128)
 * :white_check_mark: Smile
 * :x: Microsoft Bond
 * :white_check_mark: UBJSON
@@ -118,7 +118,12 @@
 
 ## Numeric
 
+All numeric types are covered by `float64`, `int64`, `uint64` or worst case arbitrary-precision `decimal` values.
+Everything could also be covered by one type (for example `int64`) for fast comparisons and covering the rest with an arbitrary-precision decimal values via a `string`.
+
 ### ASN.1
+
+decimal:
 
 * Big Endian Two’s Complement signed integers of user-defined length
 * Big Endian unsigned integers of user-defined length
@@ -127,6 +132,8 @@
 
 ### JSON
 
+decimal:
+
 * Arbitrary-precision ASCII-encoded numbers
 
 ### XML
@@ -134,6 +141,8 @@
 * TODO
 
 ### Protocol Buffers
+
+float64, int64 and uint64:
 
 * 32-bit and 64-bit Two’s Complement Little Endian Base 128 (LEB128) variable-length signed integers
 * 32-bit and 64-bit Little Endian Base 128 (LEB128) variable-length unsigned integers
@@ -148,10 +157,14 @@
 
 ### Facebook Thrift
 
+int64 and float64:
+
 * 16-bit, 32-bit, and 64-bit ZigZag-encoded Little Endian Base 128 variable-length signed integers
 * Little Endian 64-bit IEEE 764 floating-point numbers
 
 ### MessagePack
+
+int64, uint64 and float64:
 
 * Big Endian 5-bit, 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers
 * Big Endian 7-bit, 8-bit, 16-bit, 32-bit, and 64-bit unsigned integers
@@ -159,17 +172,23 @@
 
 ### Apache Avro
 
+int64, float64 and decimal:
+
 * 32-bit and 64-bit ZigZag-encoded Little Endian Base 128 (LEB128) variable-length integers
 * Arbitrary-precision Two’s Complement signed decimal numbers
 * Little Endian 32-bit and 64-bit IEEE 764 floating-point numbers
 
 ### BSON
 
+int64, uint64, float64 and decimal:
+
 * Little Endian Two’s Complement signed 32-bit and 64-bit integers
 * Little Endian unsigned 64-bit integers
 * Little Endian 64-bit and 128-bit IEEE 764 floating-point numbers
 
 ### Smile
+
+int64, float64, decimal:
 
 * 5-bit, 32-bit, and 64-bit ZigZag-encoded signed Little Endian Base 128 (LEB128) variable-length integers
 * Little Endian 32-bit and 64-bit IEEE 764 floating-point numbers encoded using 7 bit groups
@@ -178,6 +197,8 @@
 
 ### Microsoft Bond
 
+int64, uint64, float64:
+
 * 16-bit, 32-bit, and 64-bit Little Endian Base 128 (LEB128) variable-length unsigned integers
 * 16-bit, 32-bit, and 64-bit ZigZag-encoded (4.2) Little Endian Base 128 (LEB128) variable-length signed integers
 * Fixed-length 8-bit unsigned integers
@@ -185,6 +206,8 @@
 * Little Endian 32-bit and 64-bit IEEE 764 floating-point numbers
 
 ### UBJSON
+
+int64, float64, decimal:
 
 * Big Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers
 * Big Endian 8-bit unsigned integers
@@ -197,6 +220,8 @@ TODO
 
 ### CapnProto
 
+int64, uint64, float64:
+
 * Little Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers
 * Little Endian 8-bit, 16-bit, 32-bit, and 64-bit unsigned integers
 * Little Endian 32-bit and 64-bit IEEE 764 floating-point numbers
@@ -207,6 +232,8 @@ TODO
 
 ### CBOR
 
+uint64, int64, float64, decimal:
+
 * Big Endian 5-bit, 8-bit, 16-bit, 32-bit, and 64-big unsigned integers
 * Big Endian 5-bit, 8-bit, 16-bit, 32-bit, and 64-big negative integers (encoded as−1 minus the value)
 * Big Endian 32-bit and 64-bit IEEE 764 floating-point numbers
@@ -215,11 +242,15 @@ TODO
 
 ### FlatBuffers
 
+int64, uint64, float64:
+
 * Little Endian 8-bit, 16-bit, 32-bit, and 64-bit unsigned integers
 * Little Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers
 * Little Endian 32-bit and 64-bit IEEE 764 floating-point numbers
 
 ### FlexBuffers
+
+int64, uint64, float64:
 
 * Little Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers
 * Little Endian 8-bit, 16-bit, 32-bit, and 64-bit unsigned integers
