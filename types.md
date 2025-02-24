@@ -87,7 +87,7 @@
 * :grey_question: YAML
 * :white_check_mark: Facebook Thrift (binary)
 * :white_check_mark: MessagePack (bin)
-* :white_check_mark: Apache Avro (bytes)
+* :white_check_mark: Apache Avro (bytes and fixed for a fixed-length byte array)
 * :white_check_mark: BSON (binary data)
 * :white_check_mark: Smile (binary)
 * :white_check_mark: Microsoft Bond (blob)
@@ -98,10 +98,6 @@
 * :white_check_mark: CBOR (byte string)
 * :x: FlatBuffers
 * :white_check_mark: FlexBuffers (blob)
-
-## Arbitrary-length big array
-
-Only ASN.1
 
 ## Arbitrary-precision Decimal Values
 
@@ -325,3 +321,29 @@ Bond, FlatBuffers, FlexBuffers
 ## Table
 
 FlatBuffers
+
+## UUID
+
+Avro, MongoDB also supports UUID
+
+## Extra ASN.1 types
+
+Arbitrary-length bit array
+
+## Regular expression
+
+MongoDB and CBOR
+
+## Extra MongoDB types
+
+* ObjectId
+* DBPointer
+* Javascript code
+* Function
+* MD5
+* Symbol
+
+## Extra CBOR Types
+
+* Base64
+* MIME Message
