@@ -250,33 +250,29 @@ TODO
 * :x: FlatBuffers
 * :x: FlexBuffers
 
-## Enum
+## Struct / Message / Record / Object
 
-ASN.1, Protocol Buffers, Thrift, Apache Avro, CapnProto, FlatBuffers
-
-## Set
-
-ASN.1, Thrift, Bond
-
-## Object
-
-JSON, BSON, Smile, UBJSON
+Protocol Buffers, JSON, Thrift, Avro, BSON, Smile, Bond, UBJSON, CapnProto, FlatBuffers
 
 ## List / Sequence / Array / Vector
 
 ASN.1, Protocol Buffers, JSON, Thrift, MessagePack, Avro, BSON, Smile, Bond, UBJSON, CapnProto, CBOR, FlatBuffers, FlexBuffers
 
+## Enum
+
+ASN.1, Protocol Buffers, Thrift, Apache Avro, CapnProto, FlatBuffers
+
 ## Map
 
 Protocol Buffers, Thrift, MessagePack, Avro, CBOR, FlexBuffers
 
+## Set
+
+ASN.1, Thrift, Bond
+
 ## Union / Oneof / Choice
 
 ASN.1, Protocol Buffers, Thrift, Avro, CapnProto, FlatBuffers
-
-## Struct / Message / Record
-
-Protocol Buffers, Thrift, Avro, Bond, CapnProto, FlatBuffers
 
 ## Table
 
