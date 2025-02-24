@@ -1,5 +1,12 @@
 # Types supported by each serialization format
 
+## TODO
+
+* XML
+* YAML
+* TOML
+* Apache Parquet
+
 ## Undefined
 
 `undefined` is only supported by BSON where it is deprecated and in CBOR where it is substitute for a data item with an encoding problem.
@@ -8,7 +15,7 @@
 
 * :white_check_mark: ASN.1
 * :white_check_mark: JSON
-* :grey_question: XML
+* :white_check_mark: XML (xsi:nil)
 * :x: Protocol Buffers (null values are not serialized)
 * :grey_question: YAML
 * :x: Facebook Thrift
