@@ -19,7 +19,6 @@
 * :white_check_mark: Apache Avro
 * :white_check_mark: BSON
 * :white_check_mark: Smile
-* :x: Microsoft Bond
 * :white_check_mark: UBJSON
 * :grey_question: TOML
 * :x: CapnProto
@@ -44,7 +43,6 @@
 * :white_check_mark: Apache Avro
 * :white_check_mark: BSON
 * :white_check_mark: Smile
-* :white_check_mark: Microsoft Bond
 * :white_check_mark: UBJSON
 * :grey_question: TOML
 * :white_check_mark: CapnProto
@@ -65,7 +63,6 @@
 * :white_check_mark: Apache Avro
 * :white_check_mark: BSON
 * :white_check_mark: Smile
-* :white_check_mark: Microsoft Bond (also Little Endian UTF-16)
 * :white_check_mark: UBJSON
 * :grey_question: TOML
 * :white_check_mark: CapnProto
@@ -86,7 +83,6 @@
 * :white_check_mark: Apache Avro (bytes and fixed for a fixed-length byte array)
 * :white_check_mark: BSON (binary data)
 * :white_check_mark: Smile (binary)
-* :white_check_mark: Microsoft Bond (blob)
 * :x: UBJSON
 * :grey_question: TOML
 * :white_check_mark: CapnProto (data)
@@ -107,7 +103,6 @@
 * :white_check_mark: Apache Avro ([Arbitrary-precision Two’s Complement signed decimal numbers](https://avro.apache.org/docs/1.12.0/specification/#decimal))
 * :x: BSON (float128)
 * :white_check_mark: Smile
-* :x: Microsoft Bond
 * :white_check_mark: UBJSON
 * :grey_question: TOML
 * :x: CapnProto
@@ -195,16 +190,6 @@ int64, float64, decimal:
 * Arbitrary-length stringified signed integers
 * Arbitrary-precision decimals (with scale and stringified integral)
 
-### Microsoft Bond
-
-int64, uint64, float64:
-
-* 16-bit, 32-bit, and 64-bit Little Endian Base 128 (LEB128) variable-length unsigned integers
-* 16-bit, 32-bit, and 64-bit ZigZag-encoded (4.2) Little Endian Base 128 (LEB128) variable-length signed integers
-* Fixed-length 8-bit unsigned integers
-* Fixed-length 8-bit Two’s Complement signed integers
-* Little Endian 32-bit and 64-bit IEEE 764 floating-point numbers
-
 ### UBJSON
 
 int64, float64, decimal:
@@ -272,7 +257,6 @@ int64, uint64, float64:
   + Duration
 * :white_check_mark: BSON (MongoDB Timestamp)
 * :x: Smile
-* :x: Microsoft Bond (also Little Endian UTF-16)
 * :x: UBJSON
 * :grey_question: TOML
 * :x: CapnProto
@@ -293,7 +277,6 @@ int64, uint64, float64:
 * :white_check_mark: Apache Avro
 * :white_check_mark: BSON
 * :white_check_mark: Smile
-* :white_check_mark: Microsoft Bond
 * :white_check_mark: UBJSON
 * :grey_question: TOML
 * :white_check_mark: CapnProto
@@ -314,7 +297,6 @@ int64, uint64, float64:
 * :white_check_mark: Apache Avro
 * :white_check_mark: BSON
 * :white_check_mark: Smile
-* :white_check_mark: Microsoft Bond
 * :white_check_mark: UBJSON
 * :grey_question: TOML
 * :white_check_mark: CapnProto
@@ -335,7 +317,6 @@ int64, uint64, float64:
 * :white_check_mark: Apache Avro
 * :x: BSON
 * :x: Smile
-* :x: Microsoft Bond
 * :x: UBJSON
 * :grey_question: TOML
 * :white_check_mark: CapnProto
@@ -356,7 +337,6 @@ int64, uint64, float64:
 * :white_check_mark: Apache Avro
 * :x: BSON
 * :x: Smile
-* :x: Microsoft Bond
 * :x: UBJSON
 * :grey_question: TOML
 * :x: CapnProto
@@ -377,7 +357,6 @@ int64, uint64, float64:
 * :x: Apache Avro
 * :white_check_mark: BSON
 * :x: Smile
-* :x: Microsoft Bond
 * :x: UBJSON
 * :grey_question: TOML
 * :x: CapnProto
@@ -398,7 +377,6 @@ int64, uint64, float64:
 * :white_check_mark: Apache Avro
 * :x: BSON
 * :x: Smile
-* :x: Microsoft Bond
 * :x: UBJSON
 * :grey_question: TOML
 * :white_check_mark: CapnProto
@@ -410,14 +388,6 @@ int64, uint64, float64:
 ## Table
 
 FlatBuffers
-
-## Maybe
-
-Bond
-
-## Nullable
-
-Bond
 
 ## UUID
 
