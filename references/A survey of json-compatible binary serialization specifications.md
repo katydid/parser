@@ -58,7 +58,7 @@ This data was originally sourced from "A survey of json-compatible binary serial
 
 Missing
 
-# Protocol Buffers
+# Protobufs
 
 ## Composite
 
@@ -97,7 +97,7 @@ Missing
 
 Missing
 
-# Facebook Thrift
+# Thrift
 
 ## Composite
 
@@ -125,7 +125,7 @@ Missing
 * Binary (byte array)
 * Byte
 
-# MessagePack
+# MsgPack
 
 ## Composite
 
@@ -152,7 +152,7 @@ Missing
 * Bin (byte array)
 * 32-bit, 64-bit, and 96-bit UNIX seconds and nanoseconds Epoch timestamps
 
-# Apache Avro
+# Avro
 
 ## Composite
 
@@ -252,7 +252,9 @@ Missing
 
 * Binary (byte array)
 
-# Microsoft Bond
+# Bond
+
+Microsoft Bond
 
 ## Composite
 
@@ -339,7 +341,7 @@ Missing
 
 * Data (byte array)
 
-# Apache Parquet
+# Parquet
 
 Missing
 
