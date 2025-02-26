@@ -73,18 +73,18 @@ It can be emulated by an empty Object in JSON and many other formats or a messag
 
 * :white_check_mark: ASN.1
 * :white_check_mark: JSON
-* :grey_question: XML
+* :white_check_mark: XML
 * :white_check_mark: Protobufs
-* :grey_question: YAML
+* :white_check_mark: YAML
 * :white_check_mark: Thrift
 * :white_check_mark: MsgPack
 * :white_check_mark: Avro
 * :white_check_mark: BSON
 * :white_check_mark: Smile
 * :white_check_mark: UBJSON
-* :grey_question: TOML
+* :white_check_mark: TOML
 * :white_check_mark: CapnProto
-* :grey_question: Parquet
+* :white_check_mark: Parquet
 * :white_check_mark: CBOR
 * :white_check_mark: FlatBuffers
 * :white_check_mark: FlexBuffers

@@ -2,13 +2,21 @@
 
 * Null
 * Boolean
+* String
 
-## BSON-Types
+## String Types
+
+* String
+* ObjectId (example: `_id: ObjectId("5099803df3f4948bd2f98391")`)
+* Regular Expression
+* JavaScript
+
+## Referenced
 
 * Null
 * Boolean
-* Double
 * String
+* Double
 * Object
 * Array
 * Binary data
@@ -28,7 +36,7 @@
 * Object
 * Arrays
 
-## References
+### References
 
 * https://www.mongodb.com/docs/manual/reference/bson-types/
 * https://www.mongodb.com/docs/manual/core/document/

@@ -1,10 +1,16 @@
 # FlatBuffers
 
 * bool
+* String
 
-## Schema
+## String Types
+
+* String: UTF-8 or 7-bit ASCII
+
+## Referenced
 
 * bool
+* String: UTF-8 or 7-bit ASCII
 * Tables: consist of a name (here Monster) and a list of fields
 * Optional
 * Required
@@ -21,10 +27,9 @@
 * float (float32)
 * double (float64)
 * Vector (nested vectors are not supported)
-* String: UTF-8 or 7-bit ASCII
 * Enums
 * Union
 
-## References
+### References
 
 * https://flatbuffers.dev/schema/

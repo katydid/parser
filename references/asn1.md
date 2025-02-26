@@ -2,26 +2,7 @@
 
 * NULL
 * BOOLEAN
-
-## Generic Types
-
-* NULL
-* BOOLEAN
-* INTEGER
-* BIT STRING
-* OCTET STRING
-* OBJECT IDENTIFIER
-* REAL
-* ENUMERATED
 * UTF8String
-
-## Composite Types
-
-* SEQUENCE
-* SEQUENCE OF
-* SET
-* SET OF
-* CHOICE
 
 ## String Types
 
@@ -38,7 +19,44 @@
 * TeletexString, T61String
 * VideotexString
 
-## Time Types
+## Referenced
+
+### Generics
+
+* NULL
+* BOOLEAN
+* UTF8String
+* INTEGER
+* BIT STRING
+* OCTET STRING
+* OBJECT IDENTIFIER
+* REAL
+* ENUMERATED
+
+### Strings
+
+* UTF8String
+* NumericString
+* PrintableString
+* IA5String
+* VisibleString
+* GeneralString
+* GraphicString
+* UniversalString
+* CHARACTER STRING
+* BMPString
+* TeletexString, T61String
+* VideotexString
+
+### Composites
+
+* SEQUENCE
+* SEQUENCE OF
+* SET
+* SET OF
+* CHOICE
+
+### Times
 
 * TIME
 * UTCTime
@@ -48,6 +66,6 @@
 * DATE-TIME
 * DURATION
 
-## References
+### References
 
 * https://www.oss.com/asn1/resources/asn1-made-simple/asn1-quick-reference.html

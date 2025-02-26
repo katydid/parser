@@ -2,8 +2,26 @@
 
 * null
 * boolean
+* string
 
-## JSON Types
+## String Types
+
+* string
+* date
+* email
+* idn-email
+* hostname
+* idn-hostname
+* uri
+* uri-reference
+* iri
+* iri-reference
+* uri-template
+* regex
+
+## Referenced#
+
+### JSON
 
 * null
 * boolean
@@ -13,7 +31,7 @@
 * object
 * array
 
-## JSON-Schema
+### JSON-Schema
 
 * date-time
 * time
@@ -35,6 +53,6 @@
 * relative-json-pointer
 * regex
 
-## References
+### References
 
 * https://json-schema.org/understanding-json-schema/reference/type

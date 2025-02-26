@@ -2,31 +2,30 @@
 
 * null
 * bool
+* str
 
-## Scalar
+## String Types
+
+* str
+
+## Referenced
 
 * null
 * bool
+* str
 * int
 * float
-* str
 * binary
 * timestamp
-
-## Composite
-
 * map
 * omap
 * pairs
 * set
 * seq
-
-## Other
-
 * merge
 * value
 * yaml
 
-## References
+### References
 
 * https://yaml.org/type/

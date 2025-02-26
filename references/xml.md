@@ -4,8 +4,15 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 
 * [xsi:nil](https://www.w3.org/TR/xmlschema-1/#xsi_nil)
 * boolean (XML Schema)
+* string
 
-##  XML Schema Types
+## String Types
+
+**TODO**
+
+## Referenced
+
+### XML Schema
 
 * boolean
 * string
@@ -52,11 +59,11 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 * unsignedByte
 * positiveInteger
 
-## DOM Types
+### DOM
 
+* TEXT_NODE
 * ELEMENT_NODE
 * ATTRIBUTE_NODE
-* TEXT_NODE
 * CDATA_SECTION_NODE
 * ENTITY_REFERENCE_NODE
 * ENTITY_NODE
@@ -77,7 +84,7 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 * ProcessingInstruction
 * Comment
 
-## RelaxNG Types
+### RelaxNG
 
 * empty
 * text
@@ -95,14 +102,13 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 * mixed
 * ref
 * parentRef
-* text
 * value
 * data
 * notAllowed
 * externalRef
 * except
 
-## DTD Types
+### DTD
 
 * DTD Data Types
 * CDATA
@@ -115,7 +121,7 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 * NMTOKENS
 * PCDATA
 
-## References
+### References
 
 * https://www.liquid-technologies.com/Reference/Glossary/DTD_Datatypes_index.html
 * https://relaxng.org/spec-20011203.html#full-syntax

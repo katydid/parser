@@ -1,17 +1,22 @@
 # TOML
 
 * Boolean
+* String (UTF8)
 
-## Types
+## String Types
+
+* String (UTF8)
+
+## Referenced
 
 * Boolean
-* Key/Value Pair
 * String (UTF8)
+* Key/Value Pair
 * Integer 64 bits
 * Float: IEEE 754 binary64
 * Array
 
-## Objects
+### Tables
 
 Tables also known as hash tables or dictionaries
 
@@ -19,7 +24,7 @@ Tables also known as hash tables or dictionaries
 * Inline Table
 * Array of Tables
 
-## Times
+### Times
 
 RFC 3339
 
@@ -28,6 +33,6 @@ RFC 3339
 * Local Date
 * Local Time
 
-## References
+### References
 
 * https://toml.io/en/v1.0.0#spec
