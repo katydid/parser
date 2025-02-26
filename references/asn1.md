@@ -4,11 +4,11 @@ These types were originally sourced from https://www.oss.com/asn1/resources/asn1
 
 ## Generic Types
 
+* NULL
 * BOOLEAN
 * INTEGER
 * BIT STRING
 * OCTET STRING
-* NULL
 * OBJECT IDENTIFIER
 * REAL
 * ENUMERATED
