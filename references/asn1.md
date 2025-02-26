@@ -4,6 +4,7 @@
 * BOOLEAN
 * UTF8String
 * OCTET STRING
+* REAL
 
 ## String Types
 
@@ -24,6 +25,10 @@
 
 * OCTET STRING
 
+## Decimal Types
+
+* REAL
+
 ## Referenced
 
 ### Generics
@@ -32,10 +37,10 @@
 * BOOLEAN
 * UTF8String
 * OCTET STRING
+* REAL
 * INTEGER
 * BIT STRING
 * OBJECT IDENTIFIER
-* REAL
 * ENUMERATED
 
 ### Strings

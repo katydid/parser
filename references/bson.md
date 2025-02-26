@@ -4,6 +4,7 @@
 * Boolean
 * String
 * Binary data
+* Decimal128
 
 ## String Types
 
@@ -16,12 +17,17 @@
 
 * Binary data
 
+## Decimal Types
+
+* Decimal128
+
 ## Referenced
 
 * Null
 * Boolean
 * String
 * Binary data
+* Decimal128
 * Double
 * Object
 * Array
@@ -35,7 +41,6 @@
 * 32-bit integer
 * Timestamp
 * 64-bit integer
-* Decimal128
 * Min key
 * Max key
 * Object

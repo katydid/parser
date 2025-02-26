@@ -4,6 +4,8 @@
 * bool
 * str
 * binary
+* int
+* float
 
 ## String Types
 
@@ -13,14 +15,19 @@
 
 * binary
 
+## Decimal Types
+
+* int: However, there are cases where an integer provided may overflow the native type’s storage capability. In this case, the processor should find some manner to round-trip the integer, perhaps using a string based representation.
+* float: The valid range and accuracy depends on the implementation, though 32 bit IEEE floats should be safe.
+
 ## Referenced
 
 * null
 * bool
 * str
 * binary
-* int
-* float
+* int: However, there are cases where an integer provided may overflow the native type’s storage capability. In this case, the processor should find some manner to round-trip the integer, perhaps using a string based representation.
+* float: The valid range and accuracy depends on the implementation, though 32 bit IEEE floats should be safe.
 * timestamp
 * map
 * omap

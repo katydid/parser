@@ -3,6 +3,7 @@
 * null
 * boolean
 * string
+* number
 
 ## String Types
 
@@ -19,6 +20,10 @@
 * uri-template
 * regex
 
+## Decimal Types
+
+* number
+
 ## Referenced#
 
 ### JSON
@@ -33,25 +38,26 @@
 
 ### JSON-Schema
 
-* date-time
-* time
-* date
-* duration
 * email
 * idn-email
 * hostname
 * idn-hostname
-* ipv4
-* ipv6
-* uuid
 * uri
 * uri-reference
 * iri
 * iri-reference
 * uri-template
+* regex
+* date-time
+* time
+* date
+* duration
+* ipv4
+* ipv6
+* uuid
 * json-pointer
 * relative-json-pointer
-* regex
+
 
 ### References
 

@@ -113,19 +113,19 @@ It can be emulated by an empty Object in JSON and many other formats or a messag
 
 * :white_check_mark: ASN.1
 * :white_check_mark: JSON
-* :grey_question: XML
+* :white_check_mark: XML
 * :x: Protobufs
-* :grey_question: YAML
+* :white_check_mark: YAML
 * :x: Thrift
 * :x: MsgPack
-* :white_check_mark: Avro ([Arbitrary-precision Two’s Complement signed decimal numbers](https://avro.apache.org/docs/1.12.0/specification/#decimal))
-* :x: BSON (float128)
+* :white_check_mark: Avro
+* :white_check_mark: BSON
 * :white_check_mark: Smile
 * :white_check_mark: UBJSON
-* :grey_question: TOML
+* :x: TOML
 * :x: CapnProto
-* :grey_question: Parquet
-* :white_check_mark: CBOR ([Arbitrary-precision signed decimals (mantissa and scale-based)](https://www.rfc-editor.org/rfc/rfc7049#section-2.4.3))
+* :x: Parquet
+* :white_check_mark: CBOR
 * :x: FlatBuffers
 * :x: FlexBuffers
 

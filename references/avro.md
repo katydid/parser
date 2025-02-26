@@ -4,6 +4,7 @@
 * boolean
 * string
 * bytes
+* decimal
 
 ## String Types
 
@@ -15,11 +16,16 @@
 
 * bytes
 
+## Decimal Types
+
+* decimal
+
 ## Referenced
 
 * null: no value
 * boolean: a binary value
 * string: unicode character sequence
+* decimal: The decimal logical type represents an arbitrary-precision signed decimal number
 * enum	string	"FOO"
 * fixed	string	"\u00ff"
 * bytes: sequence of 8-bit unsigned bytes
@@ -35,3 +41,4 @@
 ### References
 
 * https://avro.apache.org/docs/1.11.1/specification/
+* https://avro.apache.org/docs/1.12.0/specification/#decimal

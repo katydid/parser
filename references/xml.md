@@ -6,6 +6,7 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 * boolean (XML Schema)
 * string
 * hexBinary/base64Binary
+* decimal
 
 ## String Types
 
@@ -15,6 +16,14 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 
 * hexBinary
 * base64Binary
+
+**TODO**
+
+## Decimal Types
+
+* decimal
+
+**TODO**
 
 ## Referenced
 
