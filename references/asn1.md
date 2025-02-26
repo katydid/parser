@@ -3,6 +3,7 @@
 * NULL
 * BOOLEAN
 * UTF8String
+* OCTET STRING
 
 ## String Types
 
@@ -19,6 +20,10 @@
 * TeletexString, T61String
 * VideotexString
 
+## Byte Array Types
+
+* OCTET STRING
+
 ## Referenced
 
 ### Generics
@@ -26,9 +31,9 @@
 * NULL
 * BOOLEAN
 * UTF8String
+* OCTET STRING
 * INTEGER
 * BIT STRING
-* OCTET STRING
 * OBJECT IDENTIFIER
 * REAL
 * ENUMERATED

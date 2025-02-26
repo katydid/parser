@@ -91,23 +91,23 @@ It can be emulated by an empty Object in JSON and many other formats or a messag
 
 ## Byte Array
 
-* :white_check_mark: ASN.1 (Octet string)
+* :white_check_mark: ASN.1
 * :x: JSON (possible with base64 encoding)
-* :grey_question: XML
-* :white_check_mark: Protobufs (bytes)
-* :grey_question: YAML
-* :white_check_mark: Thrift (binary)
-* :white_check_mark: MsgPack (bin)
-* :white_check_mark: Avro (bytes and fixed for a fixed-length byte array)
-* :white_check_mark: BSON (binary data)
-* :white_check_mark: Smile (binary)
-* :x: UBJSON
-* :grey_question: TOML
-* :white_check_mark: CapnProto (data)
-* :grey_question: Parquet
-* :white_check_mark: CBOR (byte string)
-* :x: FlatBuffers
-* :white_check_mark: FlexBuffers (blob)
+* :white_check_mark: XML
+* :white_check_mark: Protobufs
+* :white_check_mark: YAML
+* :white_check_mark: Thrift
+* :white_check_mark: MsgPack
+* :white_check_mark: Avro
+* :white_check_mark: BSON
+* :white_check_mark: Smile
+* :white_check_mark: UBJSON
+* :x: TOML
+* :white_check_mark: CapnProto
+* :white_check_mark: Parquet
+* :white_check_mark: CBOR
+* :white_check_mark: FlatBuffers
+* :white_check_mark: FlexBuffers
 
 ## Arbitrary-precision Decimal Values (decimal)
 

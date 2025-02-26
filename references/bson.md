@@ -3,6 +3,7 @@
 * Null
 * Boolean
 * String
+* Binary data
 
 ## String Types
 
@@ -11,15 +12,19 @@
 * Regular Expression
 * JavaScript
 
+## Byte Array Types
+
+* Binary data
+
 ## Referenced
 
 * Null
 * Boolean
 * String
+* Binary data
 * Double
 * Object
 * Array
-* Binary data
 * Undefined (Deprecated).
 * ObjectId (example: `_id: ObjectId("5099803df3f4948bd2f98391")`)
 * Date

@@ -4,10 +4,15 @@
 * No-Op
 * Boolean
 * String Type
+* Binary Data
 
 ## String Types
 
 * String Type
+
+## Byte Array Types
+
+* Binary Data
 
 ## Referenced
 
@@ -15,9 +20,9 @@
 * No-Op Value
 * Boolean Types
 * String Type
+* Binary Data
 * Numeric Types
 * Char Type
-* Binary Data
 * Object
 * Array
 

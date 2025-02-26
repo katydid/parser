@@ -11,6 +11,7 @@
 
 * Boolean
 * String (UTF8)
+* "for binary data, it is recommended that you use Base64"
 * Key/Value Pair
 * Integer 64 bits
 * Float: IEEE 754 binary64

@@ -3,16 +3,22 @@
 * Void
 * Bool
 * Text
+* Data
 
 ## String Types
 
 * Text
 
+## Byte Array Types
+
+* Data
+
 ## Referenced
 
 * Void: Void
 * Boolean: Bool
-* Blobs: Text, Data
+* Text
+* Data
 * Integers: Int8, Int16, Int32, Int64
 * Unsigned integers: UInt8, UInt16, UInt32, UInt64
 * Floating-point: Float32, Float64

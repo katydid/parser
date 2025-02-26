@@ -5,10 +5,16 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 * [xsi:nil](https://www.w3.org/TR/xmlschema-1/#xsi_nil)
 * boolean (XML Schema)
 * string
+* hexBinary/base64Binary
 
 ## String Types
 
 **TODO**
+
+## Byte Array Types
+
+* hexBinary
+* base64Binary
 
 ## Referenced
 
@@ -16,6 +22,8 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 
 * boolean
 * string
+* hexBinary
+* base64Binary
 * decimal
 * float
 * double
@@ -28,8 +36,6 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 * gMonthDay
 * gDay
 * gMonth
-* hexBinary
-* base64Binary
 * anyURI
 * QName
 * NOTATION
@@ -73,16 +79,7 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 * DOCUMENT_TYPE_NODE
 * DOCUMENT_FRAGMENT_NODE
 * NOTATION_NODE
-* Document
-* DocumentType
-* DocumentFragment
 * ShadowRoot
-* Element
-* Attr
-* Text
-* CDATASection
-* ProcessingInstruction
-* Comment
 
 ### RelaxNG
 
@@ -110,7 +107,6 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 
 ### DTD
 
-* DTD Data Types
 * CDATA
 * ENTITY
 * ENTITIES
