@@ -4,42 +4,12 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 
 * [xsi:nil](https://www.w3.org/TR/xmlschema-1/#xsi_nil)
 
-## XML Types
-
-https://www.w3schools.com/xml/dom_nodetype.asp
-
-* ELEMENT_NODE
-* ATTRIBUTE_NODE
-* TEXT_NODE
-* CDATA_SECTION_NODE
-* ENTITY_REFERENCE_NODE
-* ENTITY_NODE
-* PROCESSING_INSTRUCTION_NODE
-* COMMENT_NODE
-* DOCUMENT_NODE
-* DOCUMENT_TYPE_NODE
-* DOCUMENT_FRAGMENT_NODE
-* NOTATION_NODE
-
-https://dom.spec.whatwg.org/#node-trees
-
-* Document
-* DocumentType
-* DocumentFragment
-* ShadowRoot
-* Element
-* Attr
-* Text
-* CDATASection
-* ProcessingInstruction
-* Comment
-
 ##  XML Schema Types
 
 https://www.w3.org/TR/xmlschema-2/#built-in-primitive-datatypes
 
-* string
 * boolean
+* string
 * decimal
 * float
 * double
@@ -86,14 +56,44 @@ https://www.w3.org/TR/xmlschema-2/#built-in-derived
 * unsignedByte
 * positiveInteger
 
+## XML Types
+
+https://www.w3schools.com/xml/dom_nodetype.asp
+
+* ELEMENT_NODE
+* ATTRIBUTE_NODE
+* TEXT_NODE
+* CDATA_SECTION_NODE
+* ENTITY_REFERENCE_NODE
+* ENTITY_NODE
+* PROCESSING_INSTRUCTION_NODE
+* COMMENT_NODE
+* DOCUMENT_NODE
+* DOCUMENT_TYPE_NODE
+* DOCUMENT_FRAGMENT_NODE
+* NOTATION_NODE
+
+https://dom.spec.whatwg.org/#node-trees
+
+* Document
+* DocumentType
+* DocumentFragment
+* ShadowRoot
+* Element
+* Attr
+* Text
+* CDATASection
+* ProcessingInstruction
+* Comment
+
 ## RelaxNG Types
 
 https://relaxng.org/spec-20011203.html#full-syntax
 
+* empty
 * text
 * token
 * whitespace
-* empty
 * element
 * attribute
 * group

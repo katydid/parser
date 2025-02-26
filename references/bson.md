@@ -3,6 +3,7 @@
 https://www.mongodb.com/docs/manual/reference/bson-types/
 
 * Null
+* Boolean
 * Double
 * String
 * Object
@@ -10,7 +11,6 @@ https://www.mongodb.com/docs/manual/reference/bson-types/
 * Binary data
 * Undefined (Deprecated).
 * ObjectId (example: `_id: ObjectId("5099803df3f4948bd2f98391")`)
-* Boolean
 * Date
 * Regular Expression
 * DBPointer (Deprecated).

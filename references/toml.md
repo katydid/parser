@@ -4,11 +4,11 @@ These types were originally sourced from https://toml.io/en/v1.0.0#spec
 
 ## Types
 
+* Boolean
 * Key/Value Pair
 * String (UTF8)
 * Integer 64 bits
 * Float: IEEE 754 binary64
-* Boolean
 * Array
 
 ## Objects

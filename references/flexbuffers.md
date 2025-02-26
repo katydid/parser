@@ -2,12 +2,12 @@
 
 https://flatbuffers.dev/schema/
 
+* bool
 * Tables: consist of a name (here Monster) and a list of fields
 * Optional
 * Required
 * Struct: Similar to a table, structs consist of fields are required (so no defaults either), and fields may not be added or be deprecated.
 * Arrays are a convenience short-hand for a fixed-length collection of elements. (Only supported in structs)
-* bool
 * byte
 * ubyte
 * short (int16)

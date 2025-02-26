@@ -4,6 +4,7 @@ This data was originally sourced from "A survey of json-compatible binary serial
 The documentation at https://flatbuffers.dev/flexbuffers/ was not sufficient.
 
 * Null
+* Boolean
 
 ## Composite
 
@@ -19,10 +20,6 @@ The documentation at https://flatbuffers.dev/flexbuffers/ was not sufficient.
 ## String
 
 * UTF-8
-
-## Scalars
-
-* Boolean
 
 ## More
 

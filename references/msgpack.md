@@ -3,8 +3,8 @@
 https://github.com/msgpack/msgpack/blob/master/spec.md#formats
 
 * Nil represents nil
-* Integer represents an integer (a value of an Integer object is limited from -(2^63) upto (2^64)-1)
 * Boolean represents true or false
+* Integer represents an integer (a value of an Integer object is limited from -(2^63) upto (2^64)-1)
 * Float represents a IEEE 754 double precision floating point number including NaN and Infinity
 * String extending Raw type represents a UTF-8 string
 * Binary extending Raw type represents a byte array
@@ -16,8 +16,8 @@ https://github.com/msgpack/msgpack/blob/master/spec.md#formats
 ## Serialization: type to format conversion
 
 * Nil	nil
-* Integer	int format family (positive fixint, negative fixint, int 8/16/32/64 or uint 8/16/32/64)
 * Boolean	bool format family (false or true)
+* Integer	int format family (positive fixint, negative fixint, int 8/16/32/64 or uint 8/16/32/64)
 * Float	float format family (float 32/64)
 * String	str format family (fixstr or str 8/16/32)
 * Binary	bin format family (bin 8/16/32)
