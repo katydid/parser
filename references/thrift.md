@@ -1,6 +1,9 @@
 # Thrift
 
-https://thrift.apache.org/docs/types
+* null is not serialized
+* bool
+
+## Apache Thrift Types
 
 * bool: A boolean value (true or false)
 * byte: An 8-bit signed integer
@@ -13,8 +16,10 @@ https://thrift.apache.org/docs/types
 * list
 * set
 * map
-
-https://thrift.apache.org/docs/idl
-
 * optional
 * required
+
+## References
+
+* https://thrift.apache.org/docs/types
+* https://thrift.apache.org/docs/idl

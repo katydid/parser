@@ -1,6 +1,9 @@
 # BSON
 
-https://www.mongodb.com/docs/manual/reference/bson-types/
+* Null
+* Boolean
+
+## BSON-Types
 
 * Null
 * Boolean
@@ -22,8 +25,10 @@ https://www.mongodb.com/docs/manual/reference/bson-types/
 * Decimal128
 * Min key
 * Max key
-
-https://www.mongodb.com/docs/manual/core/document/
-
 * Object
 * Arrays
+
+## References
+
+* https://www.mongodb.com/docs/manual/reference/bson-types/
+* https://www.mongodb.com/docs/manual/core/document/

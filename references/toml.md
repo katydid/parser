@@ -1,6 +1,6 @@
 # TOML
 
-These types were originally sourced from https://toml.io/en/v1.0.0#spec
+* Boolean
 
 ## Types
 
@@ -27,3 +27,7 @@ RFC 3339
 * Local Date-Time
 * Local Date
 * Local Time
+
+## References
+
+* https://toml.io/en/v1.0.0#spec

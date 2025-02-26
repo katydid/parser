@@ -1,16 +1,19 @@
 # JSON
 
-## JSON Schema
+* null
+* boolean
 
-https://json-schema.org/understanding-json-schema/reference/type
+## JSON Types
 
 * null
+* boolean
 * string
 * number
 * integer
 * object
 * array
-* boolean
+
+## JSON-Schema
 
 * date-time
 * time
@@ -31,3 +34,7 @@ https://json-schema.org/understanding-json-schema/reference/type
 * json-pointer
 * relative-json-pointer
 * regex
+
+## References
+
+* https://json-schema.org/understanding-json-schema/reference/type

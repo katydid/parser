@@ -1,6 +1,9 @@
 # CBOR
 
-https://www.rfc-editor.org/rfc/rfc8949.html#name-extended-generic-data-model
+* null
+* boolean
+
+## Data-Model
 
 * null
 * boolean
@@ -13,3 +16,7 @@ https://www.rfc-editor.org/rfc/rfc8949.html#name-extended-generic-data-model
 * tag of number N	1 data item
 * simple/float
 * undefined: a substitute for a data item with an encoding problem.
+
+## References
+
+* https://www.rfc-editor.org/rfc/rfc8949.html#name-extended-generic-data-model

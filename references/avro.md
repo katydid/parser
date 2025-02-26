@@ -1,6 +1,9 @@
 # Avro
 
-https://avro.apache.org/docs/1.11.1/specification/
+* null
+* boolean
+
+## Specification
 
 * null: no value
 * boolean: a binary value
@@ -16,3 +19,7 @@ https://avro.apache.org/docs/1.11.1/specification/
 * map	object	{"a": 1}
 * fixed	string	"\u00ff"
 * Unions, as mentioned above, are represented using JSON arrays.
+
+## References
+
+* https://avro.apache.org/docs/1.11.1/specification/

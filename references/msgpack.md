@@ -1,6 +1,9 @@
 # Message Pack
 
-https://github.com/msgpack/msgpack/blob/master/spec.md#formats
+* Nil
+* Boolean
+
+## Formats
 
 * Nil represents nil
 * Boolean represents true or false
@@ -24,3 +27,7 @@ https://github.com/msgpack/msgpack/blob/master/spec.md#formats
 * Array	array format family (fixarray or array 16/32)
 * Map	map format family (fixmap or map 16/32)
 * Extension	ext format family (fixext or ext 8/16/32)
+
+## References
+
+* https://github.com/msgpack/msgpack/blob/master/spec.md#formats

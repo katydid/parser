@@ -1,6 +1,7 @@
 # ASN.1
 
-These types were originally sourced from https://www.oss.com/asn1/resources/asn1-made-simple/asn1-quick-reference.html
+* NULL
+* BOOLEAN
 
 ## Generic Types
 
@@ -46,3 +47,7 @@ These types were originally sourced from https://www.oss.com/asn1/resources/asn1
 * TIME-OF-DAY
 * DATE-TIME
 * DURATION
+
+## References
+
+* https://www.oss.com/asn1/resources/asn1-made-simple/asn1-quick-reference.html

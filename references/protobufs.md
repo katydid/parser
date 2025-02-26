@@ -4,8 +4,9 @@
 * Empty (message)
 * bool
 
-https://protobuf.dev/programming-guides/editions/
+## Builtin Types
 
+* bool
 * message
 * repeated
 * optional
@@ -27,12 +28,13 @@ https://protobuf.dev/programming-guides/editions/
 * string:	A string must always contain UTF-8 encoded or 7-bit ASCII text, and cannot be longer than 232.
 * bytes:	May contain any arbitrary sequence of bytes no longer than 232.
 
-https://protobuf.dev/reference/protobuf/google.protobuf/
+## Well Known Types
 
 * Any (message)
 * Api (message)
 * Duration (message)
 * Enum (message)
+* Empty (message)
 * Field (message)
 * Field.Cardinality (enum)
 * Field.Kind (enum)
@@ -45,3 +47,8 @@ https://protobuf.dev/reference/protobuf/google.protobuf/
 * Syntax (enum)
 * Timestamp (message)
 * Type (message)
+
+## References
+
+* https://protobuf.dev/reference/protobuf/google.protobuf/
+* https://protobuf.dev/programming-guides/editions/

@@ -1,6 +1,7 @@
 ## YAML
 
-These types were originally sourced from https://yaml.org/type/
+* null
+* bool
 
 ## Scalar
 
@@ -25,3 +26,7 @@ These types were originally sourced from https://yaml.org/type/
 * merge
 * value
 * yaml
+
+## References
+
+* https://yaml.org/type/

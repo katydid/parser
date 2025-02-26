@@ -1,6 +1,10 @@
 # UBJSON
 
-https://ubjson.org/type-reference/value-types/
+* Null
+* No-Op
+* Boolean
+
+## UBJSON Types
 
 * Null Value
 * No-Op Value
@@ -9,8 +13,10 @@ https://ubjson.org/type-reference/value-types/
 * Char Type
 * String Type
 * Binary Data
-
-https://ubjson.org/type-reference/container-types/
-
 * Object
 * Array
+
+## References
+
+* https://ubjson.org/type-reference/value-types/
+* https://ubjson.org/type-reference/container-types/

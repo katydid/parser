@@ -3,10 +3,9 @@
 Each XML element has unordered attributes, which can be modeled as a Object followed by an ordered List of elements.
 
 * [xsi:nil](https://www.w3.org/TR/xmlschema-1/#xsi_nil)
+* boolean (XML Schema)
 
 ##  XML Schema Types
-
-https://www.w3.org/TR/xmlschema-2/#built-in-primitive-datatypes
 
 * boolean
 * string
@@ -27,9 +26,6 @@ https://www.w3.org/TR/xmlschema-2/#built-in-primitive-datatypes
 * anyURI
 * QName
 * NOTATION
-
-https://www.w3.org/TR/xmlschema-2/#built-in-derived
-
 * normalizedString
 * token
 * language
@@ -56,9 +52,7 @@ https://www.w3.org/TR/xmlschema-2/#built-in-derived
 * unsignedByte
 * positiveInteger
 
-## XML Types
-
-https://www.w3schools.com/xml/dom_nodetype.asp
+## DOM Types
 
 * ELEMENT_NODE
 * ATTRIBUTE_NODE
@@ -72,9 +66,6 @@ https://www.w3schools.com/xml/dom_nodetype.asp
 * DOCUMENT_TYPE_NODE
 * DOCUMENT_FRAGMENT_NODE
 * NOTATION_NODE
-
-https://dom.spec.whatwg.org/#node-trees
-
 * Document
 * DocumentType
 * DocumentFragment
@@ -87,8 +78,6 @@ https://dom.spec.whatwg.org/#node-trees
 * Comment
 
 ## RelaxNG Types
-
-https://relaxng.org/spec-20011203.html#full-syntax
 
 * empty
 * text
@@ -115,8 +104,6 @@ https://relaxng.org/spec-20011203.html#full-syntax
 
 ## DTD Types
 
-https://www.liquid-technologies.com/Reference/Glossary/DTD_Datatypes_index.html
-
 * DTD Data Types
 * CDATA
 * ENTITY
@@ -127,3 +114,12 @@ https://www.liquid-technologies.com/Reference/Glossary/DTD_Datatypes_index.html
 * NMTOKEN
 * NMTOKENS
 * PCDATA
+
+## References
+
+* https://www.liquid-technologies.com/Reference/Glossary/DTD_Datatypes_index.html
+* https://relaxng.org/spec-20011203.html#full-syntax
+* https://dom.spec.whatwg.org/#node-trees
+* https://www.w3schools.com/xml/dom_nodetype.asp
+* https://www.w3.org/TR/xmlschema-2/#built-in-derived
+* https://www.w3.org/TR/xmlschema-2/#built-in-primitive-datatypes

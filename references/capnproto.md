@@ -1,6 +1,9 @@
 # CapnProto
 
-https://capnproto.org/language.html#built-in-types
+* Void
+* Bool
+
+## Built-In Types
 
 * Void: Void
 * Boolean: Bool
@@ -12,3 +15,7 @@ https://capnproto.org/language.html#built-in-types
 * Structs
 * Unions
 * Enums
+
+## References
+
+* https://capnproto.org/language.html#built-in-types

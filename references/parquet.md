@@ -1,7 +1,9 @@
 # Apache Parquet
 
-https://parquet.apache.org/docs/file-format/types/
-https://github.com/apache/parquet-format/blob/master/README.md
+* NULL
+* BOOLEAN
+
+## Types
 
 * NULL values are not encoded in the data. 
 * BOOLEAN: 1 bit boolean
@@ -19,3 +21,8 @@ https://github.com/apache/parquet-format/blob/master/README.md
 * REQUIRED
 * OPTIONAL
 * REPEATED
+
+## References
+
+* https://parquet.apache.org/docs/file-format/types/
+* https://github.com/apache/parquet-format/blob/master/README.md
