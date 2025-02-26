@@ -1,10 +1,5 @@
 # UBJSON
 
-https://ubjson.org/type-reference/container-types/
-
-* Object
-* Array
-
 https://ubjson.org/type-reference/value-types/
 
 * Null Value
@@ -15,3 +10,7 @@ https://ubjson.org/type-reference/value-types/
 * String Type
 * Binary Data
 
+https://ubjson.org/type-reference/container-types/
+
+* Object
+* Array

@@ -3,6 +3,8 @@
 This data was originally sourced from "A survey of json-compatible binary serialization specifications - Juan Cruz Viotti and Mital Kinderkhedia (2022)"
 The documentation at https://flatbuffers.dev/flexbuffers/ was not sufficient.
 
+* Null
+
 ## Composite
 
 * Vector
@@ -21,7 +23,6 @@ The documentation at https://flatbuffers.dev/flexbuffers/ was not sufficient.
 ## Scalars
 
 * Boolean
-* Null
 
 ## More
 

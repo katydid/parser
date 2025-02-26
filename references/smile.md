@@ -2,6 +2,8 @@
 
 This data was originally sourced from "A survey of json-compatible binary serialization specifications - Juan Cruz Viotti and Mital Kinderkhedia (2022)"
 
+* Null
+
 5-bit, 32-bit, and 64-bit ZigZag-encoded (4.2) signed Little Endian
 Base 128 (LEB128) (4.1) variable-length integers
 Little Endian 32-bit and 64-bit IEEE 764 floating-point numbers [51]
@@ -11,5 +13,5 @@ Arbitrary-precision decimals (with scale and stringified integral)
 
 String: ASCII, UTF-8
 Composite: Array, Object
-Scalars: Boolean, Null
+Scalars: Boolean
 Other: Binary (byte array)

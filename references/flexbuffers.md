@@ -22,4 +22,3 @@ https://flatbuffers.dev/schema/
 * String: UTF-8 or 7-bit ASCII
 * Enums
 * Union
-

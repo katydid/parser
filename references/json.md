@@ -4,13 +4,13 @@
 
 https://json-schema.org/understanding-json-schema/reference/type
 
+* null
 * string
 * number
 * integer
 * object
 * array
 * boolean
-* null
 
 * date-time
 * time

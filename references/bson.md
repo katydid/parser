@@ -1,12 +1,8 @@
 # BSON
 
-https://www.mongodb.com/docs/manual/core/document/
-
-* Object
-* Arrays
-
 https://www.mongodb.com/docs/manual/reference/bson-types/
 
+* Null
 * Double
 * String
 * Object
@@ -16,7 +12,6 @@ https://www.mongodb.com/docs/manual/reference/bson-types/
 * ObjectId `_id: ObjectId("5099803df3f4948bd2f98391")`
 * Boolean
 * Date
-* Null
 * Regular Expression
 * DBPointer Deprecated.
 * JavaScript
@@ -27,3 +22,8 @@ https://www.mongodb.com/docs/manual/reference/bson-types/
 * Decimal128
 * Min key
 * Max key
+
+https://www.mongodb.com/docs/manual/core/document/
+
+* Object
+* Arrays

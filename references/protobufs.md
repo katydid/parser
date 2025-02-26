@@ -1,5 +1,7 @@
 # Google Protocol Buffers
 
+* null values are not serialized
+
 https://protobuf.dev/programming-guides/editions/
 
 * message

@@ -3,6 +3,7 @@
 https://parquet.apache.org/docs/file-format/types/
 https://github.com/apache/parquet-format/blob/master/README.md
 
+* NULL values are not encoded in the data. 
 * BOOLEAN: 1 bit boolean
 * INT32: 32 bit signed ints
 * INT64: 64 bit signed ints
@@ -11,7 +12,6 @@ https://github.com/apache/parquet-format/blob/master/README.md
 * DOUBLE: IEEE 64-bit floating point values
 * BYTE_ARRAY: arbitrarily long byte arrays
 * FIXED_LEN_BYTE_ARRAY: fixed length byte arrays
-* NULL values are not encoded in the data. 
 * UTF8
 * MAP
 * MAP_KEY_VALUE

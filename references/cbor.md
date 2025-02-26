@@ -2,8 +2,8 @@
 
 https://www.rfc-editor.org/rfc/rfc8949.html#name-extended-generic-data-model
 
-* boolean
 * null
+* boolean
 * undefined
 * unsigned integer N
 * negative integer -1-N

@@ -4,10 +4,10 @@ These types were originally sourced from https://yaml.org/type/
 
 ## Scalar
 
+* null
 * bool
 * int
 * float
-* null
 * str
 * binary
 * timestamp

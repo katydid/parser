@@ -11,18 +11,18 @@
 
 * :white_check_mark: ASN.1
 * :white_check_mark: JSON
-* :white_check_mark: XML (xsi:nil)
-* :x: Protobufs (null values are not serialized)
-* :grey_question: YAML
+* :white_check_mark: XML
+* :x: Protobufs
+* :white_check_mark: YAML
 * :x: Thrift
 * :white_check_mark: MsgPack
 * :white_check_mark: Avro
 * :white_check_mark: BSON
 * :white_check_mark: Smile
 * :white_check_mark: UBJSON
-* :grey_question: TOML
+* :x: TOML
 * :x: CapnProto
-* :grey_question: Parquet
+* :x: Parquet
 * :white_check_mark: CBOR
 * :x: FlatBuffers
 * :white_check_mark: FlexBuffers

@@ -2,8 +2,8 @@
 
 https://github.com/msgpack/msgpack/blob/master/spec.md#formats
 
-* Integer represents an integer (a value of an Integer object is limited from -(2^63) upto (2^64)-1)
 * Nil represents nil
+* Integer represents an integer (a value of an Integer object is limited from -(2^63) upto (2^64)-1)
 * Boolean represents true or false
 * Float represents a IEEE 754 double precision floating point number including NaN and Infinity
 * String extending Raw type represents a UTF-8 string
