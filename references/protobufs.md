@@ -1,6 +1,7 @@
 # Google Protocol Buffers
 
 * null values are not serialized
+* Empty (message)
 
 https://protobuf.dev/programming-guides/editions/
 
@@ -31,7 +32,6 @@ https://protobuf.dev/reference/protobuf/google.protobuf/
 * Any (message)
 * Api (message)
 * Duration (message)
-* Empty (message)
 * Enum (message)
 * Field (message)
 * Field.Cardinality (enum)

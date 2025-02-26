@@ -15,8 +15,8 @@ https://github.com/msgpack/msgpack/blob/master/spec.md#formats
 
 ## Serialization: type to format conversion
 
-* Integer	int format family (positive fixint, negative fixint, int 8/16/32/64 or uint 8/16/32/64)
 * Nil	nil
+* Integer	int format family (positive fixint, negative fixint, int 8/16/32/64 or uint 8/16/32/64)
 * Boolean	bool format family (false or true)
 * Float	float format family (float 32/64)
 * String	str format family (fixstr or str 8/16/32)

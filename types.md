@@ -11,7 +11,7 @@
 
 * :white_check_mark: ASN.1
 * :white_check_mark: JSON
-* :white_check_mark: XML
+* :white_check_mark: XML ([xsi:nil](https://www.w3.org/TR/xmlschema-1/#xsi_nil))
 * :x: Protobufs
 * :white_check_mark: YAML
 * :x: Thrift
@@ -29,7 +29,25 @@
 
 ## Void
 
-`void` is only supported by CapnProto, but can also be emulated by an empty Object in JSON and many other formats or a message without fields in for example Protobufs via the [empty](https://github.com/protocolbuffers/protobuf/blob/main/src/google/protobuf/empty.proto) message.
+* :x: ASN.1
+* :x: JSON
+* :x: XML
+* :white_check_mark: Protobufs ([empty.proto](https://github.com/protocolbuffers/protobuf/blob/main/src/google/protobuf/empty.proto))
+* :x: YAML
+* :x: Thrift
+* :x: MsgPack
+* :x: Avro
+* :x: BSON
+* :x: Smile
+* :white_check_mark: UBJSON (No-Op)
+* :x: TOML
+* :white_check_mark: CapnProto
+* :x: Parquet
+* :x: CBOR
+* :x: FlatBuffers
+* :x: FlexBuffers
+
+It can be emulated by an empty Object in JSON and many other formats or a message without fields.
 
 ## Boolean
 

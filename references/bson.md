@@ -8,14 +8,14 @@ https://www.mongodb.com/docs/manual/reference/bson-types/
 * Object
 * Array
 * Binary data
-* Undefined Deprecated.
-* ObjectId `_id: ObjectId("5099803df3f4948bd2f98391")`
+* Undefined (Deprecated).
+* ObjectId (example: `_id: ObjectId("5099803df3f4948bd2f98391")`)
 * Boolean
 * Date
 * Regular Expression
-* DBPointer Deprecated.
+* DBPointer (Deprecated).
 * JavaScript
-* Symbol Deprecated.
+* Symbol (Deprecated).
 * 32-bit integer
 * Timestamp
 * 64-bit integer
