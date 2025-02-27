@@ -35,6 +35,10 @@
 * sfixed32:	Always four bytes.
 * sfixed64:	Always eight bytes.
 
+## Timestamp Types
+
+* Timestamp
+
 ## Referenced
 
 ### Builtin
@@ -63,6 +67,7 @@
 
 ### Well Known
 
+* Timestamp (message)
 * Any (message)
 * Api (message)
 * Duration (message)
@@ -78,7 +83,6 @@
 * SourceContext (message)
 * Struct (message)
 * Syntax (enum)
-* Timestamp (message)
 * Type (message)
 
 ### References

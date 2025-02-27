@@ -16,6 +16,16 @@
 
 * Integer 64 bits
 
+## Date Types
+
+* Local Date
+
+## Timestamp Types
+
+* Offset Date-Time
+* Local Date-Time
+* Local Time
+
 ## Referenced
 
 * Boolean
@@ -38,9 +48,9 @@ Tables also known as hash tables or dictionaries
 
 RFC 3339
 
+* Local Date
 * Offset Date-Time
 * Local Date-Time
-* Local Date
 * Local Time
 
 ### References

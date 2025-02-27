@@ -36,6 +36,11 @@
 
 * date
 
+## Timestamp Types
+
+* date-time
+* time
+
 ## Referenced
 
 ### JSON
@@ -51,6 +56,8 @@
 ### JSON-Schema
 
 * date
+* date-time
+* time
 * email
 * idn-email
 * hostname
@@ -61,15 +68,12 @@
 * iri-reference
 * uri-template
 * regex
-* date-time
-* time
 * duration
 * ipv4
 * ipv6
 * uuid
 * json-pointer
 * relative-json-pointer
-
 
 ### References
 

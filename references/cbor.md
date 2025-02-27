@@ -33,6 +33,11 @@
 
 * Calendar Dates
 
+## Timestamp Types
+
+* Standard Date/Time String
+* Epoch-Based Date/Time
+
 ## Referenced
 
 * null

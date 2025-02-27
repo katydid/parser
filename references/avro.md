@@ -33,6 +33,11 @@
 
 * Date (days from the UNIX Epoch)
 
+## Timestamp Types
+
+* Time (milliseconds and microseconds)
+* Timestamp (milliseconds and microseconds)
+
 ## Referenced
 
 * null: no value

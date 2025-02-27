@@ -33,6 +33,10 @@
 
 * Date
 
+## Timestamp Types
+
+* Timestamp
+
 ## Referenced
 
 * Null
@@ -44,6 +48,7 @@
 * 32-bit integer (Little Endian Two’s Complement signed 32-bit and 64-bit integers)
 * 64-bit integer (Little Endian Two’s Complement signed 32-bit and 64-bit integers)
 * Date
+* Timestamp
 * Object
 * Array
 * Undefined (Deprecated).
@@ -52,7 +57,6 @@
 * DBPointer (Deprecated).
 * JavaScript
 * Symbol (Deprecated).
-* Timestamp
 * Min key
 * Max key
 * Object

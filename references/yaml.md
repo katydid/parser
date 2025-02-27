@@ -26,6 +26,10 @@
 
 * int: However, there are cases where an integer provided may overflow the native type’s storage capability. In this case, the processor should find some manner to round-trip the integer, perhaps using a string based representation.
 
+## Timestamp Types
+
+* timestamp
+
 ## Referenced
 
 * null

@@ -47,6 +47,16 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 ## Date Types
 
 * date
+* gYearMonth
+* gYear
+* gMonthDay
+* gDay
+* gMonth
+
+## Timestamp Types
+
+* dateTime
+* time
 
 ## Referenced
 
@@ -73,14 +83,14 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 * short (A signed 16-bit integer)
 * byte (A signed 8-bit integer)
 * date
-* duration
-* dateTime
-* time
 * gYearMonth
 * gYear
 * gMonthDay
 * gDay
 * gMonth
+* dateTime
+* time
+* duration
 * anyURI
 * QName
 * NOTATION

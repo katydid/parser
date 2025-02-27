@@ -1,12 +1,5 @@
 # Types supported by each serialization format
 
-## TODO
-
-* XML
-* YAML
-* TOML
-* Parquet
-
 ## Null
 
 * :white_check_mark: ASN.1
@@ -207,7 +200,27 @@ Double-precision floating-point format IEEE-754
 * :white_check_mark: BSON
 * :x: Smile
 * :x: UBJSON
-* :x: TOML
+* :white_check_mark: TOML
+* :x: CapnProto
+* :x: Parquet
+* :white_check_mark: CBOR
+* :x: FlatBuffers
+* :x: FlexBuffers
+
+## Timestamp
+
+* :white_check_mark: ASN.1
+* :white_check_mark: JSON
+* :white_check_mark: XML
+* :white_check_mark: Protobufs
+* :white_check_mark: YAML
+* :x: Thrift
+* :white_check_mark: MsgPack
+* :white_check_mark: Avro
+* :white_check_mark: BSON
+* :x: Smile
+* :x: UBJSON
+* :white_check_mark: TOML
 * :x: CapnProto
 * :x: Parquet
 * :white_check_mark: CBOR

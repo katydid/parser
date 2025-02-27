@@ -40,6 +40,14 @@
 
 * DATE
 
+## Timestamp Types
+
+* TIME
+* UTCTime
+* GeneralizedTime
+* TIME-OF-DAY
+* DATE-TIME
+
 ## Referenced
 
 ### Generics
