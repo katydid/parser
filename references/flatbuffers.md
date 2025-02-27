@@ -39,6 +39,10 @@
 * Arrays are a convenience short-hand for a fixed-length collection of elements. (Only supported in structs)
 * Vector (nested vectors are not supported)
 
+## Union Types
+
+* Union
+
 ## Referenced
 
 * bool
@@ -57,11 +61,11 @@
 * Enums
 * Arrays are a convenience short-hand for a fixed-length collection of elements. (Only supported in structs)
 * Vector (nested vectors are not supported)
+* Union
 * Tables: consist of a name (here Monster) and a list of fields
 * Optional
 * Required
 * Struct: Similar to a table, structs consist of fields are required (so no defaults either), and fields may not be added or be deprecated.
-* Union
 
 ### References
 

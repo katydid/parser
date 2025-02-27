@@ -36,6 +36,10 @@
 
 * set
 
+## Union Types
+
+* union
+
 ## Referenced
 
 * bool: A boolean value (true or false)
@@ -49,6 +53,7 @@
 * enum
 * list
 * set
+* union
 * struct
 * map
 * optional

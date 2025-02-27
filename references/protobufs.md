@@ -51,6 +51,10 @@
 
 * repeated
 
+## Union Types
+
+* oneof
+
 ## Referenced
 
 ### Builtin
@@ -72,9 +76,9 @@
 * sfixed64:	Always eight bytes.
 * enum
 * repeated
+* oneof
 * message
 * optional
-* oneof
 * maps
 
 ### Well Known

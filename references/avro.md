@@ -50,6 +50,10 @@
 
 * array
 
+## Union Types
+
+* Unions, as mentioned above, are represented using JSON arrays.
+
 ## Referenced
 
 * null: no value
@@ -65,9 +69,9 @@
 * long: 64-bit signed integer (32-bit and 64-bit ZigZag-encoded Little Endian Base 128 (LEB128) variable-length integers)
 * Enums
 * array
+* Unions, as mentioned above, are represented using JSON arrays.
 * record	object	{"a": 1}
 * map	object	{"a": 1}
-* Unions, as mentioned above, are represented using JSON arrays.
 * Fixed
 * Names
 * Aliases

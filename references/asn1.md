@@ -66,6 +66,10 @@
 * SET
 * SET OF
 
+## Union Types
+
+* CHOICE
+
 ## Referenced
 
 ### Generics

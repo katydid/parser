@@ -77,12 +77,18 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 * element
 * ELEMENT_NODE
 
+## Union Types
+
+* choice
+* xs:choice
+
 ## Referenced
 
 ### XML Schema
 
 * boolean
 * string
+* token
 * normalizedString
 * hexBinary
 * base64Binary
@@ -111,10 +117,11 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 * dateTime
 * time
 * duration
+* xs:enumeration
+* xs:choice
 * anyURI
 * QName
 * NOTATION
-* token
 * language
 * NMTOKEN
 * NMTOKENS
@@ -125,7 +132,6 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 * IDREFS
 * ENTITY
 * ENTITIES
-* xs:enumeration
 
 ### DOM
 
@@ -150,10 +156,10 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 * token
 * whitespace
 * element
+* choice
 * attribute
 * group
 * interleave
-* choice
 * optional
 * zeroOrMore
 * oneOrMOre

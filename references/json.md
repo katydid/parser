@@ -53,6 +53,10 @@
 
 * uniqueItems
 
+## Union Types
+
+* oneOf
+
 ## Referenced
 
 ### JSON
@@ -90,6 +94,7 @@
 ### Keywords
 
 * uniqueItems
+* oneOf
 * maxItems
 * minItems
 * maxContains
@@ -98,6 +103,8 @@
 * minProperties
 * required
 * dependentRequired
+* allOf
+* anyOf
 
 ### References
 

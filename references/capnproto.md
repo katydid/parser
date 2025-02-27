@@ -34,6 +34,10 @@
 
 * Lists: List(T)
 
+## Union Types
+
+* Unions
+
 ## Referenced
 
 * Void: Void
@@ -46,8 +50,8 @@
 * Integers: Int8, Int16, Int32, Int64 (Little Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers)
 * Enums
 * Lists: List(T)
-* Structs
 * Unions
+* Structs
 
 ### References
 
