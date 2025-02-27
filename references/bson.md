@@ -20,6 +20,10 @@
 
 * Decimal128
 
+## Float64 Types
+
+* Double (8 bytes (64-bit IEEE 754-2008 binary floating point))
+
 ## Referenced
 
 * Null
@@ -27,7 +31,7 @@
 * String
 * Binary data
 * Decimal128
-* Double
+* Double (8 bytes (64-bit IEEE 754-2008 binary floating point))
 * Object
 * Array
 * Undefined (Deprecated).
@@ -49,3 +53,4 @@
 
 * https://www.mongodb.com/docs/manual/reference/bson-types/
 * https://www.mongodb.com/docs/manual/core/document/
+* https://bsonspec.org/spec

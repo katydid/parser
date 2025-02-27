@@ -19,6 +19,11 @@
 
 * decimal
 
+## Float64 Types
+
+* float: single precision (32-bit) IEEE 754 floating-point number
+* double: double precision (64-bit) IEEE 754 floating-point number
+
 ## Referenced
 
 * null: no value
@@ -28,10 +33,10 @@
 * enum	string	"FOO"
 * fixed	string	"\u00ff"
 * bytes: sequence of 8-bit unsigned bytes
-* int: 32-bit signed integer
-* long: 64-bit signed integer
 * float: single precision (32-bit) IEEE 754 floating-point number
 * double: double precision (64-bit) IEEE 754 floating-point number
+* int: 32-bit signed integer
+* long: 64-bit signed integer
 * record	object	{"a": 1}
 * array	array	[1]
 * map	object	{"a": 1}

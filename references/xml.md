@@ -26,6 +26,11 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 
 **TODO**
 
+## Float64 Types
+
+* float (float is patterned after the IEEE single-precision 32-bit floating point type [IEEE 754-1985].)
+* double (The double datatype is patterned after the IEEE double-precision 64-bit floating point type [IEEE 754-1985].)
+
 ## Referenced
 
 ### XML Schema

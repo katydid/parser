@@ -13,6 +13,11 @@
 * [byte]
 * [ubyte]
 
+## Float64 Types
+
+* float (float32)
+* double (float64)
+
 ## Referenced
 
 * bool
@@ -20,6 +25,8 @@
 * For other text encodings or general binary data use vectors ([byte] or [ubyte]) instead
 * byte
 * ubyte
+* float (float32)
+* double (float64)
 * Tables: consist of a name (here Monster) and a list of fields
 * Optional
 * Required
@@ -31,8 +38,6 @@
 * uint (uint32)
 * long (int64)
 * ulong (uint64)
-* float (float32)
-* double (float64)
 * Vector (nested vectors are not supported)
 * Enums
 * Union

@@ -132,6 +132,28 @@ These are numbers that are tough to represent with built-in types in most progra
 * :x: FlatBuffers
 * :x: FlexBuffers
 
+## Float64
+
+Double-precision floating-point format IEEE-754
+
+* :white_check_mark: ASN.1
+* :white_check_mark: JSON
+* :white_check_mark: XML
+* :white_check_mark: Protobufs
+* :white_check_mark: YAML
+* :white_check_mark: Thrift
+* :white_check_mark: MsgPack
+* :white_check_mark: Avro
+* :white_check_mark: BSON
+* :white_check_mark: Smile
+* :white_check_mark: UBJSON
+* :white_check_mark: TOML
+* :white_check_mark: CapnProto
+* :white_check_mark: Parquet
+* :white_check_mark: CBOR
+* :white_check_mark: FlatBuffers
+* :white_check_mark: FlexBuffers
+
 ## Numeric
 
 All numeric types are covered by `float64`, `int64`, `uint64` or worst case arbitrary-precision `decimal` values.

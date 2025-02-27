@@ -28,6 +28,10 @@
 
 * REAL
 
+## Float64 Types
+
+* REAL
+
 ## Referenced
 
 ### Generics

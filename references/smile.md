@@ -18,6 +18,10 @@
 * Arbitrary-length stringified signed integers
 * Arbitrary-precision decimals (with scale and stringified integral)
 
+## Float64 Types
+
+* Little Endian 32-bit and 64-bit IEEE 754 floating-point numbers encoded using 7 bit groups
+
 ## Referenced
 
 * Null
@@ -26,8 +30,8 @@
 * Binary (byte array)
 * Arbitrary-length stringified signed integers
 * Arbitrary-precision decimals (with scale and stringified integral)
+* Little Endian 32-bit and 64-bit IEEE 764 (must be a typo and probably IEEE 754) floating-point numbers encoded using 7 bit groups
 * 5-bit, 32-bit, and 64-bit ZigZag-encoded (4.2) signed Little Endian Base 128 (LEB128) (4.1) variable-length integers
-* Little Endian 32-bit and 64-bit IEEE 764 floating-point numbers encoded using 7 bit groups
 * Array
 * Object
 

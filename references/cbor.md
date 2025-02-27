@@ -17,6 +17,10 @@
 
 * Decimal Fractions and Bigfloats
 
+## Float64 Types
+
+* float: representable by IEEE 754 binary64
+
 ## Referenced
 
 * null
@@ -24,13 +28,13 @@
 * text string	N bytes (UTF-8 text)
 * byte string	N bytes
 * Decimal Fractions and Bigfloats
+* float: representable by IEEE 754 binary64
 * unsigned integer: 0..264-1
 * negative integer: range -264..264-1 inclusive
 * array	N data items (elements)
 * map	2N data items (key/value pairs)
 * tag of number: an integer in the range 0..264-1
 * simple
-* float: representable by IEEE 754 binary64
 * undefined: a substitute for a data item with an encoding problem.
 
 ### References

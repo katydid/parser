@@ -24,6 +24,10 @@
 
 * number
 
+## Float64 Types
+
+* number
+
 ## Referenced#
 
 ### JSON

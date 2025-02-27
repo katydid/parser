@@ -18,6 +18,11 @@
 
 * high-precision number
 
+## Float64 Types
+
+* float32 (See IEEE 754 Spec)
+* float64 (See IEEE 754 Spec)
+
 ## Referenced
 
 * Null Value
@@ -26,13 +31,13 @@
 * String Type
 * Binary Data
 * high-precision number
+* float32 (See IEEE 754 Spec)
+* float64 (See IEEE 754 Spec)
 * int8
 * uint8
 * int16
 * int32
 * int64
-* float32
-* float64
 * Char Type
 * Object
 * Array

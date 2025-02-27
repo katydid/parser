@@ -8,14 +8,18 @@
 
 * String (UTF8)
 
+## Float64 Types
+
+* Float: IEEE 754 binary64
+
 ## Referenced
 
 * Boolean
 * String (UTF8)
 * "for binary data, it is recommended that you use Base64"
+* Float: IEEE 754 binary64
 * Key/Value Pair
 * Integer 64 bits
-* Float: IEEE 754 binary64
 * Array
 
 ### Tables
