@@ -41,6 +41,10 @@
 * date-time
 * time
 
+## Duration Types
+
+* duration
+
 ## Referenced
 
 ### JSON
@@ -58,6 +62,7 @@
 * date
 * date-time
 * time
+* duration
 * email
 * idn-email
 * hostname
@@ -68,7 +73,6 @@
 * iri-reference
 * uri-template
 * regex
-* duration
 * ipv4
 * ipv6
 * uuid

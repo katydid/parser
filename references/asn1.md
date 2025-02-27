@@ -48,6 +48,10 @@
 * TIME-OF-DAY
 * DATE-TIME
 
+## Duration Types
+
+* DURATION
+
 ## Referenced
 
 ### Generics

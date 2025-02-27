@@ -38,6 +38,10 @@
 * Time (milliseconds and microseconds)
 * Timestamp (milliseconds and microseconds)
 
+## Duration Types
+
+* Duration
+
 ## Referenced
 
 * null: no value

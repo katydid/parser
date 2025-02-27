@@ -39,6 +39,10 @@
 
 * Timestamp
 
+## Duration Types
+
+* Duration
+
 ## Referenced
 
 ### Builtin
@@ -68,9 +72,9 @@
 ### Well Known
 
 * Timestamp (message)
+* Duration (message)
 * Any (message)
 * Api (message)
-* Duration (message)
 * Enum (message)
 * Empty (message)
 * Field (message)

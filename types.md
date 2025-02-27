@@ -227,27 +227,23 @@ Double-precision floating-point format IEEE-754
 * :x: FlatBuffers
 * :x: FlexBuffers
 
-## Date/Time/Duration
+## Duration
 
-* :white_check_mark: ASN.1 (Date, Time and Date-time)
-* :x: JSON
-* :grey_question: XML
-* :white_check_mark: Protobufs (Timestamp, Duration)
-* :grey_question: YAML
+* :white_check_mark: ASN.1
+* :white_check_mark: JSON
+* :white_check_mark: XML
+* :white_check_mark: Protobufs
+* :x: YAML
 * :x: Thrift
-* :white_check_mark: MsgPack (32-bit, 64-bit, and 96-bit UNIX seconds and nanoseconds Epoch timestamps)
+* :white_check_mark: MsgPack
 * :white_check_mark: Avro
-  + Date (days from the UNIX Epoch)
-  + Time (milliseconds and microseconds)
-  + Timestamp (milliseconds and microseconds)
-  + Duration
-* :white_check_mark: BSON (MongoDB Timestamp)
+* :x: BSON
 * :x: Smile
 * :x: UBJSON
-* :grey_question: TOML
+* :x: TOML
 * :x: CapnProto
-* :grey_question: Parquet
-* :white_check_mark: CBOR (Datetime, Epoch)
+* :x: Parquet
+* :x: CBOR
 * :x: FlatBuffers
 * :x: FlexBuffers
 

@@ -58,6 +58,10 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 * dateTime
 * time
 
+## Duration Types
+
+* duration
+
 ## Referenced
 
 ### XML Schema
