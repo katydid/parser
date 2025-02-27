@@ -31,6 +31,10 @@
 
 * Timestamp represents an instantaneous point on the time-line in the world that is independent from time zones or calendars. Maximum precision is nanoseconds. (32-bit, 64-bit, and 96-bit UNIX seconds and nanoseconds Epoch timestamps)
 
+## List Types
+
+* Array represents a sequence of objects (fixarray or array 16/32)
+
 ## Referenced
 
 * Nil represents nil

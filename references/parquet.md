@@ -28,6 +28,11 @@
 * INT32: 32 bit signed ints
 * INT64: 64 bit signed ints
 
+## List Types
+
+* LIST
+* REPEATED
+
 ## Referenced
 
 * NULL values are not encoded in the data. 
@@ -40,12 +45,12 @@
 * INT32: 32 bit signed ints
 * INT64: 64 bit signed ints
 * INT96: 96 bit signed ints
+* LIST
+* REPEATED
 * MAP
 * MAP_KEY_VALUE
-* LIST
 * REQUIRED
 * OPTIONAL
-* REPEATED
 
 ### References
 

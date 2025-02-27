@@ -31,6 +31,10 @@
 * int32 (Big Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers)
 * int64 (Big Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers)
 
+## List Types
+
+* Array
+
 ## Referenced
 
 * Null Value
@@ -46,9 +50,9 @@
 * int16 (Big Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers)
 * int32 (Big Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers)
 * int64 (Big Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers)
+* Array
 * Char Type
 * Object
-* Array
 
 ### References
 

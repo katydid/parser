@@ -38,6 +38,10 @@
 * Standard Date/Time String
 * Epoch-Based Date/Time
 
+## List Types
+
+* array	N data items (elements)
+
 ## Referenced
 
 * null

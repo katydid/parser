@@ -47,6 +47,10 @@
 
 * enum
 
+## List Types
+
+* repeated
+
 ## Referenced
 
 ### Builtin
@@ -67,8 +71,8 @@
 * sfixed32:	Always four bytes.
 * sfixed64:	Always eight bytes.
 * enum
-* message
 * repeated
+* message
 * optional
 * oneof
 * maps

@@ -37,6 +37,10 @@
 
 * Timestamp
 
+## List Types
+
+* Array
+
 ## Referenced
 
 * Null
@@ -49,8 +53,8 @@
 * 64-bit integer (Little Endian Two’s Complement signed 32-bit and 64-bit integers)
 * Date
 * Timestamp
-* Object
 * Array
+* Object
 * Undefined (Deprecated).
 * ObjectId (example: `_id: ObjectId("5099803df3f4948bd2f98391")`)
 * Regular Expression

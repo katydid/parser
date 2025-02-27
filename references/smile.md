@@ -26,6 +26,10 @@
 
 * 5-bit, 32-bit, and 64-bit ZigZag-encoded signed Little Endian Base 128 (LEB128) variable-length integers
 
+## List Types
+
+* Array
+
 ## Referenced
 
 * Null

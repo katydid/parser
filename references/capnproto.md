@@ -30,6 +30,10 @@
 
 * Enums
 
+## List Types
+
+* Lists: List(T)
+
 ## Referenced
 
 * Void: Void
@@ -40,10 +44,10 @@
 * Float64 (Floating-points: Encoded in little-endian IEEE-754 format.)
 * Unsigned integers: UInt8, UInt16, UInt32, UInt64 (Little Endian 8-bit, 16-bit, 32-bit, and 64-bit unsigned integers)
 * Integers: Int8, Int16, Int32, Int64 (Little Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers)
+* Enums
 * Lists: List(T)
 * Structs
 * Unions
-* Enums
 
 ### References
 

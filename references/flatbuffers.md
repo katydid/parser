@@ -34,6 +34,11 @@
 
 * Enums
 
+## List Types
+
+* Arrays are a convenience short-hand for a fixed-length collection of elements. (Only supported in structs)
+* Vector (nested vectors are not supported)
+
 ## Referenced
 
 * bool
@@ -49,13 +54,13 @@
 * short (int16) (Little Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers)
 * int (int32) (Little Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers)
 * long (int64) (Little Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers)
+* Enums
+* Arrays are a convenience short-hand for a fixed-length collection of elements. (Only supported in structs)
+* Vector (nested vectors are not supported)
 * Tables: consist of a name (here Monster) and a list of fields
 * Optional
 * Required
 * Struct: Similar to a table, structs consist of fields are required (so no defaults either), and fields may not be added or be deprecated.
-* Arrays are a convenience short-hand for a fixed-length collection of elements. (Only supported in structs)
-* Vector (nested vectors are not supported)
-* Enums
 * Union
 
 ### References

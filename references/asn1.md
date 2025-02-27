@@ -56,6 +56,11 @@
 
 * ENUMERATED
 
+## List Types
+
+* SEQUENCE
+* SEQUENCE OF
+
 ## Referenced
 
 ### Generics

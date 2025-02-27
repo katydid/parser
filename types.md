@@ -267,22 +267,24 @@ Double-precision floating-point format IEEE-754
 * :white_check_mark: FlatBuffers
 * :x: FlexBuffers
 
-## List / Sequence / Array / Vector
+## List
+
+Also referred to as Sequence, Array, Vector, repeated or elements.
 
 * :white_check_mark: ASN.1
 * :white_check_mark: JSON
-* :grey_question: XML
+* :white_check_mark: XML
 * :white_check_mark: Protobufs
-* :grey_question: YAML
+* :white_check_mark: YAML
 * :white_check_mark: Thrift
 * :white_check_mark: MsgPack
 * :white_check_mark: Avro
 * :white_check_mark: BSON
 * :white_check_mark: Smile
 * :white_check_mark: UBJSON
-* :grey_question: TOML
+* :white_check_mark: TOML
 * :white_check_mark: CapnProto
-* :grey_question: Parquet
+* :white_check_mark: Parquet
 * :white_check_mark: CBOR
 * :white_check_mark: FlatBuffers
 * :white_check_mark: FlexBuffers

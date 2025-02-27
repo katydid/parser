@@ -10,6 +10,12 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 ## String Types
 
 * string
+* normalizedString
+* text
+* token
+* whitespace
+* TEXT_NODE
+* COMMENT_NODE
 
 ## Byte Array Types
 
@@ -66,12 +72,18 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 
 * xs:enumeration
 
+## List Types
+
+* element
+* ELEMENT_NODE
+
 ## Referenced
 
 ### XML Schema
 
 * boolean
 * string
+* normalizedString
 * hexBinary
 * base64Binary
 * decimal (A decimal value)
@@ -102,7 +114,6 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 * anyURI
 * QName
 * NOTATION
-* normalizedString
 * token
 * language
 * NMTOKEN
@@ -119,13 +130,13 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 ### DOM
 
 * TEXT_NODE
+* COMMENT_NODE
 * ELEMENT_NODE
 * ATTRIBUTE_NODE
 * CDATA_SECTION_NODE
 * ENTITY_REFERENCE_NODE
 * ENTITY_NODE
 * PROCESSING_INSTRUCTION_NODE
-* COMMENT_NODE
 * DOCUMENT_NODE
 * DOCUMENT_TYPE_NODE
 * DOCUMENT_FRAGMENT_NODE

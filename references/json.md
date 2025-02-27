@@ -45,6 +45,10 @@
 
 * duration
 
+## List Types
+
+* array
+
 ## Referenced
 
 ### JSON

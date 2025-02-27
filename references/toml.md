@@ -26,6 +26,10 @@
 * Local Date-Time
 * Local Time
 
+## List Types
+
+* Array
+
 ## Referenced
 
 * Boolean
@@ -33,8 +37,8 @@
 * "for binary data, it is recommended that you use Base64"
 * Float: IEEE 754 binary64
 * Integer 64 bits
-* Key/Value Pair
 * Array
+* Key/Value Pair
 
 ### Tables
 

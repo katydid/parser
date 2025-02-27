@@ -28,6 +28,10 @@
 
 * enum
 
+## List Types
+
+* list
+
 ## Referenced
 
 * bool: A boolean value (true or false)
@@ -39,8 +43,8 @@
 * i32: A 32-bit signed integer (16-bit, 32-bit, and 64-bit ZigZag-encoded Little Endian Base 128 variable-length signed integers)
 * i64: A 64-bit signed integer (16-bit, 32-bit, and 64-bit ZigZag-encoded Little Endian Base 128 variable-length signed integers)
 * enum
-* struct
 * list
+* struct
 * set
 * map
 * optional
