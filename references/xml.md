@@ -82,6 +82,10 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 * choice
 * xs:choice
 
+## Object Types
+
+* ATTRIBUTE_NODE
+
 ## Referenced
 
 ### XML Schema

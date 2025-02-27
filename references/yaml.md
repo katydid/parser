@@ -38,6 +38,16 @@
 
 * set
 
+## Map Types
+
+* map
+* omap
+
+## Object Types
+
+* map
+* omap
+
 ## Referenced
 
 * null
@@ -49,8 +59,8 @@
 * timestamp
 * seq
 * set
-* map
-* omap
+* map (- 2001-07-23 ? [ New York Yankees,Atlanta Braves ] : [ 2001-07-02, 2001-08-12, 2001-08-14] -- mapping between sequences)
+* omap (ordered map)
 * pairs
 * merge
 * value
@@ -59,3 +69,4 @@
 ### References
 
 * https://yaml.org/type/
+* https://www.tutorialspoint.com/yaml/yaml_collections_and_structures.htm

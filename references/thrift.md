@@ -40,6 +40,14 @@
 
 * union
 
+## Map Types
+
+* map
+
+## Object Types
+
+* struct
+
 ## Referenced
 
 * bool: A boolean value (true or false)
@@ -54,8 +62,8 @@
 * list
 * set
 * union
-* struct
 * map
+* struct
 * optional
 * required
 

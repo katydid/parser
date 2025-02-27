@@ -38,6 +38,10 @@
 
 * Unions
 
+## Object Types
+
+* Structs
+
 ## Referenced
 
 * Void: Void

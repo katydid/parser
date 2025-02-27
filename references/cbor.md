@@ -42,6 +42,14 @@
 
 * array	N data items (elements)
 
+## Map Types
+
+* map	2N data items (key/value pairs)
+
+## Object Types
+
+* map	2N data items (key/value pairs)
+
 ## Referenced
 
 * null

@@ -57,6 +57,10 @@
 
 * oneOf
 
+## Object Types
+
+* object
+
 ## Referenced
 
 ### JSON
@@ -66,8 +70,8 @@
 * string
 * number
 * integer
-* object
 * array
+* object
 
 ### JSON-Schema
 

@@ -43,6 +43,10 @@
 
 * Union
 
+## Object Types
+
+* Tables: consist of a name and a list of fields
+
 ## Referenced
 
 * bool

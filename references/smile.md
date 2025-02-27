@@ -30,6 +30,10 @@
 
 * Array
 
+## Object Types
+
+* Object
+
 ## Referenced
 
 * Null

@@ -202,7 +202,7 @@ Double-precision floating-point format IEEE-754
 * :x: UBJSON
 * :white_check_mark: TOML
 * :x: CapnProto
-* :x: Parquet
+* :white_check_mark: Parquet
 * :white_check_mark: CBOR
 * :x: FlatBuffers
 * :x: FlexBuffers
@@ -222,7 +222,7 @@ Double-precision floating-point format IEEE-754
 * :x: UBJSON
 * :white_check_mark: TOML
 * :x: CapnProto
-* :x: Parquet
+* :white_check_mark: Parquet
 * :white_check_mark: CBOR
 * :x: FlatBuffers
 * :x: FlexBuffers
@@ -262,7 +262,7 @@ Double-precision floating-point format IEEE-754
 * :x: UBJSON
 * :x: TOML
 * :white_check_mark: CapnProto
-* :x: Parquet
+* :white_check_mark: Parquet
 * :x: CBOR
 * :white_check_mark: FlatBuffers
 * :x: FlexBuffers
@@ -331,46 +331,49 @@ Also referred to as Oneof or Choice.
 * :white_check_mark: FlatBuffers
 * :x: FlexBuffers
 
-## Struct / Message / Record / Object / Tables
+## Map
 
-Different from maps, these fields/keys are all of type string.
+Maps are key-value pairs, where the keys are not limited to strings.
 
 * :x: ASN.1
-* :white_check_mark: JSON
-* :grey_question: XML
+* :x: JSON
+* :x: XML
 * :white_check_mark: Protobufs
-* :grey_question: YAML
+* :white_check_mark: YAML
 * :white_check_mark: Thrift
-* :x: MsgPack
+* :white_check_mark: MsgPack
+* :x: Avro
+* :x: BSON
+* :x: Smile
+* :x: UBJSON
+* :x: TOML
+* :x: CapnProto
+* :white_check_mark: Parquet
+* :white_check_mark: CBOR
+* :x: FlatBuffers
+* :white_check_mark: FlexBuffers
+
+## Object
+
+Also referred to as Struct, Message, Record, Object or Table.
+These are key-value pairs, where the keys are limited to strings.
+
+* :white_check_mark: ASN.1
+* :white_check_mark: JSON
+* :white_check_mark: XML
+* :white_check_mark: Protobufs
+* :white_check_mark: YAML
+* :white_check_mark: Thrift
+* :white_check_mark: MsgPack
 * :white_check_mark: Avro
 * :white_check_mark: BSON
 * :white_check_mark: Smile
 * :white_check_mark: UBJSON
-* :grey_question: TOML
+* :white_check_mark: TOML
 * :white_check_mark: CapnProto
-* :grey_question: Parquet
-* :x: CBOR
-* :white_check_mark: FlatBuffers
-* :x: FlexBuffers
-
-## Map
-
-* :x: ASN.1
-* :x: JSON
-* :grey_question: XML
-* :white_check_mark: Protobufs
-* :grey_question: YAML
-* :white_check_mark: Thrift
-* :white_check_mark: MsgPack
-* :white_check_mark: Avro
-* :x: BSON
-* :x: Smile
-* :x: UBJSON
-* :grey_question: TOML
-* :x: CapnProto
-* :grey_question: Parquet
+* :white_check_mark: Parquet
 * :white_check_mark: CBOR
-* :x: FlatBuffers
+* :white_check_mark: FlatBuffers
 * :white_check_mark: FlexBuffers
 
 ## UUID

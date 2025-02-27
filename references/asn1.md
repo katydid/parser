@@ -58,17 +58,20 @@
 
 ## List Types
 
-* SEQUENCE
 * SEQUENCE OF
 
 ## Set Types
 
-* SET
 * SET OF
 
 ## Union Types
 
 * CHOICE
+
+## Object Types
+
+* SET (fields in any order)
+* SEQUENCE (fields in order)
 
 ## Referenced
 
@@ -122,3 +125,7 @@
 * https://www.oss.com/asn1/resources/asn1-made-simple/asn1-quick-reference.html
 * "A survey of json-compatible binary serialization specifications - Juan Cruz Viotti and Mital Kinderkhedia (2022)"
 * https://www.oss.com/asn1/resources/asn1-made-simple/asn1-quick-reference/enumerated.html
+* https://www.oss.com/asn1/resources/asn1-made-simple/asn1-quick-reference/set.html
+* https://www.oss.com/asn1/resources/asn1-made-simple/asn1-quick-reference/sequenceof.html
+* https://www.oss.com/asn1/resources/asn1-made-simple/asn1-quick-reference/sequence.html
+* https://www.oss.com/asn1/resources/asn1-made-simple/asn1-quick-reference/set.html

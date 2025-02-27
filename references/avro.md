@@ -54,6 +54,11 @@
 
 * Unions, as mentioned above, are represented using JSON arrays.
 
+## Object Types
+
+* record
+* map
+
 ## Referenced
 
 * null: no value
@@ -71,7 +76,7 @@
 * array
 * Unions, as mentioned above, are represented using JSON arrays.
 * record	object	{"a": 1}
-* map	object	{"a": 1}
+* map	object	{"a": 1} (Map keys are assumed to be strings.)
 * Fixed
 * Names
 * Aliases

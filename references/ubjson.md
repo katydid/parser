@@ -35,6 +35,10 @@
 
 * Array
 
+## Object Types
+
+* Object
+
 ## Referenced
 
 * Null Value
@@ -51,8 +55,8 @@
 * int32 (Big Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers)
 * int64 (Big Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers)
 * Array
-* Char Type
 * Object
+* Char Type
 
 ### References
 

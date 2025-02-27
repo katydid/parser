@@ -55,6 +55,14 @@
 
 * oneof
 
+## Map Types
+
+* maps
+
+## Object Types
+
+* message
+
 ## Referenced
 
 ### Builtin
@@ -77,9 +85,9 @@
 * enum
 * repeated
 * oneof
+* maps
 * message
 * optional
-* maps
 
 ### Well Known
 

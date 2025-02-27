@@ -41,6 +41,10 @@
 
 * Array
 
+## Object Types
+
+* Object
+
 ## Referenced
 
 * Null
@@ -63,8 +67,6 @@
 * Symbol (Deprecated).
 * Min key
 * Max key
-* Object
-* Arrays
 
 ### References
 

@@ -29,6 +29,13 @@
 ## List Types
 
 * Array
+* Array of Tables
+
+## Object Types
+
+* Key/Value Pair (Keys are strings)
+* Table (also known as hash tables or dictionaries) are collections of key/value pairs.
+* Inline Table
 
 ## Referenced
 
@@ -38,15 +45,15 @@
 * Float: IEEE 754 binary64
 * Integer 64 bits
 * Array
-* Key/Value Pair
+* Key/Value Pair (Keys are strings)
 
 ### Tables
 
 Tables also known as hash tables or dictionaries
 
-* Table
-* Inline Table
 * Array of Tables
+* Table (also known as hash tables or dictionaries) are collections of key/value pairs.
+* Inline Table
 
 ### Times
 
