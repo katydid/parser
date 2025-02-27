@@ -61,6 +61,11 @@
 * SEQUENCE
 * SEQUENCE OF
 
+## Set Types
+
+* SET
+* SET OF
+
 ## Referenced
 
 ### Generics

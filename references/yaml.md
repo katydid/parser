@@ -34,6 +34,10 @@
 
 * seq
 
+## Set Types
+
+* set
+
 ## Referenced
 
 * null
@@ -44,10 +48,10 @@
 * float: The valid range and accuracy depends on the implementation, though 32 bit IEEE floats should be safe.
 * timestamp
 * seq
+* set
 * map
 * omap
 * pairs
-* set
 * merge
 * value
 * yaml

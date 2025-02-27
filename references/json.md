@@ -49,6 +49,10 @@
 
 * array
 
+## Set Types
+
+* uniqueItems
+
 ## Referenced
 
 ### JSON
@@ -83,7 +87,20 @@
 * json-pointer
 * relative-json-pointer
 
+### Keywords
+
+* uniqueItems
+* maxItems
+* minItems
+* maxContains
+* minContains
+* maxProperties
+* minProperties
+* required
+* dependentRequired
+
 ### References
 
 * https://json-schema.org/understanding-json-schema/reference/type
+* https://json-schema.org/draft/2020-12/draft-bhutton-json-schema-validation-00#rfc.section.6.4.3
 * "A survey of json-compatible binary serialization specifications - Juan Cruz Viotti and Mital Kinderkhedia (2022)"

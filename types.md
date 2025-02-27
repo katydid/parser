@@ -289,6 +289,26 @@ Also referred to as Sequence, Array, Vector, repeated or elements.
 * :white_check_mark: FlatBuffers
 * :white_check_mark: FlexBuffers
 
+## Set
+
+* :white_check_mark: ASN.1
+* :white_check_mark: JSON
+* :x: XML
+* :x: Protobufs
+* :white_check_mark: YAML
+* :white_check_mark: Thrift
+* :x: MsgPack
+* :x: Avro
+* :x: BSON
+* :x: Smile
+* :x: UBJSON
+* :x: TOML
+* :x: CapnProto
+* :x: Parquet
+* :x: CBOR
+* :x: FlatBuffers
+* :x: FlexBuffers
+
 ## Struct / Message / Record / Object / Tables
 
 Different from maps, these fields/keys are all of type string.
@@ -330,26 +350,6 @@ Different from maps, these fields/keys are all of type string.
 * :white_check_mark: CBOR
 * :x: FlatBuffers
 * :white_check_mark: FlexBuffers
-
-## Set
-
-* :white_check_mark: ASN.1
-* :x: JSON
-* :grey_question: XML
-* :x: Protobufs
-* :grey_question: YAML
-* :white_check_mark: Thrift
-* :x: MsgPack
-* :x: Avro
-* :white_check_mark: BSON
-* :x: Smile
-* :x: UBJSON
-* :grey_question: TOML
-* :x: CapnProto
-* :grey_question: Parquet
-* :x: CBOR
-* :x: FlatBuffers
-* :x: FlexBuffers
 
 ## Union / Oneof / Choice
 
