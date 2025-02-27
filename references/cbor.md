@@ -8,6 +8,7 @@
 ## String Types
 
 * text string
+* regular expression
 
 ## Byte Array Types
 
@@ -50,11 +51,20 @@
 
 * map	2N data items (key/value pairs)
 
+## Extra Types
+
+* tag of number: an integer in the range 0..264-1
+* simple
+* undefined: a substitute for a data item with an encoding problem.
+* Base64 (encoded as text string)
+* MIME Message (encoded as text string)
+
 ## Referenced
 
 * null
 * boolean
 * text string	N bytes (UTF-8 text)
+* regular expression
 * byte string	N bytes
 * Decimal Fractions and Bigfloats (Arbitrary-precision signed decimals (mantissa and scale-based)) (Big Endian arbitrary-length positive and negative integers)
 * float: representable by IEEE 754 binary64 (Big Endian 32-bit and 64-bit IEEE 764 floating-point numbers)
@@ -68,6 +78,8 @@
 * tag of number: an integer in the range 0..264-1
 * simple
 * undefined: a substitute for a data item with an encoding problem.
+* Base64 (encoded as text string)
+* MIME Message (encoded as text string)
 
 ### References
 

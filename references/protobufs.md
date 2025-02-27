@@ -63,6 +63,23 @@
 
 * message
 
+## Extra Types
+
+* optional
+* Any (message)
+* Api (message)
+* Field (message)
+* Field.Cardinality (enum)
+* Field.Kind (enum)
+* FieldMask (message)
+* Method (message)
+* Mixin (message)
+* Option (message)
+* SourceContext (message)
+* Struct (message)
+* Syntax (enum)
+* Type (message)
+
 ## Referenced
 
 ### Builtin

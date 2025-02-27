@@ -376,30 +376,3 @@ These are key-value pairs, where the keys are limited to strings.
 * :white_check_mark: FlatBuffers
 * :white_check_mark: FlexBuffers
 
-## UUID
-
-Avro, MongoDB also supports UUID
-
-## Extra ASN.1 types
-
-Arbitrary-length bit array
-
-## Regular expression
-
-MongoDB and CBOR
-
-## Extra MongoDB types
-
-* ObjectId: The 12-byte ObjectId consists of: A 4-byte timestamp, representing the ObjectId's creation, measured in seconds since the Unix epoch. A 5-byte random value generated once per process. This random value is unique to the machine and process. A 3-byte incrementing counter, initialized to a random value.
-* DBPointer (Deprecated)
-* Javascript
-* Function (subtype of binData)
-* MD5 (subtype of binData)
-* Symbol (Deprecated)
-* Undefined (Deprecated)
-
-## Extra CBOR Types
-
-* Base64 (encoded as text string)
-* MIME Message (encoded as text string)
-* Undefined: a substitute for a data item with an encoding problem.

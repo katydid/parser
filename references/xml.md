@@ -86,6 +86,10 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 
 * ATTRIBUTE_NODE
 
+## Extra Types
+
+**TODO**
+
 ## Referenced
 
 ### XML Schema

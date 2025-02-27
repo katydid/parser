@@ -48,6 +48,10 @@
 
 * struct
 
+## Extra Types
+
+* optional
+
 ## Referenced
 
 * bool: A boolean value (true or false)

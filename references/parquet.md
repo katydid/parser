@@ -58,6 +58,13 @@
 * MAP
 * MAP_KEY_VALUE
 
+## Extra Types
+
+* OPTIONAL
+* UUID
+* GEOMETRY
+* GEOGRAPHY
+
 ## Referenced
 
 * NULL values are not encoded in the data. 
@@ -78,6 +85,8 @@
 * ENUM
 * LIST
 * REPEATED
+* MAP
+* MAP_KEY_VALUE
 * REQUIRED
 * OPTIONAL
 * UUID

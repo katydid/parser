@@ -46,6 +46,11 @@
 ## Object Types
 
 * Tables: consist of a name and a list of fields
+* Struct: Similar to a table, structs consist of fields are required (so no defaults either), and fields may not be added or be deprecated.
+
+## Extra Types
+
+* Optional
 
 ## Referenced
 
@@ -67,9 +72,9 @@
 * Vector (nested vectors are not supported)
 * Union
 * Tables: consist of a name (here Monster) and a list of fields
+* Struct: Similar to a table, structs consist of fields are required (so no defaults either), and fields may not be added or be deprecated.
 * Optional
 * Required
-* Struct: Similar to a table, structs consist of fields are required (so no defaults either), and fields may not be added or be deprecated.
 
 ### References
 

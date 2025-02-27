@@ -39,6 +39,10 @@
 
 * Object
 
+## Extra Types
+
+* Char Type
+
 ## Referenced
 
 * Null Value

@@ -8,13 +8,14 @@
 ## String Types
 
 * String
-* ObjectId (example: `_id: ObjectId("5099803df3f4948bd2f98391")`)
 * Regular Expression
 * JavaScript
 
 ## Byte Array Types
 
 * Binary data
+* Function (subtype of binData)
+* MD5 (subtype of binData)
 
 ## Decimal Types
 
@@ -45,12 +46,23 @@
 
 * Object
 
+## Extra Types
+
+* ObjectId (example: `_id: ObjectId("5099803df3f4948bd2f98391")`)
+* Min key
+* Max key
+* Uuid
+
 ## Referenced
 
 * Null
 * Boolean
 * String
+* JavaScript
+* Regular Expression
 * Binary data
+* Function (subtype of binData)
+* MD5 (subtype of binData)
 * Decimal128
 * Double (8 bytes (64-bit IEEE 754-2008 binary floating point)) (Little Endian 64-bit and 128-bit IEEE 754 floating-point numbers)
 * 32-bit integer (Little Endian Two’s Complement signed 32-bit and 64-bit integers)
@@ -59,14 +71,12 @@
 * Timestamp
 * Array
 * Object
-* Undefined (Deprecated).
 * ObjectId (example: `_id: ObjectId("5099803df3f4948bd2f98391")`)
-* Regular Expression
-* DBPointer (Deprecated).
-* JavaScript
-* Symbol (Deprecated).
 * Min key
 * Max key
+* Undefined (Deprecated).
+* DBPointer (Deprecated).
+* Symbol (Deprecated).
 
 ### References
 

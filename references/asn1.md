@@ -73,6 +73,11 @@
 * SET (fields in any order)
 * SEQUENCE (fields in order)
 
+## Extra Types
+
+* BIT STRING (Arbitrary-length bit array)
+* OBJECT IDENTIFIER
+
 ## Referenced
 
 ### Generics

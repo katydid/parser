@@ -48,6 +48,13 @@
 * map
 * omap
 
+## Extra Types
+
+* pairs
+* merge
+* value
+* yaml
+
 ## Referenced
 
 * null

@@ -43,6 +43,10 @@
 
 * Map represents key-value pairs of objects (fixmap or map 16/32)
 
+## Extra Types
+
+* Extension represents a tuple of type information and a byte array where type information is an integer whose meaning is defined by applications or MessagePack specification (fixext or ext 8/16/32)
+
 ## Referenced
 
 * Nil represents nil

@@ -59,6 +59,13 @@
 * record
 * map
 
+## Extra Types
+
+* Fixed
+* Names
+* Aliases
+* Uuid
+
 ## Referenced
 
 * null: no value
