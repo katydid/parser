@@ -22,7 +22,7 @@
 
 ## Float64 Types
 
-* Double (8 bytes (64-bit IEEE 754-2008 binary floating point))
+* Double (8 bytes (64-bit IEEE 754-2008 binary floating point)) (Little Endian 64-bit and 128-bit IEEE 754 floating-point numbers)
 
 ## Referenced
 
@@ -31,7 +31,7 @@
 * String
 * Binary data
 * Decimal128
-* Double (8 bytes (64-bit IEEE 754-2008 binary floating point))
+* Double (8 bytes (64-bit IEEE 754-2008 binary floating point)) (Little Endian 64-bit and 128-bit IEEE 754 floating-point numbers)
 * Object
 * Array
 * Undefined (Deprecated).
@@ -54,3 +54,4 @@
 * https://www.mongodb.com/docs/manual/reference/bson-types/
 * https://www.mongodb.com/docs/manual/core/document/
 * https://bsonspec.org/spec
+* "A survey of json-compatible binary serialization specifications - Juan Cruz Viotti and Mital Kinderkhedia (2022)"

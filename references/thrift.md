@@ -15,14 +15,14 @@
 
 ## Float64 Types
 
-* double: A 64-bit floating point number (Values of type double are first converted to an int64 according to the IEEE 754 floating-point "double format" bit layout.)
+* double: A 64-bit floating point number (Values of type double are first converted to an int64 according to the IEEE 754 floating-point "double format" bit layout.) (Little Endian 64-bit IEEE 764 floating-point numbers)
 
 ## Referenced
 
 * bool: A boolean value (true or false)
 * string: A text string encoded using UTF-8 encoding
 * binary: a sequence of unencoded bytes
-* double: A 64-bit floating point number (Values of type double are first converted to an int64 according to the IEEE 754 floating-point "double format" bit layout.)
+* double: A 64-bit floating point number (Values of type double are first converted to an int64 according to the IEEE 754 floating-point "double format" bit layout.) (Little Endian 64-bit IEEE 764 floating-point numbers)
 * byte: An 8-bit signed integer
 * i16: A 16-bit signed integer
 * i32: A 32-bit signed integer
@@ -39,3 +39,4 @@
 * https://thrift.apache.org/docs/types
 * https://thrift.apache.org/docs/idl
 * https://github.com/apache/thrift/blob/master/doc/specs/thrift-binary-protocol.md
+* "A survey of json-compatible binary serialization specifications - Juan Cruz Viotti and Mital Kinderkhedia (2022)"

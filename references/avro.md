@@ -21,8 +21,8 @@
 
 ## Float64 Types
 
-* float: single precision (32-bit) IEEE 754 floating-point number
-* double: double precision (64-bit) IEEE 754 floating-point number
+* float: single precision (32-bit) IEEE 754 floating-point number (Little Endian 32-bit and 64-bit IEEE 764 floating-point numbers)
+* double: double precision (64-bit) IEEE 754 floating-point number (Little Endian 32-bit and 64-bit IEEE 764 floating-point numbers)
 
 ## Referenced
 
@@ -33,8 +33,8 @@
 * enum	string	"FOO"
 * fixed	string	"\u00ff"
 * bytes: sequence of 8-bit unsigned bytes
-* float: single precision (32-bit) IEEE 754 floating-point number
-* double: double precision (64-bit) IEEE 754 floating-point number
+* float: single precision (32-bit) IEEE 754 floating-point number (Little Endian 32-bit and 64-bit IEEE 764 floating-point numbers)
+* double: double precision (64-bit) IEEE 754 floating-point number (Little Endian 32-bit and 64-bit IEEE 764 floating-point numbers)
 * int: 32-bit signed integer
 * long: 64-bit signed integer
 * record	object	{"a": 1}
@@ -46,3 +46,4 @@
 
 * https://avro.apache.org/docs/1.11.1/specification/
 * https://avro.apache.org/docs/1.12.0/specification/#decimal
+* "A survey of json-compatible binary serialization specifications - Juan Cruz Viotti and Mital Kinderkhedia (2022)"

@@ -165,18 +165,6 @@ decimal:
 
 * Big Endian Two’s Complement signed integers of user-defined length
 * Big Endian unsigned integers of user-defined length
-* Real numbers consisting of up to 255 bytes encoding the base, scale, exponent, and mantissa
-* Arbitrary-length ASCII-encoded decimal numbers
-
-### JSON
-
-decimal:
-
-* Arbitrary-precision ASCII-encoded numbers
-
-### XML
-
-* TODO
 
 ### Protobufs
 
@@ -187,18 +175,12 @@ float64, int64 and uint64:
 * 32-bit and 64-bit ZigZag-encoded Little Endian Base 128 variable-length signed integers
 * Little Endian 32-bit and 64-bit fixed-length unsigned integers
 * Little Endian 32-bit and 64-bit fixed-length Two’s Complement signed integers
-* Little Endian 32-bit and 64-bit IEEE 764 floating-point numbers
-
-### YAML
-
-* TODO
 
 ### Thrift
 
 int64 and float64:
 
 * 16-bit, 32-bit, and 64-bit ZigZag-encoded Little Endian Base 128 variable-length signed integers
-* Little Endian 64-bit IEEE 764 floating-point numbers
 
 ### MsgPack
 
@@ -206,7 +188,6 @@ int64, uint64 and float64:
 
 * Big Endian 5-bit, 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers
 * Big Endian 7-bit, 8-bit, 16-bit, 32-bit, and 64-bit unsigned integers
-* Big Endian 32-bit and 64-bit IEEE 764 floating-point numbers
 
 ### Avro
 
@@ -214,7 +195,6 @@ int64, float64 and decimal:
 
 * 32-bit and 64-bit ZigZag-encoded Little Endian Base 128 (LEB128) variable-length integers
 * Arbitrary-precision Two’s Complement signed decimal numbers
-* Little Endian 32-bit and 64-bit IEEE 764 floating-point numbers
 
 ### BSON
 
@@ -222,16 +202,12 @@ int64, uint64, float64 and decimal:
 
 * Little Endian Two’s Complement signed 32-bit and 64-bit integers
 * Little Endian unsigned 64-bit integers
-* Little Endian 64-bit and 128-bit IEEE 764 floating-point numbers
 
 ### Smile
 
 int64, float64, decimal:
 
 * 5-bit, 32-bit, and 64-bit ZigZag-encoded signed Little Endian Base 128 (LEB128) variable-length integers
-* Little Endian 32-bit and 64-bit IEEE 764 floating-point numbers encoded using 7 bit groups
-* Arbitrary-length stringified signed integers
-* Arbitrary-precision decimals (with scale and stringified integral)
 
 ### UBJSON
 
@@ -239,12 +215,6 @@ int64, float64, decimal:
 
 * Big Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers
 * Big Endian 8-bit unsigned integers
-* Big Endian 32-bit and 64-bit IEEE 764 floating-point numbers
-* Arbitrary-precision ASCII-encoded numbers
-
-### TOML
-
-TODO
 
 ### CapnProto
 
@@ -252,11 +222,6 @@ int64, uint64, float64:
 
 * Little Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers
 * Little Endian 8-bit, 16-bit, 32-bit, and 64-bit unsigned integers
-* Little Endian 32-bit and 64-bit IEEE 764 floating-point numbers
-
-### Parquet
-
-TODO
 
 ### CBOR
 
@@ -264,9 +229,6 @@ uint64, int64, float64, decimal:
 
 * Big Endian 5-bit, 8-bit, 16-bit, 32-bit, and 64-big unsigned integers
 * Big Endian 5-bit, 8-bit, 16-bit, 32-bit, and 64-big negative integers (encoded as−1 minus the value)
-* Big Endian 32-bit and 64-bit IEEE 764 floating-point numbers
-* Big Endian arbitrary-length positive and negative integers
-* Arbitrary-precision signed decimals (mantissa and scale-based)
 
 ### FlatBuffers
 
@@ -274,7 +236,6 @@ int64, uint64, float64:
 
 * Little Endian 8-bit, 16-bit, 32-bit, and 64-bit unsigned integers
 * Little Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers
-* Little Endian 32-bit and 64-bit IEEE 764 floating-point numbers
 
 ### FlexBuffers
 
@@ -282,7 +243,6 @@ int64, uint64, float64:
 
 * Little Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers
 * Little Endian 8-bit, 16-bit, 32-bit, and 64-bit unsigned integers
-* Little Endian 16-bit, 32-bit, and 64-bit IEEE 764 floating-point numbers
 
 ## Date/Time/Duration
 

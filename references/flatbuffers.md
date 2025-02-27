@@ -15,8 +15,8 @@
 
 ## Float64 Types
 
-* float (float32)
-* double (float64)
+* float (float32) (Little Endian 32-bit and 64-bit IEEE 764 floating-point numbers)
+* double (float64) (Little Endian 32-bit and 64-bit IEEE 764 floating-point numbers)
 
 ## Referenced
 
@@ -25,8 +25,8 @@
 * For other text encodings or general binary data use vectors ([byte] or [ubyte]) instead
 * byte
 * ubyte
-* float (float32)
-* double (float64)
+* float (float32) (Little Endian 32-bit and 64-bit IEEE 764 floating-point numbers)
+* double (float64) (Little Endian 32-bit and 64-bit IEEE 764 floating-point numbers)
 * Tables: consist of a name (here Monster) and a list of fields
 * Optional
 * Required
@@ -45,3 +45,4 @@
 ### References
 
 * https://flatbuffers.dev/schema/
+* "A survey of json-compatible binary serialization specifications - Juan Cruz Viotti and Mital Kinderkhedia (2022)"

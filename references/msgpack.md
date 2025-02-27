@@ -15,7 +15,7 @@
 
 ## Float64 Types
 
-* Float represents a IEEE 754 double precision floating point number including NaN and Infinity (float 32/64)
+* Float represents a IEEE 754 double precision floating point number including NaN and Infinity (float 32/64) (Big Endian 32-bit and 64-bit IEEE 754 floating-point numbers)
 
 ## Referenced
 
@@ -23,7 +23,7 @@
 * Boolean represents true or false
 * String extending Raw type represents a UTF-8 string
 * Binary extending Raw type represents a byte array (bin 8/16/32)
-* Float represents a IEEE 754 double precision floating point number including NaN and Infinity (float 32/64)
+* Float represents a IEEE 754 double precision floating point number including NaN and Infinity (float 32/64) (Big Endian 32-bit and 64-bit IEEE 754 floating-point numbers)
 * Integer represents an integer (a value of an Integer object is limited from -(2^63) upto (2^64)-1) (positive fixint, negative fixint, int 8/16/32/64 or uint 8/16/32/64)
 * Array represents a sequence of objects (fixarray or array 16/32)
 * Map represents key-value pairs of objects (fixmap or map 16/32)
@@ -33,3 +33,4 @@
 ### References
 
 * https://github.com/msgpack/msgpack/blob/master/spec.md#formats
+* "A survey of json-compatible binary serialization specifications - Juan Cruz Viotti and Mital Kinderkhedia (2022)"

@@ -22,7 +22,7 @@
 
 ## Decimal Types
 
-* number
+* number (Arbitrary-precision ASCII-encoded numbers)
 
 ## Float64 Types
 
@@ -66,3 +66,4 @@
 ### References
 
 * https://json-schema.org/understanding-json-schema/reference/type
+* "A survey of json-compatible binary serialization specifications - Juan Cruz Viotti and Mital Kinderkhedia (2022)"
