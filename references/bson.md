@@ -24,6 +24,11 @@
 
 * Double (8 bytes (64-bit IEEE 754-2008 binary floating point)) (Little Endian 64-bit and 128-bit IEEE 754 floating-point numbers)
 
+## Int64 Types
+
+* 32-bit integer (Little Endian Two’s Complement signed 32-bit and 64-bit integers)
+* 64-bit integer (Little Endian Two’s Complement signed 32-bit and 64-bit integers)
+
 ## Referenced
 
 * Null
@@ -32,6 +37,8 @@
 * Binary data
 * Decimal128
 * Double (8 bytes (64-bit IEEE 754-2008 binary floating point)) (Little Endian 64-bit and 128-bit IEEE 754 floating-point numbers)
+* 32-bit integer (Little Endian Two’s Complement signed 32-bit and 64-bit integers)
+* 64-bit integer (Little Endian Two’s Complement signed 32-bit and 64-bit integers)
 * Object
 * Array
 * Undefined (Deprecated).
@@ -41,9 +48,7 @@
 * DBPointer (Deprecated).
 * JavaScript
 * Symbol (Deprecated).
-* 32-bit integer
 * Timestamp
-* 64-bit integer
 * Min key
 * Max key
 * Object

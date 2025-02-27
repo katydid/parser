@@ -22,6 +22,10 @@
 
 * float: The valid range and accuracy depends on the implementation, though 32 bit IEEE floats should be safe.
 
+## Int64 Types
+
+* int: However, there are cases where an integer provided may overflow the native type’s storage capability. In this case, the processor should find some manner to round-trip the integer, perhaps using a string based representation.
+
 ## Referenced
 
 * null

@@ -17,26 +17,31 @@
 
 ## Decimal Types
 
-* decimal
+* decimal: The decimal logical type represents an arbitrary-precision signed decimal number (Arbitrary-precision Two’s Complement signed decimal numbers)
 
 ## Float64 Types
 
 * float: single precision (32-bit) IEEE 754 floating-point number (Little Endian 32-bit and 64-bit IEEE 764 floating-point numbers)
 * double: double precision (64-bit) IEEE 754 floating-point number (Little Endian 32-bit and 64-bit IEEE 764 floating-point numbers)
 
+## Int64 Types
+
+* int: 32-bit signed integer (32-bit and 64-bit ZigZag-encoded Little Endian Base 128 (LEB128) variable-length integers)
+* long: 64-bit signed integer (32-bit and 64-bit ZigZag-encoded Little Endian Base 128 (LEB128) variable-length integers)
+
 ## Referenced
 
 * null: no value
 * boolean: a binary value
 * string: unicode character sequence
-* decimal: The decimal logical type represents an arbitrary-precision signed decimal number
+* decimal: The decimal logical type represents an arbitrary-precision signed decimal number (Arbitrary-precision Two’s Complement signed decimal numbers)
 * enum	string	"FOO"
 * fixed	string	"\u00ff"
 * bytes: sequence of 8-bit unsigned bytes
 * float: single precision (32-bit) IEEE 754 floating-point number (Little Endian 32-bit and 64-bit IEEE 764 floating-point numbers)
 * double: double precision (64-bit) IEEE 754 floating-point number (Little Endian 32-bit and 64-bit IEEE 764 floating-point numbers)
-* int: 32-bit signed integer
-* long: 64-bit signed integer
+* int: 32-bit signed integer (32-bit and 64-bit ZigZag-encoded Little Endian Base 128 (LEB128) variable-length integers)
+* long: 64-bit signed integer (32-bit and 64-bit ZigZag-encoded Little Endian Base 128 (LEB128) variable-length integers)
 * record	object	{"a": 1}
 * array	array	[1]
 * map	object	{"a": 1}

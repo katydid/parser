@@ -18,6 +18,14 @@
 * Float32 (Floating-points: Encoded in little-endian IEEE-754 format.)
 * Float64 (Floating-points: Encoded in little-endian IEEE-754 format.)
 
+## Uint64 Types
+
+* Unsigned integers: UInt8, UInt16, UInt32, UInt64 (Little Endian 8-bit, 16-bit, 32-bit, and 64-bit unsigned integers)
+
+## Int64 Types
+
+* Integers: Int8, Int16, Int32, Int64 (Little Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers)
+
 ## Referenced
 
 * Void: Void
@@ -26,8 +34,8 @@
 * Data
 * Float32 (Floating-points: Encoded in little-endian IEEE-754 format.)
 * Float64 (Floating-points: Encoded in little-endian IEEE-754 format.)
-* Integers: Int8, Int16, Int32, Int64
-* Unsigned integers: UInt8, UInt16, UInt32, UInt64
+* Unsigned integers: UInt8, UInt16, UInt32, UInt64 (Little Endian 8-bit, 16-bit, 32-bit, and 64-bit unsigned integers)
+* Integers: Int8, Int16, Int32, Int64 (Little Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers)
 * Lists: List(T)
 * Structs
 * Unions

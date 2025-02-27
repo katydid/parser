@@ -21,6 +21,14 @@
 
 * float: representable by IEEE 754 binary64 (Big Endian 32-bit and 64-bit IEEE 764 floating-point numbers)
 
+## Uint64 Types
+
+* unsigned integer: 0..264-1 (Big Endian 5-bit, 8-bit, 16-bit, 32-bit, and 64-big unsigned integers)
+
+## Int64 Types
+
+* negative integer: range -264..264-1 inclusive (Big Endian 5-bit, 8-bit, 16-bit, 32-bit, and 64-big negative integers (encoded as−1 minus the value))
+
 ## Referenced
 
 * null
@@ -29,8 +37,8 @@
 * byte string	N bytes
 * Decimal Fractions and Bigfloats (Arbitrary-precision signed decimals (mantissa and scale-based)) (Big Endian arbitrary-length positive and negative integers)
 * float: representable by IEEE 754 binary64 (Big Endian 32-bit and 64-bit IEEE 764 floating-point numbers)
-* unsigned integer: 0..264-1
-* negative integer: range -264..264-1 inclusive
+* unsigned integer: 0..264-1 (Big Endian 5-bit, 8-bit, 16-bit, 32-bit, and 64-big unsigned integers)
+* negative integer: range -264..264-1 inclusive (Big Endian 5-bit, 8-bit, 16-bit, 32-bit, and 64-big negative integers (encoded as−1 minus the value))
 * array	N data items (elements)
 * map	2N data items (key/value pairs)
 * tag of number: an integer in the range 0..264-1

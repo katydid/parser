@@ -23,6 +23,14 @@
 * float32 (See IEEE 754 Spec) (Big Endian 32-bit and 64-bit IEEE 754 floating-point numbers)
 * float64 (See IEEE 754 Spec) (Big Endian 32-bit and 64-bit IEEE 754 floating-point numbers)
 
+## Int64 Types
+
+* uint8 (Big Endian 8-bit unsigned integers)
+* int8 (Big Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers)
+* int16 (Big Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers)
+* int32 (Big Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers)
+* int64 (Big Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers)
+
 ## Referenced
 
 * Null Value
@@ -33,11 +41,11 @@
 * high-precision number (Arbitrary-precision ASCII-encoded numbers)
 * float32 (See IEEE 754 Spec) (Big Endian 32-bit and 64-bit IEEE 754 floating-point numbers)
 * float64 (See IEEE 754 Spec) (Big Endian 32-bit and 64-bit IEEE 754 floating-point numbers)
-* int8
-* uint8
-* int16
-* int32
-* int64
+* uint8 (Big Endian 8-bit unsigned integers)
+* int8 (Big Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers)
+* int16 (Big Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers)
+* int32 (Big Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers)
+* int64 (Big Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers)
 * Char Type
 * Object
 * Array

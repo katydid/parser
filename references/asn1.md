@@ -8,7 +8,6 @@
 ## String Types
 
 * UTF8String
-* NumericString
 * PrintableString
 * IA5String
 * VisibleString
@@ -27,10 +26,15 @@
 ## Decimal Types
 
 * REAL (Real numbers consisting of up to 255 bytes encoding the base, scale, exponent, and mantissa and Arbitrary-length ASCII-encoded decimal numbers)
+* NumericString
 
 ## Float64 Types
 
 * REAL (Real numbers consisting of up to 255 bytes encoding the base, scale, exponent, and mantissa and Arbitrary-length ASCII-encoded decimal numbers)
+
+## Int64 Types
+
+* INTEGER (Big Endian Two’s Complement signed integers of user-defined length)
 
 ## Referenced
 
@@ -41,7 +45,7 @@
 * UTF8String
 * OCTET STRING
 * REAL (Real numbers consisting of up to 255 bytes encoding the base, scale, exponent, and mantissa and Arbitrary-length ASCII-encoded decimal numbers)
-* INTEGER
+* INTEGER (Big Endian Two’s Complement signed integers of user-defined length)
 * BIT STRING
 * OBJECT IDENTIFIER
 * ENUMERATED

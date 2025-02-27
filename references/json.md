@@ -28,7 +28,11 @@
 
 * number
 
-## Referenced#
+## Int64 Types
+
+* integer
+
+## Referenced
 
 ### JSON
 

@@ -14,10 +14,19 @@
 * BYTE_ARRAY: arbitrarily long byte arrays
 * FIXED_LEN_BYTE_ARRAY: fixed length byte arrays
 
+## Decimal Types
+
+* INT96: 96 bit signed ints
+
 ## Float64 Types
 
 * FLOAT: IEEE 32-bit floating point values
 * DOUBLE: IEEE 64-bit floating point values
+
+## Int64 Types
+
+* INT32: 32 bit signed ints
+* INT64: 64 bit signed ints
 
 ## Referenced
 

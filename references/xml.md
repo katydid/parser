@@ -11,25 +11,38 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 
 * string
 
-**TODO**
-
 ## Byte Array Types
 
 * hexBinary
 * base64Binary
 
-**TODO**
-
 ## Decimal Types
 
-* decimal
-
-**TODO**
+* decimal (A decimal value)
+* integer (An integer value)
+* nonPositiveInteger (An integer containing only non-positive values (..,-2,-1,0))
+* negativeInteger (An integer containing only negative values (..,-2,-1))
+* nonNegativeInteger (An integer containing only non-negative values (0,1,2,..))
+* positiveInteger (An integer containing only positive values (1,2,..))
 
 ## Float64 Types
 
 * float (float is patterned after the IEEE single-precision 32-bit floating point type [IEEE 754-1985].)
 * double (The double datatype is patterned after the IEEE double-precision 64-bit floating point type [IEEE 754-1985].)
+
+## Uint64 Types
+
+* unsignedLong (An unsigned 64-bit integer)
+* unsignedInt (An unsigned 32-bit integer)
+* unsignedShort (An unsigned 16-bit integer)
+* unsignedByte (An unsigned 8-bit integer)
+
+## Int64 Types
+
+* long (A signed 64-bit integer)
+* int (A signed 32-bit integer)
+* short (A signed 16-bit integer)
+* byte (A signed 8-bit integer)
 
 ## Referenced
 
@@ -39,9 +52,22 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 * string
 * hexBinary
 * base64Binary
-* decimal
+* decimal (A decimal value)
+* integer (An integer value)
+* nonNegativeInteger (An integer containing only non-negative values (0,1,2,..))
+* nonPositiveInteger (An integer containing only non-positive values (..,-2,-1,0))
+* negativeInteger (An integer containing only negative values (..,-2,-1))
+* positiveInteger (An integer containing only positive values (1,2,..))
 * float
 * double
+* unsignedLong (An unsigned 64-bit integer)
+* unsignedInt (An unsigned 32-bit integer)
+* unsignedShort (An unsigned 16-bit integer)
+* unsignedByte (An unsigned 8-bit integer)
+* long (A signed 64-bit integer)
+* int (A signed 32-bit integer)
+* short (A signed 16-bit integer)
+* byte (A signed 8-bit integer)
 * duration
 * dateTime
 * time
@@ -66,19 +92,6 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 * IDREFS
 * ENTITY
 * ENTITIES
-* integer
-* nonPositiveInteger
-* negativeInteger
-* long
-* int
-* short
-* byte
-* nonNegativeInteger
-* unsignedLong
-* unsignedInt
-* unsignedShort
-* unsignedByte
-* positiveInteger
 
 ### DOM
 
@@ -140,3 +153,4 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 * https://www.w3schools.com/xml/dom_nodetype.asp
 * https://www.w3.org/TR/xmlschema-2/#built-in-derived
 * https://www.w3.org/TR/xmlschema-2/#built-in-primitive-datatypes
+* https://www.w3schools.com/xml/schema_dtypes_numeric.asp

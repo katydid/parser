@@ -22,6 +22,10 @@
 
 * Little Endian 32-bit and 64-bit IEEE 754 floating-point numbers encoded using 7 bit groups
 
+## Int64 Types
+
+* 5-bit, 32-bit, and 64-bit ZigZag-encoded signed Little Endian Base 128 (LEB128) variable-length integers
+
 ## Referenced
 
 * Null

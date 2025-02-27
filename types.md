@@ -127,7 +127,7 @@ These are numbers that are tough to represent with built-in types in most progra
 * :white_check_mark: UBJSON
 * :x: TOML
 * :x: CapnProto
-* :x: Parquet
+* :white_check_mark: Parquet (96 bit signed ints)
 * :white_check_mark: CBOR
 * :x: FlatBuffers
 * :x: FlexBuffers
@@ -154,95 +154,45 @@ Double-precision floating-point format IEEE-754
 * :white_check_mark: FlatBuffers
 * :white_check_mark: FlexBuffers
 
-## Numeric
+## Uint64
 
-All numeric types are covered by `float64`, `int64`, `uint64` or worst case arbitrary-precision `decimal` values.
-Everything could also be covered by one type (for example `int64`) for fast comparisons and covering the rest with an arbitrary-precision decimal values via a `string`.
+* :x: ASN.1
+* :x: JSON
+* :white_check_mark: XML
+* :white_check_mark: Protobufs
+* :x: YAML
+* :x: Thrift
+* :white_check_mark: MsgPack
+* :x: Avro
+* :x: BSON
+* :x: Smile
+* :x: UBJSON
+* :x: TOML
+* :white_check_mark: CapnProto
+* :x: Parquet
+* :white_check_mark: CBOR
+* :white_check_mark: FlatBuffers
+* :white_check_mark: FlexBuffers
 
-### ASN.1
+## Int64
 
-decimal:
-
-* Big Endian Two’s Complement signed integers of user-defined length
-* Big Endian unsigned integers of user-defined length
-
-### Protobufs
-
-float64, int64 and uint64:
-
-* 32-bit and 64-bit Two’s Complement Little Endian Base 128 (LEB128) variable-length signed integers
-* 32-bit and 64-bit Little Endian Base 128 (LEB128) variable-length unsigned integers
-* 32-bit and 64-bit ZigZag-encoded Little Endian Base 128 variable-length signed integers
-* Little Endian 32-bit and 64-bit fixed-length unsigned integers
-* Little Endian 32-bit and 64-bit fixed-length Two’s Complement signed integers
-
-### Thrift
-
-int64 and float64:
-
-* 16-bit, 32-bit, and 64-bit ZigZag-encoded Little Endian Base 128 variable-length signed integers
-
-### MsgPack
-
-int64, uint64 and float64:
-
-* Big Endian 5-bit, 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers
-* Big Endian 7-bit, 8-bit, 16-bit, 32-bit, and 64-bit unsigned integers
-
-### Avro
-
-int64, float64 and decimal:
-
-* 32-bit and 64-bit ZigZag-encoded Little Endian Base 128 (LEB128) variable-length integers
-* Arbitrary-precision Two’s Complement signed decimal numbers
-
-### BSON
-
-int64, uint64, float64 and decimal:
-
-* Little Endian Two’s Complement signed 32-bit and 64-bit integers
-* Little Endian unsigned 64-bit integers
-
-### Smile
-
-int64, float64, decimal:
-
-* 5-bit, 32-bit, and 64-bit ZigZag-encoded signed Little Endian Base 128 (LEB128) variable-length integers
-
-### UBJSON
-
-int64, float64, decimal:
-
-* Big Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers
-* Big Endian 8-bit unsigned integers
-
-### CapnProto
-
-int64, uint64, float64:
-
-* Little Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers
-* Little Endian 8-bit, 16-bit, 32-bit, and 64-bit unsigned integers
-
-### CBOR
-
-uint64, int64, float64, decimal:
-
-* Big Endian 5-bit, 8-bit, 16-bit, 32-bit, and 64-big unsigned integers
-* Big Endian 5-bit, 8-bit, 16-bit, 32-bit, and 64-big negative integers (encoded as−1 minus the value)
-
-### FlatBuffers
-
-int64, uint64, float64:
-
-* Little Endian 8-bit, 16-bit, 32-bit, and 64-bit unsigned integers
-* Little Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers
-
-### FlexBuffers
-
-int64, uint64, float64:
-
-* Little Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers
-* Little Endian 8-bit, 16-bit, 32-bit, and 64-bit unsigned integers
+* :white_check_mark: ASN.1
+* :white_check_mark: JSON
+* :white_check_mark: XML
+* :white_check_mark: Protobufs
+* :white_check_mark: YAML
+* :white_check_mark: Thrift
+* :white_check_mark: MsgPack
+* :white_check_mark: Avro
+* :white_check_mark: BSON
+* :white_check_mark: Smile
+* :white_check_mark: UBJSON
+* :white_check_mark: TOML
+* :white_check_mark: CapnProto
+* :white_check_mark: Parquet
+* :white_check_mark: CBOR
+* :white_check_mark: FlatBuffers
+* :white_check_mark: FlexBuffers
 
 ## Date/Time/Duration
 
