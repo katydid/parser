@@ -52,6 +52,10 @@
 
 * DURATION
 
+## Enum Types
+
+* ENUMERATED
+
 ## Referenced
 
 ### Generics
@@ -62,9 +66,9 @@
 * OCTET STRING
 * REAL (Real numbers consisting of up to 255 bytes encoding the base, scale, exponent, and mantissa and Arbitrary-length ASCII-encoded decimal numbers)
 * INTEGER (Big Endian Two’s Complement signed integers of user-defined length)
+* ENUMERATED
 * BIT STRING
 * OBJECT IDENTIFIER
-* ENUMERATED
 
 ### Strings
 
@@ -103,3 +107,4 @@
 
 * https://www.oss.com/asn1/resources/asn1-made-simple/asn1-quick-reference.html
 * "A survey of json-compatible binary serialization specifications - Juan Cruz Viotti and Mital Kinderkhedia (2022)"
+* https://www.oss.com/asn1/resources/asn1-made-simple/asn1-quick-reference/enumerated.html

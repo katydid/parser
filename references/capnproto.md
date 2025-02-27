@@ -26,6 +26,10 @@
 
 * Integers: Int8, Int16, Int32, Int64 (Little Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers)
 
+## Enum Types
+
+* Enums
+
 ## Referenced
 
 * Void: Void

@@ -62,6 +62,10 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 
 * duration
 
+## Enum Types
+
+* xs:enumeration
+
 ## Referenced
 
 ### XML Schema
@@ -110,6 +114,7 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 * IDREFS
 * ENTITY
 * ENTITIES
+* xs:enumeration
 
 ### DOM
 
@@ -172,3 +177,4 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 * https://www.w3.org/TR/xmlschema-2/#built-in-derived
 * https://www.w3.org/TR/xmlschema-2/#built-in-primitive-datatypes
 * https://www.w3schools.com/xml/schema_dtypes_numeric.asp
+* https://www.w3schools.com/XML/schema_facets.asp

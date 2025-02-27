@@ -42,6 +42,10 @@
 
 * Duration
 
+## Enum Types
+
+* Enums
+
 ## Referenced
 
 * null: no value
@@ -55,10 +59,14 @@
 * double: double precision (64-bit) IEEE 754 floating-point number (Little Endian 32-bit and 64-bit IEEE 764 floating-point numbers)
 * int: 32-bit signed integer (32-bit and 64-bit ZigZag-encoded Little Endian Base 128 (LEB128) variable-length integers)
 * long: 64-bit signed integer (32-bit and 64-bit ZigZag-encoded Little Endian Base 128 (LEB128) variable-length integers)
+* Enums
 * record	object	{"a": 1}
 * array	array	[1]
 * map	object	{"a": 1}
 * Unions, as mentioned above, are represented using JSON arrays.
+* Fixed
+* Names
+* Aliases
 
 ### Date-Time
 
@@ -72,3 +80,4 @@
 * https://avro.apache.org/docs/1.11.1/specification/
 * https://avro.apache.org/docs/1.12.0/specification/#decimal
 * "A survey of json-compatible binary serialization specifications - Juan Cruz Viotti and Mital Kinderkhedia (2022)"
+* https://avro.apache.org/docs/1.11.1/specification/#enums

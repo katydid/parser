@@ -24,6 +24,10 @@
 * i32: A 32-bit signed integer (16-bit, 32-bit, and 64-bit ZigZag-encoded Little Endian Base 128 variable-length signed integers)
 * i64: A 64-bit signed integer (16-bit, 32-bit, and 64-bit ZigZag-encoded Little Endian Base 128 variable-length signed integers)
 
+## Enum Types
+
+* enum
+
 ## Referenced
 
 * bool: A boolean value (true or false)
@@ -34,6 +38,7 @@
 * i16: A 16-bit signed integer (16-bit, 32-bit, and 64-bit ZigZag-encoded Little Endian Base 128 variable-length signed integers)
 * i32: A 32-bit signed integer (16-bit, 32-bit, and 64-bit ZigZag-encoded Little Endian Base 128 variable-length signed integers)
 * i64: A 64-bit signed integer (16-bit, 32-bit, and 64-bit ZigZag-encoded Little Endian Base 128 variable-length signed integers)
+* enum
 * struct
 * list
 * set
@@ -47,3 +52,4 @@
 * https://thrift.apache.org/docs/idl
 * https://github.com/apache/thrift/blob/master/doc/specs/thrift-binary-protocol.md
 * "A survey of json-compatible binary serialization specifications - Juan Cruz Viotti and Mital Kinderkhedia (2022)"
+* https://diwakergupta.github.io/thrift-missing-guide/#_enums

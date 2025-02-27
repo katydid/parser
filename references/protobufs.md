@@ -43,6 +43,10 @@
 
 * Duration
 
+## Enum Types
+
+* enum
+
 ## Referenced
 
 ### Builtin
@@ -62,21 +66,20 @@
 * fixed64:	Always eight bytes. More efficient than uint64 if values are often greater than 256.
 * sfixed32:	Always four bytes.
 * sfixed64:	Always eight bytes.
+* enum
 * message
 * repeated
 * optional
 * oneof
 * maps
-* enum
 
 ### Well Known
 
+* Empty (message)
 * Timestamp (message)
 * Duration (message)
 * Any (message)
 * Api (message)
-* Enum (message)
-* Empty (message)
 * Field (message)
 * Field.Cardinality (enum)
 * Field.Kind (enum)
@@ -95,3 +98,4 @@
 * https://protobuf.dev/programming-guides/editions/
 * https://protobuf.com/docs/language-spec
 * "A survey of json-compatible binary serialization specifications - Juan Cruz Viotti and Mital Kinderkhedia (2022)"
+* https://protobuf.dev/programming-guides/enum/

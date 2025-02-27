@@ -30,6 +30,10 @@
 * int (int32) (Little Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers)
 * long (int64) (Little Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers)
 
+## Enum Types
+
+* Enums
+
 ## Referenced
 
 * bool
