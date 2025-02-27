@@ -1,10 +1,9 @@
 # BSON
 
+## Basic Types
+
 * Null
 * Boolean
-* String
-* Binary data
-* Decimal128
 
 ## String Types
 

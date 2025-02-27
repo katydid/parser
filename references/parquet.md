@@ -1,9 +1,9 @@
 # Parquet
 
+## Basic Types
+
 * NULL
 * BOOLEAN
-* UTF8
-* BYTE_ARRAY
 
 ## String Types
 

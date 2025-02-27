@@ -1,7 +1,8 @@
 # TOML
 
+## Basic Types
+
 * Boolean
-* String (UTF8)
 
 ## String Types
 

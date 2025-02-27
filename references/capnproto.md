@@ -1,9 +1,9 @@
 # CapnProto
 
+## Basic Types
+
 * Void
 * Bool
-* Text
-* Data
 
 ## String Types
 

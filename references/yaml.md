@@ -1,11 +1,9 @@
 ## YAML
 
+## Basic Types
+
 * null
 * bool
-* str
-* binary
-* int
-* float
 
 ## String Types
 

@@ -1,9 +1,8 @@
 # FlatBuffers
 
+## Basic Types
+
 * bool
-* String
-* [byte]
-* [ubyte]
 
 ## String Types
 

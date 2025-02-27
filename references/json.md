@@ -1,9 +1,9 @@
 # JSON
 
+## Basic Types
+
 * null
 * boolean
-* string
-* number
 
 ## String Types
 

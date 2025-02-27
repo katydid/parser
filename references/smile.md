@@ -1,10 +1,9 @@
 ## Smile
 
+## Basic Types
+
 * Null
 * Boolean
-* String
-* Binary
-* Arbitrary-precision decimals
 
 ## String Types
 

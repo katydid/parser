@@ -1,10 +1,9 @@
 # ASN.1
 
+## Basic Types
+
 * NULL
 * BOOLEAN
-* UTF8String
-* OCTET STRING
-* REAL
 
 ## String Types
 

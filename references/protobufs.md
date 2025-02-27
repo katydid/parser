@@ -1,10 +1,10 @@
 # Google Protocol Buffers
 
+## Basic Types
+
 * null values are not serialized
 * Empty (message)
 * bool
-* string
-* bytes
 
 ## String Types
 

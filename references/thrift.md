@@ -1,9 +1,9 @@
 # Thrift
 
+## Basic Types
+
 * null is not serialized
 * bool
-* string
-* binary
 
 ## String Types
 

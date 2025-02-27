@@ -1,11 +1,10 @@
 # UBJSON
 
+## Basic Types
+
 * Null
 * No-Op
 * Boolean
-* String Type
-* Binary Data
-* high-precision number
 
 ## String Types
 

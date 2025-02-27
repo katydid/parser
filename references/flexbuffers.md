@@ -1,9 +1,9 @@
 # FlexBuffers
 
+## Basic Types
+
 * Null
 * Boolean
-* UTF-8
-* Blob
 
 ## String Types
 

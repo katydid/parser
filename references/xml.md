@@ -2,13 +2,14 @@
 
 Each XML element has unordered attributes, which can be modeled as a Object followed by an ordered List of elements.
 
+## Basic Types
+
 * [xsi:nil](https://www.w3.org/TR/xmlschema-1/#xsi_nil)
 * boolean (XML Schema)
-* string
-* hexBinary/base64Binary
-* decimal
 
 ## String Types
+
+* string
 
 **TODO**
 

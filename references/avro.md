@@ -1,10 +1,9 @@
 # Avro
 
+## Basic Types
+
 * null
 * boolean
-* string
-* bytes
-* decimal
 
 ## String Types
 

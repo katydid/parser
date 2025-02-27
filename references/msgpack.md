@@ -1,9 +1,9 @@
 # Message Pack
 
+## Basic Types
+
 * Nil
 * Boolean
-* String
-* Binary
 
 ## String Types
 

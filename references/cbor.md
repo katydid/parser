@@ -1,9 +1,9 @@
 # CBOR
 
+## Basic Types
+
 * null
 * boolean
-* text string
-* byte string
 
 ## String Types
 

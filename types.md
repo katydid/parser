@@ -111,6 +111,9 @@ It can be emulated by an empty Object in JSON and many other formats or a messag
 
 ## Arbitrary-precision Decimal Values (decimal)
 
+`decimal` includes integers and floats outside the 64-bit range.
+These are numbers that are tough to represent with built-in types in most programming languages.
+
 * :white_check_mark: ASN.1
 * :white_check_mark: JSON
 * :white_check_mark: XML
