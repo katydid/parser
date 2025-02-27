@@ -32,6 +32,10 @@
 
 * integer
 
+## Date Types
+
+* date
+
 ## Referenced
 
 ### JSON
@@ -46,6 +50,7 @@
 
 ### JSON-Schema
 
+* date
 * email
 * idn-email
 * hostname
@@ -58,7 +63,6 @@
 * regex
 * date-time
 * time
-* date
 * duration
 * ipv4
 * ipv6

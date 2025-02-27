@@ -29,6 +29,10 @@
 
 * negative integer: range -264..264-1 inclusive (Big Endian 5-bit, 8-bit, 16-bit, 32-bit, and 64-big negative integers (encoded as−1 minus the value))
 
+## Date Types
+
+* Calendar Dates
+
 ## Referenced
 
 * null
@@ -39,6 +43,9 @@
 * float: representable by IEEE 754 binary64 (Big Endian 32-bit and 64-bit IEEE 764 floating-point numbers)
 * unsigned integer: 0..264-1 (Big Endian 5-bit, 8-bit, 16-bit, 32-bit, and 64-big unsigned integers)
 * negative integer: range -264..264-1 inclusive (Big Endian 5-bit, 8-bit, 16-bit, 32-bit, and 64-big negative integers (encoded as−1 minus the value))
+* Calendar Dates
+* Standard Date/Time String
+* Epoch-Based Date/Time
 * array	N data items (elements)
 * map	2N data items (key/value pairs)
 * tag of number: an integer in the range 0..264-1
@@ -48,5 +55,7 @@
 ### References
 
 * https://www.rfc-editor.org/rfc/rfc8949.html#name-extended-generic-data-model
+* https://www.rfc-editor.org/rfc/rfc8949.html#name-standard-date-time-string
+* https://www.rfc-editor.org/rfc/rfc8943
 * https://www.rfc-editor.org/rfc/rfc7049#section-2.4.3
 * "A survey of json-compatible binary serialization specifications - Juan Cruz Viotti and Mital Kinderkhedia (2022)"

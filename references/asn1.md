@@ -36,6 +36,10 @@
 
 * INTEGER (Big Endian Two’s Complement signed integers of user-defined length)
 
+## Date Types
+
+* DATE
+
 ## Referenced
 
 ### Generics
@@ -75,10 +79,10 @@
 
 ### Times
 
+* DATE
 * TIME
 * UTCTime
 * GeneralizedTime
-* DATE
 * TIME-OF-DAY
 * DATE-TIME
 * DURATION

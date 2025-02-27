@@ -194,6 +194,26 @@ Double-precision floating-point format IEEE-754
 * :white_check_mark: FlatBuffers
 * :white_check_mark: FlexBuffers
 
+## Date
+
+* :white_check_mark: ASN.1
+* :white_check_mark: JSON
+* :white_check_mark: XML
+* :x: Protobufs
+* :x: YAML
+* :x: Thrift
+* :x: MsgPack
+* :white_check_mark: Avro
+* :white_check_mark: BSON
+* :x: Smile
+* :x: UBJSON
+* :x: TOML
+* :x: CapnProto
+* :x: Parquet
+* :white_check_mark: CBOR
+* :x: FlatBuffers
+* :x: FlexBuffers
+
 ## Date/Time/Duration
 
 * :white_check_mark: ASN.1 (Date, Time and Date-time)

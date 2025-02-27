@@ -44,6 +44,10 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 * short (A signed 16-bit integer)
 * byte (A signed 8-bit integer)
 
+## Date Types
+
+* date
+
 ## Referenced
 
 ### XML Schema
@@ -68,10 +72,10 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 * int (A signed 32-bit integer)
 * short (A signed 16-bit integer)
 * byte (A signed 8-bit integer)
+* date
 * duration
 * dateTime
 * time
-* date
 * gYearMonth
 * gYear
 * gMonthDay

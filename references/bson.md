@@ -29,6 +29,10 @@
 * 32-bit integer (Little Endian Two’s Complement signed 32-bit and 64-bit integers)
 * 64-bit integer (Little Endian Two’s Complement signed 32-bit and 64-bit integers)
 
+## Date Types
+
+* Date
+
 ## Referenced
 
 * Null
@@ -39,11 +43,11 @@
 * Double (8 bytes (64-bit IEEE 754-2008 binary floating point)) (Little Endian 64-bit and 128-bit IEEE 754 floating-point numbers)
 * 32-bit integer (Little Endian Two’s Complement signed 32-bit and 64-bit integers)
 * 64-bit integer (Little Endian Two’s Complement signed 32-bit and 64-bit integers)
+* Date
 * Object
 * Array
 * Undefined (Deprecated).
 * ObjectId (example: `_id: ObjectId("5099803df3f4948bd2f98391")`)
-* Date
 * Regular Expression
 * DBPointer (Deprecated).
 * JavaScript

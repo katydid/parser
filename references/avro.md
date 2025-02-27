@@ -29,6 +29,10 @@
 * int: 32-bit signed integer (32-bit and 64-bit ZigZag-encoded Little Endian Base 128 (LEB128) variable-length integers)
 * long: 64-bit signed integer (32-bit and 64-bit ZigZag-encoded Little Endian Base 128 (LEB128) variable-length integers)
 
+## Date Types
+
+* Date (days from the UNIX Epoch)
+
 ## Referenced
 
 * null: no value
@@ -46,6 +50,13 @@
 * array	array	[1]
 * map	object	{"a": 1}
 * Unions, as mentioned above, are represented using JSON arrays.
+
+### Date-Time
+
+* Date (days from the UNIX Epoch)
+* Time (milliseconds and microseconds)
+* Timestamp (milliseconds and microseconds)
+* Duration
 
 ### References
 
