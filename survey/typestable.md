@@ -29,8 +29,8 @@ Not all formats support all scalar types, but we found there is a lot of overlap
 * Bytes
 * Decimal (Arbitrary-precision Decimal Values. This includes integers and floats outside the 64-bit range, which are tough to represent with built-in types in most programming languages.)
 * Float64 (Double-precision floating-point format IEEE-754)
-* Int64
-* Uint64
+* Int64 (Includes Int32, Int16, Int8)
+* Uint64 (Includes Uint32, Uint16, Uint8, but most importantly must include values outside the range of int64)
 * Date
 * Time
 * Duration
