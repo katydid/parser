@@ -60,7 +60,7 @@
 * int64 (Big Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers)
 * Array
 * Object
-* Char Type
+* Char Type (a byte not larger than 127)
 
 ### References
 

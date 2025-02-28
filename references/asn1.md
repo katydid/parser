@@ -90,7 +90,7 @@
 * INTEGER (Big Endian Two’s Complement signed integers of user-defined length)
 * ENUMERATED
 * BIT STRING
-* OBJECT IDENTIFIER
+* OBJECT IDENTIFIER (an object identifier, which is a sequence of integer components that identify an object such as an algorithm or attribute type.  components can generally have any nonnegative value. This type is a non-string type. For example { 1 2 840 113549 } = RSA Data Security, Inc. { 1 2 840 113549 1 } = RSA Data Security, Inc. PKCS)
 
 ### Strings
 
@@ -134,3 +134,4 @@
 * https://www.oss.com/asn1/resources/asn1-made-simple/asn1-quick-reference/sequenceof.html
 * https://www.oss.com/asn1/resources/asn1-made-simple/asn1-quick-reference/sequence.html
 * https://www.oss.com/asn1/resources/asn1-made-simple/asn1-quick-reference/set.html
+* https://luca.ntop.org/Teaching/Appunti/asn1.html

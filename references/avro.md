@@ -8,12 +8,11 @@
 ## String Types
 
 * string: unicode character sequence
-* enum	string	"FOO"
-* fixed	string	"\u00ff"
 
 ## Byte Array Types
 
 * bytes
+* Fixed
 
 ## Decimal Types
 
@@ -61,9 +60,6 @@
 
 ## Extra Types
 
-* Fixed
-* Names
-* Aliases
 * Uuid
 
 ## Referenced
@@ -72,9 +68,8 @@
 * boolean: a binary value
 * string: unicode character sequence
 * decimal: The decimal logical type represents an arbitrary-precision signed decimal number (Arbitrary-precision Two’s Complement signed decimal numbers)
-* enum	string	"FOO"
-* fixed	string	"\u00ff"
 * bytes: sequence of 8-bit unsigned bytes
+* Fixed (`fixed MD5(16);` This example defines a fixed-length type called MD5 which contains 16 bytes.)
 * float: single precision (32-bit) IEEE 754 floating-point number (Little Endian 32-bit and 64-bit IEEE 764 floating-point numbers)
 * double: double precision (64-bit) IEEE 754 floating-point number (Little Endian 32-bit and 64-bit IEEE 764 floating-point numbers)
 * int: 32-bit signed integer (32-bit and 64-bit ZigZag-encoded Little Endian Base 128 (LEB128) variable-length integers)
@@ -84,9 +79,6 @@
 * Unions, as mentioned above, are represented using JSON arrays.
 * record	object	{"a": 1}
 * map	object	{"a": 1} (Map keys are assumed to be strings.)
-* Fixed
-* Names
-* Aliases
 
 ### Date-Time
 
@@ -101,3 +93,4 @@
 * https://avro.apache.org/docs/1.12.0/specification/#decimal
 * "A survey of json-compatible binary serialization specifications - Juan Cruz Viotti and Mital Kinderkhedia (2022)"
 * https://avro.apache.org/docs/1.11.1/specification/#enums
+* https://avro.apache.org/docs/1.11.1/idl-language/

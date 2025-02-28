@@ -375,4 +375,3 @@ These are key-value pairs, where the keys are limited to strings.
 * :white_check_mark: CBOR
 * :white_check_mark: FlatBuffers
 * :white_check_mark: FlexBuffers
-

@@ -9,10 +9,12 @@
 
 * text string
 * regular expression
+* MIME Message (encoded as text string)
 
 ## Byte Array Types
 
 * byte string	N bytes
+* Base64 (encoded as text string)
 
 ## Decimal Types
 
@@ -24,11 +26,12 @@
 
 ## Uint64 Types
 
-* unsigned integer: 0..264-1 (Big Endian 5-bit, 8-bit, 16-bit, 32-bit, and 64-big unsigned integers)
+* unsigned integer: 0..2^64-1 (Big Endian 5-bit, 8-bit, 16-bit, 32-bit, and 64-big unsigned integers)
+* tag of number: an integer in the range 0..2^64-1
 
 ## Int64 Types
 
-* negative integer: range -264..264-1 inclusive (Big Endian 5-bit, 8-bit, 16-bit, 32-bit, and 64-big negative integers (encoded as−1 minus the value))
+* negative integer: range -2^64..2^64-1 inclusive (Big Endian 5-bit, 8-bit, 16-bit, 32-bit, and 64-big negative integers (encoded as−1 minus the value))
 
 ## Date Types
 
@@ -53,11 +56,8 @@
 
 ## Extra Types
 
-* tag of number: an integer in the range 0..264-1
-* simple
+* simple (extendible types)
 * undefined: a substitute for a data item with an encoding problem.
-* Base64 (encoded as text string)
-* MIME Message (encoded as text string)
 
 ## Referenced
 
@@ -75,8 +75,8 @@
 * Epoch-Based Date/Time
 * array	N data items (elements)
 * map	2N data items (key/value pairs)
-* tag of number: an integer in the range 0..264-1
-* simple
+* tag of number: an integer in the range 0..2%64-1
+* simple (extendible types)
 * undefined: a substitute for a data item with an encoding problem.
 * Base64 (encoded as text string)
 * MIME Message (encoded as text string)

@@ -51,9 +51,6 @@
 ## Extra Types
 
 * pairs
-* merge
-* value
-* yaml
 
 ## Referenced
 
@@ -69,11 +66,13 @@
 * map (- 2001-07-23 ? [ New York Yankees,Atlanta Braves ] : [ 2001-07-02, 2001-08-12, 2001-08-14] -- mapping between sequences)
 * omap (ordered map)
 * pairs
-* merge
-* value
-* yaml
+* merge (used to merge two messages, not a type)
+* value (used for default values, not a type)
+* yaml (encoding yaml in yaml, not a type)
 
 ### References
 
 * https://yaml.org/type/
 * https://www.tutorialspoint.com/yaml/yaml_collections_and_structures.htm
+* https://tutorialreference.com/yaml/datatypes/advanced/yaml-pairs
+* https://stackoverflow.com/questions/24090177/how-to-merge-yaml-arrays#57209078

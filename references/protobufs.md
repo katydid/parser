@@ -46,6 +46,9 @@
 ## Enum Types
 
 * enum
+* Field.Cardinality (enum)
+* Field.Kind (enum)
+* Syntax (enum)
 
 ## List Types
 
@@ -62,23 +65,20 @@
 ## Object Types
 
 * message
+* Any (message)
+* Api (message)
+* Field (message)
+* FieldMask (message)
+* Method (message)
+* Mixin (message)
+* SourceContext (message)
+* Struct (message)
+* Type (message)
 
 ## Extra Types
 
 * optional
-* Any (message)
-* Api (message)
-* Field (message)
-* Field.Cardinality (enum)
-* Field.Kind (enum)
-* FieldMask (message)
-* Method (message)
-* Mixin (message)
 * Option (message)
-* SourceContext (message)
-* Struct (message)
-* Syntax (enum)
-* Type (message)
 
 ## Referenced
 
@@ -107,6 +107,8 @@
 * optional
 
 ### Well Known
+
+Well-Known Types that end in “Value” are wrapper messages for other types, such as BoolValue and EnumValue. These are now obsolete.
 
 * Empty (message)
 * Timestamp (message)

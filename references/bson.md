@@ -49,8 +49,6 @@
 ## Extra Types
 
 * ObjectId (example: `_id: ObjectId("5099803df3f4948bd2f98391")`)
-* Min key
-* Max key
 * Uuid
 
 ## Referenced
@@ -71,7 +69,7 @@
 * Timestamp
 * Array
 * Object
-* ObjectId (example: `_id: ObjectId("5099803df3f4948bd2f98391")`)
+* ObjectId (example: `_id: ObjectId("5099803df3f4948bd2f98391")`) (12 bytes in Golang)
 * Min key
 * Max key
 * Undefined (Deprecated).
@@ -84,3 +82,4 @@
 * https://www.mongodb.com/docs/manual/core/document/
 * https://bsonspec.org/spec
 * "A survey of json-compatible binary serialization specifications - Juan Cruz Viotti and Mital Kinderkhedia (2022)"
+* https://pkg.go.dev/go.mongodb.org/mongo-driver/bson/primitive#ObjectID
