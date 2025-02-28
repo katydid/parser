@@ -132,6 +132,24 @@
   </tbody>
 </table>
 
+## Notes
+
+* List-Directed Input/Output: Comma-separated or space-separated values that looks like CSV.
+* INI: Windows continues to make use of the INI specification today.
+* SGML: Decendent of GML
+* XML: inspired by GML
+* JSON: Standardized in 2006
+* XML: Recommended in 1999
+* Protobufs: Open Sourced 2008
+* Thrift: Open Sourced 2006
+* MessagePack: Popular, since supported by over 40 programming languages.
+* Smile: Can deserialize with fixed buffering
+* Bond: inspired by Thrift/Protobufs, deprecated in 2025
+* UBJSON: Binary format that is more human-readable. It uses printable ASCII in for field types.
+* CBOR: design for internet of things where devices are memory and processor constrained.
+* FlatBuffers: Table is an ordered sequence of aligned values prefixed with a pointer to a vTable structure that defines the layout of the Table.
+* FlexBuffers: Can be used with FlatBuffers by storing a part of a serialized FlatBuffer in a FlexBuffer.
+
 ## References 
 
 * "A survey of json-compatible binary serialization specifications - Juan Cruz Viotti and Mital Kinderkhedia (2022)"
