@@ -43,6 +43,8 @@ we have come with a limited set of supported [Scalar](./scalar.md) and [Compound
 Other types can be mapped from these rared types to these supported types. 
 For example, UUID is mapped to `Bytes`, Dates to `String` via ISO 8601, Set to `List` and an Object is repesented as a `Map`.
 
+## Kind
+
 The `Kind` is indicated with a single byte or ascii character:
 
 * 'n': Null
@@ -58,6 +60,8 @@ The `Kind` is indicated with a single byte or ascii character:
 * '}': Map Closed
 * '[': List Opened
 * ']': List Closed
+
+## Skip
 
 The `Skip` method allows the user to skip over uninteresting parts of the parse tree:
 

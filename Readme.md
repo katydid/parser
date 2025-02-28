@@ -9,7 +9,7 @@ So that this can be used by for implementing a parser for any serialization in a
 
 The interface is limited to the following methods for traversing the parse tree:
 
-* `Next` (returns a Kind or an error or EOF)
+* `Next` (parses up to the start of the next token and returns a Kind or an error or EOF)
 * `Skip` (possibly returns an error or EOF)
 
 The interface also includes the following methods for tokenizing the current token into a value:
@@ -25,8 +25,10 @@ Throwing a catchable exception or Using Maybe/Optional types are also permitted 
 
 ## Open Questions
 
-* Do we need `String` or is utf8 `Bytes` good enough?
-* Do we need `Int64` and `Float64`?
+* Can we shrink this interface:
+  + Do we need `String` or is utf8 `Bytes` good enough?
+  + Do we need `Int64` and `Float64`?
+  + Can we get rid of `IsNull`?
 
 ## Implementations
 
