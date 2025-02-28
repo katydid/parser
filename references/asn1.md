@@ -59,6 +59,7 @@
 ## List Types
 
 * SEQUENCE OF
+* OBJECT IDENTIFIER (list of integers)
 
 ## Set Types
 
@@ -76,7 +77,6 @@
 ## Extra Types
 
 * BIT STRING (Arbitrary-length bit array)
-* OBJECT IDENTIFIER
 
 ## Referenced
 

@@ -60,10 +60,13 @@
 * GEOMETRY
 * GEOGRAPHY
 
+## Uuid Types
+
+* UUID
+
 ## Extra Types
 
 * OPTIONAL
-* UUID
 
 ## Referenced
 

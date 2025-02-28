@@ -58,7 +58,7 @@
 * record
 * map
 
-## Extra Types
+## Uuid Types
 
 * Uuid
 

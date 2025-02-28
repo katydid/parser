@@ -46,10 +46,13 @@
 
 * Object
 
+## Uuid Types
+
+* Uuid
+
 ## Extra Types
 
 * ObjectId (example: `_id: ObjectId("5099803df3f4948bd2f98391")`)
-* Uuid
 
 ## Referenced
 

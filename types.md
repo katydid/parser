@@ -375,3 +375,23 @@ These are key-value pairs, where the keys are limited to strings.
 * :white_check_mark: CBOR
 * :white_check_mark: FlatBuffers
 * :white_check_mark: FlexBuffers
+
+## UUID
+
+* :x: ASN.1
+* :white_check_mark: JSON
+* :x: XML
+* :x: Protobufs
+* :x: YAML
+* :x: Thrift
+* :x: MsgPack
+* :white_check_mark: Avro
+* :white_check_mark: BSON
+* :x: Smile
+* :x: UBJSON
+* :x: TOML
+* :x: CapnProto
+* :white_check_mark: Parquet
+* :x: CBOR
+* :x: FlatBuffers
+* :x: FlexBuffers

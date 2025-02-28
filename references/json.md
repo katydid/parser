@@ -61,11 +61,14 @@
 
 * object
 
+## UUID Types
+
+* uuid
+
 ## Extra Types
 
 * ipv4
 * ipv6
-* uuid
 * json-pointer
 * relative-json-pointer
 
