@@ -16,6 +16,17 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 * whitespace
 * TEXT_NODE
 * COMMENT_NODE
+* anyURI
+* QName
+* language
+* NMTOKEN
+* Name
+* NCName
+* ID
+* IDREF
+* CDATA_SECTION_NODE
+* DTD ID
+* PCDATA
 
 ## Byte Array Types
 
@@ -76,6 +87,17 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 
 * element
 * ELEMENT_NODE
+* group
+* zeroOrMore
+* oneOrMOre
+* list
+* NMTOKENS
+* IDREFS
+* ENTITIES
+* ShadowRoot
+* DOCUMENT_NODE
+* DOCUMENT_TYPE_NODE
+* DOCUMENT_FRAGMENT_NODE
 
 ## Union Types
 
@@ -85,10 +107,12 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 ## Object Types
 
 * ATTRIBUTE_NODE
+* interleave
+* PROCESSING_INSTRUCTION_NODE
 
-## Extra Types
+## Optional Types
 
-**TODO**
+* optional
 
 ## Referenced
 
@@ -172,13 +196,13 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 * zeroOrMore
 * oneOrMOre
 * list
-* mixed
+* mixed: same as (<interleave> p <text/> </interleave>)
 * ref
 * parentRef
+* externalRef
 * value
 * data
 * notAllowed
-* externalRef
 * except
 
 ### DTD
@@ -203,3 +227,7 @@ Each XML element has unordered attributes, which can be modeled as a Object foll
 * https://www.w3.org/TR/xmlschema-2/#built-in-primitive-datatypes
 * https://www.w3schools.com/xml/schema_dtypes_numeric.asp
 * https://www.w3schools.com/XML/schema_facets.asp
+* https://developer.mozilla.org/en-US/docs/Web/API/CDATASection
+* https://learn.microsoft.com/en-us/dotnet/standard/data/xml/reading-entity-declarations-and-entity-references-into-the-dom?redirectedfrom=MSDN
+* https://en.wikipedia.org/wiki/Processing_Instruction
+* https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot
