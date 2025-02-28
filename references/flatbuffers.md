@@ -48,7 +48,9 @@
 * Tables: consist of a name and a list of fields
 * Struct: Similar to a table, structs consist of fields are required (so no defaults either), and fields may not be added or be deprecated.
 
-## Extra Types
+## Optional Types
+
+These are not encoded or should be treated as not encoded
 
 * Optional
 

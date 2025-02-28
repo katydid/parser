@@ -64,7 +64,9 @@
 
 * UUID
 
-## Extra Types
+## Optional Types
+
+These are not encoded or should be treated as not encoded
 
 * OPTIONAL
 

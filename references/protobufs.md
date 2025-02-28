@@ -75,7 +75,9 @@
 * Struct (message)
 * Type (message)
 
-## Extra Types
+## Optional Types
+
+These are not encoded or should be treated as not encoded
 
 * optional
 * Option (message)
