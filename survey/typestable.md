@@ -470,3 +470,6 @@ Other types are not supported by all formats and for that it is worth studying t
 
 </table>
 
+## References
+
+* See the [references folder](./references/)
