@@ -9,7 +9,7 @@ This usually results in the parser becoming a bottleneck, in which we recommend:
 * The parser should avoid copying or allocating memory on the heap as much as possible.
 * The parser should only parse what truly needs parsing and skip as much as possible.
 
-Given these constraints and the fact that most serialization formats are Sequential, we have decided to have two main methods for moving forward:
+Given these constraints and the fact that [most serialization formats are Sequential](./survey/comparison.md), we have decided to have two main methods for moving forward:
 
 * Next
 * Skip
