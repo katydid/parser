@@ -2,4 +2,4 @@
 
 * [History](./history.md)
 * [Comparison](./comparison.md)
-* [Types](./types.md)
+* [Types](./typestable.md)
