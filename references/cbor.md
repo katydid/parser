@@ -54,11 +54,6 @@
 
 * map	2N data items (key/value pairs)
 
-## Extra Types
-
-* simple (extendible types)
-* undefined: a substitute for a data item with an encoding problem.
-
 ## Referenced
 
 * null

@@ -102,6 +102,8 @@ It can be emulated by an empty Object in JSON and many other formats or a messag
 * :white_check_mark: FlatBuffers
 * :white_check_mark: FlexBuffers
 
+Note: ASN.1 also has an Arbitrary-length bit array.
+
 ## Arbitrary-precision Decimal Values (decimal)
 
 `decimal` includes integers and floats outside the 64-bit range.
@@ -288,6 +290,8 @@ Also referred to as Sequence, Array, Vector, repeated or elements.
 * :white_check_mark: CBOR
 * :white_check_mark: FlatBuffers
 * :white_check_mark: FlexBuffers
+
+Note: YAML also has `pairs`, which can be treated as lists of length 2.
 
 ## Set
 

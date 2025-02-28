@@ -16,6 +16,7 @@
 * Binary data
 * Function (subtype of binData)
 * MD5 (subtype of binData)
+* ObjectId (example: `_id: ObjectId("5099803df3f4948bd2f98391")`) (12 bytes in Golang)
 
 ## Decimal Types
 
@@ -49,10 +50,6 @@
 ## Uuid Types
 
 * Uuid
-
-## Extra Types
-
-* ObjectId (example: `_id: ObjectId("5099803df3f4948bd2f98391")`)
 
 ## Referenced
 

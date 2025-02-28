@@ -22,6 +22,7 @@
 ## Byte Array Types
 
 * OCTET STRING
+* BIT STRING (Arbitrary-length bit array)
 
 ## Decimal Types
 
@@ -73,10 +74,6 @@
 
 * SET (fields in any order)
 * SEQUENCE (fields in order)
-
-## Extra Types
-
-* BIT STRING (Arbitrary-length bit array)
 
 ## Referenced
 

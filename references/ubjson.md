@@ -25,6 +25,7 @@
 
 ## Int64 Types
 
+* Char Type (a byte not larger than 127)
 * uint8 (Big Endian 8-bit unsigned integers)
 * int8 (Big Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers)
 * int16 (Big Endian 8-bit, 16-bit, 32-bit, and 64-bit Two’s Complement signed integers)
@@ -38,10 +39,6 @@
 ## Object Types
 
 * Object
-
-## Extra Types
-
-* Char Type
 
 ## Referenced
 

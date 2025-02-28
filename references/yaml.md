@@ -33,6 +33,7 @@
 ## List Types
 
 * seq
+* pairs
 
 ## Set Types
 
@@ -48,10 +49,6 @@
 * map
 * omap
 
-## Extra Types
-
-* pairs
-
 ## Referenced
 
 * null
@@ -65,10 +62,10 @@
 * set
 * map (- 2001-07-23 ? [ New York Yankees,Atlanta Braves ] : [ 2001-07-02, 2001-08-12, 2001-08-14] -- mapping between sequences)
 * omap (ordered map)
-* pairs
 * merge (used to merge two messages, not a type)
 * value (used for default values, not a type)
 * yaml (encoding yaml in yaml, not a type)
+* pairs
 
 ### References
 
