@@ -19,6 +19,8 @@
 * iri-reference
 * uri-template
 * regex
+* ipv4
+* ipv6
 
 ## Decimal Types
 
@@ -64,13 +66,6 @@
 ## UUID Types
 
 * uuid
-
-## Extra Types
-
-* ipv4
-* ipv6
-* json-pointer
-* relative-json-pointer
 
 ## Referenced
 
