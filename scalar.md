@@ -8,7 +8,7 @@ We have concluded that all parsers require only the following scalar types:
 * String (UTF-8 decoded)
 * Int64 (for precise and efficient comparisons for integers up to int64)
 * Float64 (for efficient comparisons for floats up to int64)
-* Decimals or Uint64s outside of the range of Float64 or Int64 respectively are supported as a String in JSON's number format.
+* Decimals or Uint64s outside of the range of Float64 or Int64 respectively are supported as a String (**TODO: What is that exact string format**).
 * Times and Duration are supported via Int64 (nanoseconds since January 1, 1970 UTC) or a fallback to String (ISO 8601).
 
 ## Survey
@@ -23,7 +23,7 @@ We did a [survey](./survey/Readme.md) and found that the following common scalar
 <tr><td>Bytes</td><td>Bytes</td></tr>
 <tr><td>Int64</td><td>Int64</td></tr>
 <tr><td>Float64</td><td>Float64</td></tr>
-<tr><td>Decimal</td><td>String (same as number in JSON format)</td></tr>
+<tr><td>Decimal</td><td>String (<b>TODO: What is that exact string format</b>)</td></tr>
 <tr><td>Uint64</td><td>Int64 (if in range) or fallback to String (if out of int64 range, same as decimal)</td></tr>
 <tr><td>Date</td><td>String: yyyy-mm-dd (ISO 8601)</td></tr>
 <tr><td>Time</td><td>Int64 (nanoseconds since January 1, 1970 UTC) or fallback to String (ISO 8601)</td></tr>

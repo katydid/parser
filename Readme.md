@@ -2,33 +2,147 @@
 
 The Katydid Parser is a generic interface created to be implemented for many serialization formats in a variety of programming languages.
 
+Our main use case is so that one schema language (for example, JSONSchema, but not limited to) can be applied to any serialization format.
+We will use JSON and XML in most examples, but this interface also supports Protobufs and other binary formats.
+
 ## Interface
 
-We describe the interface in a language agnostic way.
-So that this can be used by for implementing a parser for any serialization in almost any programming language.
+We describe the interface in a language agnostic way, so that this can be used by for implementing a parser for any serialization in almost any programming language.
+We found that [most serialization formats are Sequential](./survey/comparison.md) and have decided on an interface with three methods:
 
-The interface is limited to the following methods for traversing the parse tree:
+* Next
+* Skip
+* Token
 
-* `Next` (parses up to the start of the next token and returns a [`Kind`](https://github.com/katydid/parser/blob/main/design.md#kind) or an error or EOF)
-* [`Skip`](https://github.com/katydid/parser/blob/main/design.md#skip) (possibly returns an error or EOF)
+Note: when we mention "returns a value or an error", this should be represented in the most efficient way specific to that programming language.
+A language supporting tagged unions/sum types/enums/optional/maybe should consider using them, but if this allocates memory on the heap, a more efficient structure could be used.
+Other options include: tuples, unions, multiple return parameters or throwing a checked exception (instead of returning an error).
 
-The interface also includes the following methods for tokenizing the current token into a value:
+This interface has 3 methods. They take zero parameters, except for the parser's internal state, which they need to update.
+If you are implementing this in a functional language without monads, please remember to add the state as an extra parameter and result.
 
-* `IsNull` (returns a parse error or no error if the current token represents null)
-* `Bool` (returns a bool or a parse error)
-* `Bytes` (returns a byte array a parse error)
-* `String` (returns a UTF8 string a parse error)
-* `Int64` (returns an 64 bit signed integer a parse error)
-* `Float64` (returns a double precision float a parse error)
+### Next
 
-Throwing a catchable exception or Using Maybe/Optional types are also permitted instead of returning errors.
+The `Next` method, returns a `Hint` or an error:
 
-## Open Questions
+```
+Next : () -> (Hint | error)
+```
 
-* Can we shrink this interface:
-  + Do we need `String` or is utf8 `Bytes` good enough?
-  + Do we need `Int64` and `Float64`?
-  + Can we get rid of `IsNull`?
+The `Next` method does as little work as possible to move onto the next token and to provide a hint about the kind of token.
+
+### Hint
+
+The `Hint` provides a hint about the location in the structure.
+
+We conducted a [survey of of the most common serialization formats](./survey/Readme.md) and found that a limited amount of [Compound](./compound.md) types need to be supported:
+
+* Map
+* List
+
+This results in only a limited amount of hints that are required for the user to know if it wants to `Skip`, parse the `Token` or move onto the `Next` element.
+
+In some implementation languages, `Hint` is indicated with a single byte or ascii character:
+
+* '{': Map Opened
+* 'k': Key
+* 'v': Value or Element
+* '}': Map Closed
+* '[': List Opened
+* 'e': Element
+* ']': List Closed
+
+In other languages a sum type/enum is preferred to represent `Hint`.
+
+### Skip
+
+The `Skip` method possibly returns an error:
+
+```
+Skip : () -> (error)?
+```
+
+The `Skip` method allows the user to skip over uninteresting parts of the parse tree.
+Based on the `Hint` skip has different intuitive behaviours. If the `Hint` was:
+
+* '{': the whole `Map` is skipped.
+* 'k': the key's value is skipped.
+* 'v': the rest of the `Map` is skipped.
+* '}': same as calling `Next` and ignoring the `Hint`.
+* '[': the whole `List` is skipped.
+* 'e': the rest of the `List` is skipped.
+* ']': same as calling `Next` and ignoring the `Hint`.
+
+### Kind
+
+The `Kind` represents the `kind` of the value.
+
+We conducted a [survey of of the most common serialization formats](./survey/Readme.md) and found that a limited amount of [Scalar](./scalar.md) types need to be supported:
+
+* `Null`
+* `Bool`
+* `Bytes`
+* `String`
+* `Int64`
+* `Float64`
+
+We represent these with a specific `Kind`:
+
+* '_': Null (Null)
+* 't': True (Bool)
+* 'f': False (Bool)
+* 'x': Bytes (Bytes)
+* '"': String (String)
+* '-': Int64 (Int64)
+* '.': Float64 (Float64)
+* '/': Decimal (String)
+* '9': Nanoseconds (Int64)
+* 'T': ISO 8601 (String)
+
+### Token
+
+The `Token` method returns a `Kind`, value or an error.
+
+```
+Token: () -> ((Kind, value) | error)
+```
+
+The `Token` method is the only method that returns the value of a token.
+The `Token` method's design varies dependending on implementation language and some experimentation is still required.
+We will give some examples.
+
+In a language with sum types, we recommend declaring `Token` as a sum type and not using `Kind`:
+```
+GetToken : () -> (Token | error)
+
+type Token =
+  | Null
+  | False
+  | True
+  | Bytes bytes
+  | String string
+  | Int64 int64
+  | Float64 float64
+  | Decimal string
+  | Nanoseconds int64
+  | DateTime string
+```
+
+In a language without sum types, we can use multiple methods:
+```
+Tokenize : () -> (Kind | error)
+Int64: () -> (int64 | error)
+Float64: () -> (float64 | error)
+String: () -> (string | error)
+Bytes: () -> ([]byte | error)
+```
+We do not need a Boolean or IsNull method, since `true`, `false` and `null` is represented purely as the `Kind`.
+
+Some languages have specific optimizations available, for example in Go:
+```go
+Token() (Kind, []byte, error)
+```
+We can cast `[]byte` to `string`, `float64`, `int64` (without copying or allocating memory) based on the `Kind`.
 
 ## Implementations
 
