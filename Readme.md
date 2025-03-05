@@ -111,6 +111,8 @@ The `Token` method is the only method that returns the value of a token.
 The `Token` method's design varies dependending on implementation language and some experimentation is still required.
 We will give some examples.
 
+In a dynamicly typed language the above description of the `Token` method is sufficient.
+
 In a language with sum types, we recommend declaring `Token` as a sum type and not using `Kind`:
 ```
 GetToken : () -> (Token | error)
