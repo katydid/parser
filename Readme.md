@@ -14,19 +14,21 @@ We found that [most serialization formats are Sequential](./survey/comparison.md
 * Skip
 * Token
 
-Note: when we mention "returns a value or an error", this should be represented in the most efficient way specific to that programming language.
+When we mention "returns a value or an error", this should be represented in the most efficient way specific to that programming language.
 A language supporting tagged unions/sum types/enums/optional/maybe should consider using them, but if this allocates memory on the heap, a more efficient structure could be used.
 Other options include: tuples, unions, multiple return parameters or throwing a checked exception (instead of returning an error).
+
+When we mention "returns an error or EOF", this could be represented as just an error, if there is a way to distinguish between a general error and an error that is an "end of file".
 
 This interface has 3 methods. They take zero parameters, except for the parser's internal state, which they need to update.
 If you are implementing this in a functional language without monads, please remember to add the state as an extra parameter and result.
 
 ### Next
 
-The `Next` method, returns a `Hint` or an error:
+The `Next` method, returns a `Hint` or an error or an `EOF`, when no more tokens are left:
 
 ```
-Next : () -> (Hint | error)
+Next : () -> (Hint | error | EOF)
 ```
 
 The `Next` method does as little work as possible to move onto the next token and to provide a hint about the kind of token.
@@ -56,10 +58,10 @@ In other languages a sum type/enum is preferred to represent `Hint`.
 
 ### Skip
 
-The `Skip` method possibly returns an error:
+The `Skip` method possibly returns an error or EOF:
 
 ```
-Skip : () -> (error)?
+Skip : () -> (error | EOF)?
 ```
 
 The `Skip` method allows the user to skip over uninteresting parts of the parse tree.
