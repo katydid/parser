@@ -46,13 +46,12 @@ This results in only a limited amount of hints that are required for the user to
 
 In some implementation languages, `Hint` is indicated with a single byte or ascii character:
 
-* '{': Map Opened
-* 'k': Key
-* 'v': Value or Element
-* '}': Map Closed
 * '[': List Opened
-* 'e': Element
 * ']': List Closed
+* '{': Map Opened
+* '}': Map Closed
+* 'k': Map Key
+* 'v': Map Value or List Element, that is not a Object or List.
 
 In other languages a sum type/enum is preferred to represent `Hint`.
 
