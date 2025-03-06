@@ -135,7 +135,6 @@ In a language without sum types, we can use multiple methods:
 Tokenize : () -> (Kind | error)
 Int64: () -> (int64 | error)
 Float64: () -> (float64 | error)
-String: () -> (string | error)
 Bytes: () -> ([]byte | error)
 ```
 We do not need a Boolean or IsNull method, since `true`, `false` and `null` is represented purely as the `Kind`.
