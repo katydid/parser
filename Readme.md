@@ -68,11 +68,10 @@ Based on the `Hint` skip has different intuitive behaviours. If the `Hint` was:
 
 * '{': the whole `Map` is skipped.
 * 'k': the key's value is skipped.
-* 'v': the rest of the `Map` is skipped.
-* '}': same as calling `Next` and ignoring the `Hint`.
 * '[': the whole `List` is skipped.
-* 'e': the rest of the `List` is skipped.
+* 'v': the rest of the `Map` or `List` is skipped.
 * ']': same as calling `Next` and ignoring the `Hint`.
+* '}': same as calling `Next` and ignoring the `Hint`.
 
 ### Kind
 
