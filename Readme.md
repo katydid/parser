@@ -138,6 +138,7 @@ Float64: () -> (float64 | error)
 Bytes: () -> ([]byte | error)
 ```
 We do not need a Boolean or IsNull method, since `true`, `false` and `null` is represented purely as the `Kind`.
+Optionally we can also use the Bytes method for Strings.
 
 Some languages have specific optimizations available, for example in Go:
 ```go
