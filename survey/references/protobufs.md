@@ -2,7 +2,7 @@
 
 ## Basic Types
 
-* null values are not serialized
+* null
 * Empty (message)
 * bool
 
@@ -131,6 +131,7 @@ Well-Known Types that end in “Value” are wrapper messages for other types, s
 
 ### References
 
+* https://protobuf.dev/reference/protobuf/google.protobuf/#null-value
 * https://protobuf.dev/reference/protobuf/google.protobuf/
 * https://protobuf.dev/programming-guides/editions/
 * https://protobuf.com/docs/language-spec
