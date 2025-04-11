@@ -97,7 +97,8 @@ We represent these with a specific `Kind`:
 * '.': Float64 (Float64)
 * '/': Decimal (String)
 * '9': Nanoseconds (Int64)
-* 'T': ISO 8601 (String)
+* 'T': Date Time ISO 8601 (String)
+* '#': Custom Tag (String)
 
 ### Token
 
@@ -128,6 +129,7 @@ type Token =
   | Decimal string
   | Nanoseconds int64
   | DateTime string
+  | Tag String
 ```
 
 In a language without sum types, we can use multiple methods:
