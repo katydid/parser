@@ -38,7 +38,51 @@ Next -> ']'
 Next -> '}'
 ```
 
+We can also look at this JSON object as translating to the following list of Trees, where a `Tree` is `Label` and a list of `Children` of type `Tree`:
+
+```haskell
+[
+  {
+    "Label": "int",
+    "Children": [
+      {
+        "Label": 1,
+        "Children": []
+      }
+    ]
+  },
+  {
+    "Label": "bool",
+    "Children": [
+      {
+        "Label": true,
+        "Children": []
+      }
+    ]
+  },
+  {
+    "Label": "arr",
+    "Children": [
+      {
+        "Label": (),
+        "Children": [
+          {
+            "Label": "elem",
+            Children: [],
+          }
+        ]
+      }
+    ]
+  }
+]
+```
+
+Note that each element in the array will be tree with a `Label` equal to unit and this will be skipped over by the parser for convenience.
+
 ## Next and Skip Example
+
+In the previous example we only covered Next and Token.
+In this example we also look at what happens when we call Skip in various locations.
 
 Given the following input:
 

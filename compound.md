@@ -5,6 +5,8 @@ We have concluded that all parsers require only the following compound types:
 * List
 * Map
 
+Note the keys in a map are not gauranteed to be unique, for example when parsing XHTML you can multiple `div` keys in the same `body`.
+
 ## Survey
 
 We did a [survey](./survey/Readme.md) and found that the following common compound types, which we have mapped to the supported compound types:
