@@ -1,3 +1,4 @@
 ## Examples
 
-**TODO**
+* [JSON](./examples/json.md)
+* XML **TODO**

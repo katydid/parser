@@ -82,8 +82,8 @@ We conducted a [survey of of the most common serialization formats](./survey/Rea
 We represent these with a specific `Kind`:
 
 * '_': Null
-* 't': True (Bool)
-* 'f': False (Bool)
+* 't': True
+* 'f': False
 * 'x': Bytes (Bytes)
 * '"': String (String)
 * '-': Int64 (Int64)
@@ -95,7 +95,6 @@ We represent these with a specific `Kind`:
 
 Your implementation language will probably need these basic types:
 
-* `Bool`
 * `Bytes`
 * `String`
 * `Int64`

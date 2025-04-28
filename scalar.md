@@ -4,8 +4,8 @@ We did a [survey](./survey/Readme.md) and found the following common scalar type
 
 <table>
 <tr><th>Surveyed</th><th>Supported as</th></tr>
-<tr><td>Null</td><td>Null</td></tr>
-<tr><td>Bool</td><td>Bool</td></tr>
+<tr><td>Null</td><td>Kind</td></tr>
+<tr><td>Bool</td><td>Kind</td></tr>
 <tr><td>String</td><td>String</td></tr>
 <tr><td>Bytes</td><td>Bytes</td></tr>
 <tr><td>Int64</td><td>Int64</td></tr>
@@ -23,7 +23,6 @@ We did a [survey](./survey/Readme.md) and found the following common scalar type
 
 Your language will need the following basic types:
 
-* Boolean
 * Bytes
 * String (UTF-8 decoded)
 * Int64 (for precise and efficient comparisons for integers up to int64)
