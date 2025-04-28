@@ -25,13 +25,13 @@ If you are implementing this in a functional language without monads, please rem
 
 ### Next
 
-The `Next` method, returns a `Hint` or an error or an `EOF`, when no more tokens are left:
+The `Next` method, returns a `Hint`, an error or an `EOF`, when no more tokens are left:
 
 ```
 Next : () -> (Hint | error | EOF)
 ```
 
-The `Next` method does as little work as possible to move onto the next token and to provide a hint about the kind of token.
+The `Next` method does as little work as possible to move onto the next token and to provide a hint about the kind of token is next.
 
 ### Hint
 
@@ -44,14 +44,14 @@ We conducted a [survey of of the most common serialization formats](./survey/Rea
 
 This results in only a limited amount of hints that are required for the user to know if it wants to `Skip`, parse the `Token` or move onto the `Next` element.
 
-In some implementation languages, `Hint` is indicated with a single byte or ascii character:
+In some implementation languages, `Hint` can be indicated with a single byte or ascii character:
 
 * '[': List Opened
 * ']': List Closed
 * '{': Map Opened
 * '}': Map Closed
 * 'k': Map Key
-* 'v': Map Value or List Element, that is not a Object or List.
+* 'v': Map Value or List Element, that is not an Object or List.
 
 In other languages a sum type/enum is preferred to represent `Hint`.
 
@@ -64,7 +64,8 @@ Skip : () -> (error | EOF)?
 ```
 
 The `Skip` method allows the user to skip over uninteresting parts of the parse tree.
-Based on the `Hint` skip has different intuitive behaviours. If the `Hint` was:
+Based on the `Hint` skip has different intuitive behaviours. 
+If the `Hint` was:
 
 * '{': the whole `Map` is skipped.
 * 'k': the key's value is skipped.
@@ -77,18 +78,10 @@ Based on the `Hint` skip has different intuitive behaviours. If the `Hint` was:
 
 The `Kind` represents the `kind` of the value.
 
-We conducted a [survey of of the most common serialization formats](./survey/Readme.md) and found that a limited amount of [Scalar](./scalar.md) types need to be supported:
-
-* `Null`
-* `Bool`
-* `Bytes`
-* `String`
-* `Int64`
-* `Float64`
-
+We conducted a [survey of of the most common serialization formats](./survey/Readme.md) and found that a limited amount of [Scalar](./scalar.md) types need to be supported.
 We represent these with a specific `Kind`:
 
-* '_': Null (Null)
+* '_': Null
 * 't': True (Bool)
 * 'f': False (Bool)
 * 'x': Bytes (Bytes)
@@ -96,9 +89,17 @@ We represent these with a specific `Kind`:
 * '-': Int64 (Int64)
 * '.': Float64 (Float64)
 * '/': Decimal (String)
-* '9': Nanoseconds (Int64)
+* '9': Nanoseconds (Int64) (used for duration and time)
 * 'T': Date Time ISO 8601 (String)
 * '#': Custom Tag (String)
+
+Your implementation language will probably need these basic types:
+
+* `Bool`
+* `Bytes`
+* `String`
+* `Int64`
+* `Float64`
 
 ### Token
 
@@ -146,7 +147,7 @@ Some languages have specific optimizations available, for example in Go:
 ```go
 Token() (Kind, []byte, error)
 ```
-We can cast `[]byte` to `string`, `float64`, `int64` (without copying or allocating memory) based on the `Kind`.
+We can cast `[]byte` to `string`, `float64` or `int64` (without copying or allocating memory) based on the `Kind`.
 
 ## Implementations
 

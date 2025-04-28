@@ -18,5 +18,5 @@ We found that [most serialization formats are Sequential](./survey/comparison.md
 Deciding which types to represent took us on a journey of doing a [survey](./survey/Readme.md) of the most common serialization formats,
 we have come with a limited set of supported [Scalar](./scalar.md) and [Compound](./compound.md) types.
 
-Other types can be mapped from these rared types to these supported types. 
+Other types can be mapped from rarer types to these supported types. 
 For example, UUID is mapped to `Bytes`, Dates to `String` via ISO 8601, Set to `List` and an Object is repesented as a `Map`.

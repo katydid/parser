@@ -1,22 +1,9 @@
 # Scalar Types
 
-We have concluded that all parsers require only the following scalar types:
-
-* Null
-* Boolean
-* Bytes
-* String (UTF-8 decoded)
-* Int64 (for precise and efficient comparisons for integers up to int64)
-* Float64 (for efficient comparisons for floats up to int64)
-* Decimals or Uint64s outside of the range of Float64 or Int64 respectively are supported as a String (**TODO: What is that exact string format**).
-* Times and Duration are supported via Int64 (nanoseconds since January 1, 1970 UTC) or a fallback to String (ISO 8601).
-
-## Survey
-
-We did a [survey](./survey/Readme.md) and found that the following common scalar types, which we have mapped to the supported scalar types:
+We did a [survey](./survey/Readme.md) and found the following common scalar types that need to be supported with a basic type in your implementation language:
 
 <table>
-<tr><th>Surveyed</th><th>Supported</th></tr>
+<tr><th>Surveyed</th><th>Supported as</th></tr>
 <tr><td>Null</td><td>Null</td></tr>
 <tr><td>Bool</td><td>Bool</td></tr>
 <tr><td>String</td><td>String</td></tr>
@@ -31,3 +18,16 @@ We did a [survey](./survey/Readme.md) and found that the following common scalar
 <tr><td>UUID</td><td>Bytes (16 bytes)</td></tr>
 <tr><td>Enum</td><td>String (the string representation of the Enum) or fallback to Int64</td></tr>
 </table>
+
+## Basic Types
+
+Your language will need the following basic types:
+
+* Boolean
+* Bytes
+* String (UTF-8 decoded)
+* Int64 (for precise and efficient comparisons for integers up to int64)
+* Float64 (for efficient comparisons for floats up to 64 bits)
+* Decimals or Uint64s outside of the range of Float64 or Int64 respectively are supported as a String (**TODO: What is that exact string format**).
+* Times and Duration are supported via Int64 (nanoseconds since January 1, 1970 UTC) or a fallback to String (ISO 8601).
+
