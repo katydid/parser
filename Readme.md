@@ -161,16 +161,16 @@ We can cast `[]byte` to `string`, `float64` or `int64` (without copying or alloc
 
 <tr>
 <td><a href="https://github.com/katydid/parser-go">Golang</a></td>
-<td><a href="https://github.com/katydid/parser-go-xml">✅</a></td>
-<td><a href="https://github.com/katydid/parser-go-json">✅</a></td>
-<td><a href="https://github.com/katydid/parser-go-proto">✅</a></td>
+<td><a href="https://github.com/katydid/parser-go-xml">✅*</a></td>
+<td><a href="https://github.com/katydid/parser-go-json">✅*</a></td>
+<td><a href="https://github.com/katydid/parser-go-proto">✅*</a></td>
 </tr>
 
 <tr>
 <td><a href="https://github.com/katydid/katydid-haskell">Haskell</a></td>
-<td><a href="https://github.com/katydid/katydid-haskell/blob/master/src/Data/Katydid/Parser/Xml.hs">✅</a></td>
-<td><a href="https://github.com/katydid/katydid-haskell/blob/master/src/Data/Katydid/Parser/Json.hs">✅</a></td>
-<td><a href="https://github.com/katydid/katydid-haskell/blob/master/src/Data/Katydid/Parser/Protobuf/Protobuf.hs">✅</a></td>
+<td><a href="https://github.com/katydid/katydid-haskell/blob/master/src/Data/Katydid/Parser/Xml.hs">✅*</a></td>
+<td><a href="https://github.com/katydid/katydid-haskell/blob/master/src/Data/Katydid/Parser/Json.hs">✅*</a></td>
+<td><a href="https://github.com/katydid/katydid-haskell/blob/master/src/Data/Katydid/Parser/Protobuf/Protobuf.hs">✅*</a></td>
 </tr>
 
 <tr>
@@ -182,7 +182,7 @@ We can cast `[]byte` to `string`, `float64` or `int64` (without copying or alloc
 
 </table>
 
-Note: Some of these implementations are outdated and implement a previous design of the interface.
+*: Implementation is outdated and implement a previous parser design. They need updating to this new parser interface.
 
 ## More
 
