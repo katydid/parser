@@ -1,6 +1,6 @@
 # Scalar Types
 
-We did a [survey](./decisions/survey/Readme.md) and found the following common scalar types that need to be supported with a basic type in your implementation language:
+We did a [survey](./survey/Readme.md) and found the following common scalar types that need to be supported with a basic type in your implementation language:
 
 <table>
 <tr><th>Surveyed</th><th>Supported as</th></tr>

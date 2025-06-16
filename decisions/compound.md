@@ -9,7 +9,7 @@ Note the keys in a map are not gauranteed to be unique, for example when parsing
 
 ## Survey
 
-We did a [survey](./decisions/survey/Readme.md) and found that the following common compound types, which we have mapped to the supported compound types:
+We did a [survey](./survey/Readme.md) and found that the following common compound types, which we have mapped to the supported compound types:
 
 <table>
 <tr><th>Surveyed</th><th>Supported</th></tr>

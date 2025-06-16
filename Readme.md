@@ -39,7 +39,7 @@ The `Next` method does as little work as possible to move onto the next token an
 
 The `Hint` provides a hint about the location in the structure.
 
-We conducted a [survey of of the most common serialization formats](./decisions/survey/Readme.md) and found that a limited amount of [Compound](./compound.md) types need to be supported:
+We conducted a [survey of of the most common serialization formats](./decisions/survey/Readme.md) and found that a limited amount of [Compound](./decisions/compound.md) types need to be supported:
 
 * Map
 * List
@@ -80,7 +80,7 @@ If the `Hint` was:
 
 The `Kind` represents the `kind` of the value.
 
-We conducted a [survey of of the most common serialization formats](./decisions/survey/Readme.md) and found that a limited amount of [Scalar](./scalar.md) types need to be supported.
+We conducted a [survey of of the most common serialization formats](./decisions/survey/Readme.md) and found that a limited amount of [Scalar](./decisions/scalar.md) types need to be supported.
 We represent these with a specific `Kind`:
 
 * '_': Null
@@ -188,5 +188,5 @@ We can cast `[]byte` to `string`, `float64` or `int64` (without copying or alloc
 
 ## More
 
-* [Design Decisions](./design.md)
+* [Design Decisions](./decisions/design.md)
 * [Examples](./examples.md)
