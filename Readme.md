@@ -186,6 +186,11 @@ We can cast `[]byte` to `string`, `float64` or `int64` (without copying or alloc
 
 *: Implementation is outdated and implement a previous parser design. They need updating to this new parser interface.
 
+## Examples
+
+* [JSON](./examples/json.md)
+* XML **TODO**
+
 ## More
 
 * [Design Decisions](./decisions/design.md)
