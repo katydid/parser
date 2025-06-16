@@ -9,7 +9,7 @@ This is one reason performance is important and why we recommend:
 * The parser should avoid copying or allocating memory on the heap as much as possible.
 * The parser should only parse what truly needs parsing and skip as much as possible.
 
-We found that [most serialization formats are Sequential](./survey/comparison.md) and have decided on an interface with three methods:
+We found that [most serialization formats are Sequential](./decisions/survey/comparison.md) and have decided on an interface with three methods:
 
 * Next
 * Skip

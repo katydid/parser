@@ -8,20 +8,22 @@ We will use JSON and XML in most examples, but this interface also supports Prot
 ## Interface
 
 We describe the interface in a language agnostic way, so that this can be used by for implementing a parser for any serialization in almost any programming language.
-We found that [most serialization formats are Sequential](./survey/comparison.md) and have decided on an interface with three methods:
+We found that [most serialization formats are Sequential](./decisions/survey/comparison.md) and have decided on an interface with three methods:
 
 * Next
 * Skip
 * Token
+
+This interface has 3 methods. They take zero parameters, except for the parser's internal state, which they need to update.
+If you are implementing this in a functional language without monads, please remember to add the state as an extra parameter and result.
+
+## Errors
 
 When we mention "returns a value or an error", this should be represented in the most efficient way specific to that programming language.
 A language supporting tagged unions/sum types/enums/optional/maybe should consider using them, but if this allocates memory on the heap, a more efficient structure could be used.
 Other options include: tuples, unions, multiple return parameters or throwing a checked exception (instead of returning an error).
 
 When we mention "returns an error or EOF", this could be represented as just an error, if there is a way to distinguish between a general error and an error that is an "end of file".
-
-This interface has 3 methods. They take zero parameters, except for the parser's internal state, which they need to update.
-If you are implementing this in a functional language without monads, please remember to add the state as an extra parameter and result.
 
 ### Next
 
@@ -37,7 +39,7 @@ The `Next` method does as little work as possible to move onto the next token an
 
 The `Hint` provides a hint about the location in the structure.
 
-We conducted a [survey of of the most common serialization formats](./survey/Readme.md) and found that a limited amount of [Compound](./compound.md) types need to be supported:
+We conducted a [survey of of the most common serialization formats](./decisions/survey/Readme.md) and found that a limited amount of [Compound](./compound.md) types need to be supported:
 
 * Map
 * List
@@ -78,7 +80,7 @@ If the `Hint` was:
 
 The `Kind` represents the `kind` of the value.
 
-We conducted a [survey of of the most common serialization formats](./survey/Readme.md) and found that a limited amount of [Scalar](./scalar.md) types need to be supported.
+We conducted a [survey of of the most common serialization formats](./decisions/survey/Readme.md) and found that a limited amount of [Scalar](./scalar.md) types need to be supported.
 We represent these with a specific `Kind`:
 
 * '_': Null
