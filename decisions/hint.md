@@ -50,6 +50,20 @@ It will be parsed the same as if it was the following JSON:
 
 Note the keys are not gauranteed to be unique.
 
+In cases where we know the elements cannot be compound types, we can model them as keys.
+For example, in XML when parsing
+
+```xml
+<A><B>C</B>D<B>F</B></A>
+```
+
+It can be parsed as:
+
+```json
+{"A": {"B": "C", "D": {}, "B": "F"}}
+```
+
+
 ## Why Next returns a Hint and not a Token
 
 The `Next` method returns a hint.
@@ -120,7 +134,7 @@ There are two reasons:
 1. We want to keep the validator language simple and as close to regular expressions as possible.
 2. We want other algorithms that use the parser interface to be as simple as possible.
 
-### Regex based Validator Language
+### Regex Derivative based Validator Language
 
 The validator algorithm is derived from the derivative algorithm for regular expressions.
 
@@ -148,12 +162,12 @@ data Expr =
 | Star Expr
 ```
 
-If we want a pattern that matches:
+The following JSON input:
 ```json
 {"a": 1, "b": 2}
 ```
 
-We can write:
+Can be validated with:
 ```haskell
 (Tree (KeyStr "a") (Tree (KeyInt 1) Empty)) `Concat` (Tree (KeyStr "b") (Tree (KeyInt 2) Empty))
 ```
@@ -163,29 +177,65 @@ For argument sake, let us call that `Elem`.
 
 Given the following JSON:
 ```json
-[1, 2]
+[1, {"a": 2}]
 ```
 
 We can validate it with:
 ```haskell
-(Elem (Tree (KeyInt 1) Empty)) `Concat` (Elem (Tree (KeyInt 2) Empty))
+(Elem (Tree (KeyInt 1) Empty)) `Concat` (Elem (Tree (KeyStr "a") (Tree (KeyInt 2) Empty)))
 ```
 
 Given the following JSON:
 ```json
-{1: [], 2: []}
+{1: [], "a": 2}
 ```
 
 We can validate it with something very similar:
 ```haskell
-(Tree (KeyInt 1) Empty) `Concat` (Tree (KeyInt 2) Empty)
+(Tree (KeyInt 1) Empty) `Concat` (Tree (KeyStr "a") (Tree (KeyInt 2) Empty))
 ```
 
-For these expressions to mean different things,
-our validation algorithm would need to keep track of whether the parser was in an object or a list,
-which would complicate the validation algorithm.
+In fact they are so similar, our regular expression based derivative model is unable to spot the difference between these two expressions and two inputs.
+It is hard to say what the `Elem` operator means without a `KeyPattern`.
 
-Another problem is how would you distinguish between: `{"a": [1]}` and `{"a": 1}`.
+The `Tree` operator from the previous section has a trick.
+The `KeyPattern` allows the expression to indicate that we need to go down a level in the tree and validate its children.
+
+This why we propose having null keys for arrays.
+
+Given the following JSON:
+```json
+[1, {"a": 2}]
+```
+
+This would parse as:
+```json
+{null: 1, null: {"a": 2}}
+```
+
+which we can then validate with:
+```haskell
+(Tree KeyNull (Tree (KeyInt 1) Empty)) `Concat` (Tree KeyNull (Tree (KeyStr "a") (Tree (KeyInt 2) Empty)))
+```
+
+We can also decide to introduce the `Elem` operator that would now be equivalent to `Tree KeyNull`.
+
+### Possible viable idea (TODO)
+
+Given the following JSON:
+```json
+[1, {"a": 2}]
+```
+
+We could parse it as:
+```json
+{"array": [1, {"a": 2}]}
+```
+
+which we can then validate with:
+```haskell
+(Tree KeyArray ((Tree (KeyInt 1) Empty) `Concat` (Tree (KeyStr "a") (Tree (KeyInt 2) Empty))))
+```
 
 ### More Complex Algorithms
 
