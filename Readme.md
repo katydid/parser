@@ -15,7 +15,7 @@ We describe the interface in a language agnostic way, so that this can be used b
 
 ### Next
 
-The `Next` method, returns a `Hint`, an error or an `EOF`, when no more tokens are left:
+The `Next` method, returns a `Hint`, an error or an `EOF` signal, when no more tokens are left:
 
 ```
 Next : () -> (Hint | error | EOF)
@@ -48,8 +48,8 @@ Skip : () -> (error | EOF)?
 
 The `Skip` method allows the user to skip over uninteresting parts of the parse tree.
 Based on the `Hint` skip has different intuitive behaviours. 
-If the `Hint` was:
 
+If the `Hint` was:
 * '{': the whole `Map` is skipped.
 * 'k': the key's value is skipped.
 * '[': the whole `List` is skipped.
@@ -59,9 +59,7 @@ If the `Hint` was:
 
 ### Kind
 
-The `Kind` represents the `kind` of the value.
-
-We represent these with a specific `Kind`:
+The `Kind` represents the kind of the value:
 
 * '_': Null (Unit)
 * 't': True
@@ -75,60 +73,24 @@ We represent these with a specific `Kind`:
 * 'T': Date Time ISO 8601 (String)
 * '#': Custom Tag (String)
 
-Your implementation language will probably need these basic types:
+Note how each `Kind` is mapped to a value type, that will represent the value returned by the `Token` method.
+
+### Token
+
+The `Token` method returns (a `Kind` and a value) or an error.
+
+```
+Token: () -> ((Kind, value) | error)
+```
+
+The value is represented as one of the following value types:
 
 * `Bytes`
 * `String`
 * `Int64`
 * `Float64`
 
-### Token
-
-The `Token` method returns a `Kind`, value or an error.
-
-```
-Token: () -> ((Kind, value) | error)
-```
-
-The `Token` method is the only method that returns the value of a token.
-The `Token` method's design varies dependending on implementation language and some experimentation is still required.
-We will give some examples.
-
-In a dynamically typed language the above description of the `Token` method is sufficient.
-
-In a language with sum types, we recommend declaring `Token` as a sum type and not using `Kind`:
-```
-GetToken : () -> (Token | error)
-
-type Token =
-  | Null
-  | False
-  | True
-  | Bytes bytes
-  | String string
-  | Int64 int64
-  | Float64 float64
-  | Decimal string
-  | Nanoseconds int64
-  | DateTime string
-  | Tag String
-```
-
-In a language without sum types, we can use multiple methods:
-```
-Tokenize : () -> (Kind | error)
-Int64: () -> (int64 | error)
-Float64: () -> (float64 | error)
-Bytes: () -> ([]byte | error)
-```
-We call the `Tokenize` method first, to get the `Kind` and then call the appropriate follow up method (`Int64`, `Float64` or `Bytes`) to get the value of the token, if required.
-We do not need a `Boolean` or `IsNull` method, since `true`, `false` and `null` is represented purely as the `Kind`.
-
-Some languages have specific optimizations available, for example in Go:
-```go
-Token() (Kind, []byte, error)
-```
-We can cast `[]byte` to `string`, `float64` or `int64` (without copying or allocating memory) based on the `Kind`.
+See the mapping from `Kind` to value types in the previous section.
 
 ## Implementations
 
@@ -171,7 +133,8 @@ We can cast `[]byte` to `string`, `float64` or `int64` (without copying or alloc
 * [JSON](./examples/json.md)
 * XML **TODO**
 
-## More
+## Design Decisions
 
-* [Design Decisions](./decisions/design.md)
-* [Examples](./examples.md)
+* [Notation](./decisions/notation.md)
+* [Interface](./decisions/interface.md)
+* [More](./decisions/)
