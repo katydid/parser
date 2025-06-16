@@ -8,22 +8,10 @@ We will use JSON and XML in most examples, but this interface also supports Prot
 ## Interface
 
 We describe the interface in a language agnostic way, so that this can be used by for implementing a parser for any serialization in almost any programming language.
-We found that [most serialization formats are Sequential](./decisions/survey/comparison.md) and have decided on an interface with three methods:
 
-* Next
-* Skip
-* Token
-
-This interface has 3 methods. They take zero parameters, except for the parser's internal state, which they need to update.
-If you are implementing this in a functional language without monads, please remember to add the state as an extra parameter and result.
-
-## Errors
-
-When we mention "returns a value or an error", this should be represented in the most efficient way specific to that programming language.
-A language supporting tagged unions/sum types/enums/optional/maybe should consider using them, but if this allocates memory on the heap, a more efficient structure could be used.
-Other options include: tuples, unions, multiple return parameters or throwing a checked exception (instead of returning an error).
-
-When we mention "returns an error or EOF", this could be represented as just an error, if there is a way to distinguish between a general error and an error that is an "end of file".
+* `Next : () -> (Hint | error | EOF)`
+* `Skip : () -> (error | EOF)?`
+* `Token: () -> ((Kind, value) | error)`
 
 ### Next
 
@@ -38,13 +26,6 @@ The `Next` method does as little work as possible to move onto the next token an
 ### Hint
 
 The `Hint` provides a hint about the location in the structure.
-
-We conducted a [survey of of the most common serialization formats](./decisions/survey/Readme.md) and found that a limited amount of [Compound](./decisions/compound.md) types need to be supported:
-
-* Map
-* List
-
-This results in only a limited amount of hints that are required for the user to know if it wants to `Skip`, parse the `Token` or move onto the `Next` element.
 
 In some implementation languages, `Hint` can be indicated with a single byte or ascii character:
 
@@ -80,10 +61,9 @@ If the `Hint` was:
 
 The `Kind` represents the `kind` of the value.
 
-We conducted a [survey of of the most common serialization formats](./decisions/survey/Readme.md) and found that a limited amount of [Scalar](./decisions/scalar.md) types need to be supported.
 We represent these with a specific `Kind`:
 
-* '_': Null
+* '_': Null (Unit)
 * 't': True
 * 'f': False
 * 'x': Bytes (Bytes)
@@ -141,8 +121,8 @@ Int64: () -> (int64 | error)
 Float64: () -> (float64 | error)
 Bytes: () -> ([]byte | error)
 ```
-We do not need a Boolean or IsNull method, since `true`, `false` and `null` is represented purely as the `Kind`.
-Optionally we can also use the Bytes method for Strings.
+We call the `Tokenize` method first, to get the `Kind` and then call the appropriate follow up method (`Int64`, `Float64` or `Bytes`) to get the value of the token, if required.
+We do not need a `Boolean` or `IsNull` method, since `true`, `false` and `null` is represented purely as the `Kind`.
 
 Some languages have specific optimizations available, for example in Go:
 ```go

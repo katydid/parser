@@ -1,6 +1,23 @@
-# Scalar Types
+# Kind
 
-We did a [survey](./survey/Readme.md) and found the following common scalar types that need to be supported with a basic type in your implementation language:
+We support a specific set of `Kind`s:
+
+* '_': Null (Unit)
+* 't': True
+* 'f': False
+* 'x': Bytes (Bytes)
+* '"': String (String)
+* '-': Int64 (Int64)
+* '.': Float64 (Float64)
+* '/': Decimal (String)
+* '9': Nanoseconds (Int64) (used for duration and time)
+* 'T': Date Time ISO 8601 (String)
+* '#': Custom Tag (String)
+
+## Survey
+
+The decision was made by making a [survey of of the most common serialization formats](./survey/Readme.md).
+We found that a limited amount of scalar types need to be supported:
 
 <table>
 <tr><th>Surveyed</th><th>Supported as</th></tr>
@@ -19,14 +36,5 @@ We did a [survey](./survey/Readme.md) and found the following common scalar type
 <tr><td>Enum</td><td>String (the string representation of the Enum) or fallback to Int64</td></tr>
 </table>
 
-## Basic Types
-
-Your language will need the following basic types:
-
-* Bytes
-* String (UTF-8 decoded)
-* Int64 (for precise and efficient comparisons for integers up to int64)
-* Float64 (for efficient comparisons for floats up to 64 bits)
-* Decimals or Uint64s outside of the range of Float64 or Int64 respectively are supported as a String (**TODO: What is that exact string format**).
-* Times and Duration are supported via Int64 (nanoseconds since January 1, 1970 UTC) or a fallback to String (ISO 8601).
-
+Types can be mapped from rarer types to these supported types. 
+For example, UUID is mapped to `Bytes` and Dates to `String` via ISO 8601.
