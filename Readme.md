@@ -29,12 +29,10 @@ The `Hint` provides a hint about the location in the structure.
 
 In some implementation languages, `Hint` can be indicated with a single byte or ascii character:
 
-* '[': List Opened
-* ']': List Closed
-* '{': Map Opened
-* '}': Map Closed
-* 'k': Map Key
-* 'v': Map Value or List Element, that is not an Object or List.
+* '{': Open
+* '}': Close
+* 'k': Key
+* 'v': Value
 
 In other languages a sum type/enum is preferred to represent `Hint`.
 
@@ -50,11 +48,9 @@ The `Skip` method allows the user to skip over uninteresting parts of the parse 
 Based on the `Hint` skip has different intuitive behaviours. 
 
 If the `Hint` was:
-* '{': the whole `Map` is skipped.
+* '{': these key-value pairs are skipped, including the close `}`.
 * 'k': the key's value is skipped.
-* '[': the whole `List` is skipped.
-* 'v': the rest of the `Map` or `List` is skipped.
-* ']': same as calling `Next` and ignoring the `Hint`.
+* 'v': the rest of the key-value pairs are skipped, including the close `}`.
 * '}': same as calling `Next` and ignoring the `Hint`.
 
 ### Kind
