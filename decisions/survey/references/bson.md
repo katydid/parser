@@ -55,7 +55,7 @@
 
 * Null
 * Boolean
-* String
+* String (BSON strings are UTF-8)
 * JavaScript
 * Regular Expression
 * Binary data

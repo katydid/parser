@@ -66,7 +66,7 @@
 
 * null: no value
 * boolean: a binary value
-* string: unicode character sequence
+* string: unicode character sequence (Note that since UTF-8 is used as the binary encoding for strings)
 * decimal: The decimal logical type represents an arbitrary-precision signed decimal number (Arbitrary-precision Two’s Complement signed decimal numbers)
 * bytes: sequence of 8-bit unsigned bytes
 * Fixed (`fixed MD5(16);` This example defines a fixed-length type called MD5 which contains 16 bytes.)

@@ -46,7 +46,7 @@
 
 * Void: Void
 * Boolean: Bool
-* Text
+* Text (Text is always UTF-8 encoded and NUL-terminated.)
 * Data
 * Float32 (Floating-points: Encoded in little-endian IEEE-754 format.)
 * Float64 (Floating-points: Encoded in little-endian IEEE-754 format.)
