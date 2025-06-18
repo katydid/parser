@@ -44,7 +44,7 @@ Given the JSON list:
 ```
 
 It will be parsed the same as if it was the following JSON:
-```json
+```
 {null: 1, null: "b", null: {"a": 3}}
 ```
 
