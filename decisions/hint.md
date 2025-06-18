@@ -172,7 +172,7 @@ Can be validated with:
 (Tree (KeyStr "a") (Tree (KeyInt 1) Empty)) `Concat` (Tree (KeyStr "b") (Tree (KeyInt 2) Empty))
 ```
 
-If we need to support lists, we need to add a new operator without a KeyPattern.
+If we need to support lists, we need to add a new operator without a `KeyPattern`.
 For argument sake, let us call that `Elem`.
 
 Given the following JSON:
@@ -186,7 +186,7 @@ We can validate it with:
 ```
 
 Given the following JSON:
-```json
+```
 {1: [], "a": 2}
 ```
 
@@ -209,7 +209,7 @@ Given the following JSON:
 ```
 
 This would parse as:
-```json
+```
 {null: 1, null: {"a": 2}}
 ```
 
@@ -313,12 +313,12 @@ Given the JSON list:
 ```
 
 It will be parsed the same as if it was the following JSON:
-```json
+```
 {null: 1, null: "b", null: {"a": 3}}
 ```
 
 But why `null` and not an index:
-```json
+```
 {0: 1, 1: "b", 2: {"a": 3}}
 ```
 
@@ -329,7 +329,7 @@ For example when parsing:
 [1,"b",["a", 3]]
 ```
 We need to keep track of two indices at a time:
-```json
+```
 {0: 1, 1: "b", 2: {0: "a", 1: 3}}
 ```
 
