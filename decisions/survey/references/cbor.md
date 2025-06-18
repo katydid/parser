@@ -7,7 +7,7 @@
 
 ## String Types
 
-* text string
+* text string (A text string (Section 2) encoded as UTF-8 [RFC3629])
 * regular expression
 * MIME Message (encoded as text string)
 

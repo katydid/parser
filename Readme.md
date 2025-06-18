@@ -65,7 +65,7 @@ The `Kind` represents the kind of the value:
 * '-': Int64 (Int64)
 * '.': Float64 (Float64)
 * '/': Decimal (String)
-* '9': Nanoseconds (Int64) (used for duration and time)
+* '9': Nanoseconds (Int64) (used for duration and time since epoch)
 * 'T': Date Time ISO 8601 (String)
 * '#': Custom Tag (String)
 

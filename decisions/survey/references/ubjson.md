@@ -45,7 +45,7 @@
 * Null Value
 * No-Op Value
 * Boolean Types
-* String Type
+* String Type (The Universal Binary JSON specification dictates UTF-8 as the required string encoding)
 * Binary Data
 * high-precision number (Arbitrary-precision ASCII-encoded numbers)
 * float32 (See IEEE 754 Spec) (Big Endian 32-bit and 64-bit IEEE 754 floating-point numbers)
