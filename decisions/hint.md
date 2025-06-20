@@ -1,10 +1,14 @@
 # Hint
 
-The `Hint` provides a hint about the location in the structure.
+Calling the `Next` method returns the `Hint`.
 
-We conducted a [survey of the most common serialization formats](./survey/Readme.md) and found that all the compound types can be represented as key-value pairs.
+```
+Next : () -> (Hint | error | EOF)
+```
 
-This results in only a limited amount of hints that are required for the user to know if it wants to `Skip`, parse the `Token` or move onto the `Next` element.
+The `Hint` provides a hint about the next token in [the parse tree](./tree.md).
+The `Hint` is used to decide whether to `Skip`, parse the `Token` or move onto the `Next` element.
+
 In some implementation languages, `Hint` can be indicated with a single byte or ascii character:
 
 * '{': Open
@@ -14,57 +18,21 @@ In some implementation languages, `Hint` can be indicated with a single byte or 
 
 In other languages a sum type/enum is preferred to represent `Hint`.
 
-## Survey
+## Hint
 
-We did a [survey](./survey/Readme.md) and found that the following common compound types:
+**TODO**
 
-* Void
-* List
-* Set
-* Union
-* Object
-* Map
-* Pair (YAML only)
+Our pull based parser would see every:
 
-Each of these can be mapped to key-value pairs.
+* `Node v []` as a value and return a `Hint` = `v`
+* `Node k [Node v []]` as a value and return a `Hint` = `k` and Next a `Hint = v`.
+* Otherwise `Node k children` as a key and return a `Hint` = `k` with `Hint`s `{` and `}` surrounding the list of children.
 
-* Void is mapped to an empty key-values pairs represented as the following tokens: '{', '}'.
-* A List is mapped to key-value pairs, where each key is the null value and each value is the value of the element in the list. We provide an example below.
-* A Set is mapped the same as a List.
-* A Union is mapped to a key and value pair, where the key represents the tag. If the union is not a tagged union, then the value is represented as just a value and not as a non compound type.
-* A Map is mapped to key-value pairs, in the obvious way.
-* An Object is mapped to key-value pairs, where fields are keys.
-* Pair is mapped the same as a List of length two. It is not mapped to a key-value pair, since a key cannot represent a compound types.
-
-Here we provide an example of how a list is mapped to key-value pairs.
-
-Given the JSON list:
-```json
-[1,"b",{"a": 3}]
-```
-
-It will be parsed the same as if it was the following JSON:
-```
-{null: 1, null: "b", null: {"a": 3}}
-```
-
-Note the keys are not gauranteed to be unique.
-
-In cases where we know the elements cannot be compound types, we can model them as keys.
-For example, in XML when parsing
-
-```xml
-<A><B>C</B>D<B>F</B></A>
-```
-
-It can be parsed as:
-
-```json
-{"A": {"B": "C", "D": {}, "B": "F"}}
-```
-
+Also Note: at the top (start) we start with a list of trees. These are not surrounded by `Hint`s `{` and `}`.
 
 ## Why Next returns a Hint and not a Token
+
+tl;dr: performance
 
 The `Next` method returns a hint.
 
@@ -98,6 +66,8 @@ When applying a validator as a filter through millions of record of serialized d
 
 ## Why not Lists of Lists, like Lisp
 
+**TODO**
+
 An alternative would be to model everything as a list, like Lisp does.
 
 This would mean that an object:
@@ -130,214 +100,123 @@ The second design of the parser included `Hint`s for both lists and key-value pa
 * 'k': Map Key
 * 'v': Map Value or List Element, that is not an Object or List.
 
-There are two reasons:
-1. We want to keep the validator language simple and as close to regular expressions as possible.
-2. We want other algorithms that use the parser interface to be as simple as possible.
+**TODO**
 
-### Regex Derivative based Validator Language
+## Example: Parsing JSON
 
-The validator algorithm is derived from the derivative algorithm for regular expressions.
-
-As a foundation we have the following operators:
-
-* EmptySet
-* EmptyString
-* Char (replace with Key-Value Pair)
-* Or
-* Concat
-* Star (Zero or More)
-
-We try to keep as close as possible to the original derivative algorithm, except for replacing the Char operator.
-All other operators are borrowed exactly from regular expressions.
-
-The new operator is a Tree operator, which has a pattern for the Key and an expression (based on Regular expression) for the value:
-
-```haskell
-data Expr =
-| EmptySet
-| Empty
-| Tree KeyPattern Expr
-| Or Expr Expr
-| Concat Expr Expr
-| Star Expr
-```
-
-The following JSON input:
-```json
-{"a": 1, "b": 2}
-```
-
-Can be validated with:
-```haskell
-(Tree (KeyStr "a") (Tree (KeyInt 1) Empty)) `Concat` (Tree (KeyStr "b") (Tree (KeyInt 2) Empty))
-```
-
-If we need to support lists, we need to add a new operator without a `KeyPattern`.
-For argument sake, let us call that `Elem`.
+We can imagine JSON would parse into our tree.
 
 Given the following JSON:
 ```json
-[1, {"a": 2}]
+{"a": 1, "b": [2, {"c:" 3, "d": 4}]}
 ```
 
-We can validate it with:
+It would parse into our parse tree as:
 ```haskell
-(Elem (Tree (KeyInt 1) Empty)) `Concat` (Elem (Tree (KeyStr "a") (Tree (KeyInt 2) Empty)))
+[
+    Node (String "a") [
+        Node (Int64 1) []
+    ],
+    Node (String "b") [
+        Node Null [
+            Node (Int64 2) []
+        ],
+        Node Null [
+            Node (String "c") [
+                Node (Int64 3) []
+            ],
+            Node (String "d") [
+                Node (Int64 4) []
+            ]
+        ]
+    ]
+]
 ```
 
-Given the following JSON:
+Remember every `Node v []` would parse as a `Hint`: `v`,
+while every `Node k children`, where `children != []`, would parse as a `Hint`: `k` with `{` and `}` `Hint`s surrounding the list of children.
+
+This means our pull-based parser would parse it as:
 ```
-{1: [], "a": 2}
+{"a": 1, "b": {null: 2, null: {"c": 3, "d": 4}}}
 ```
 
-We can validate it with something very similar:
+Or more verbosely:
+```
+Next -> '{'
+Next -> 'k'
+Token -> '"', "a"
+Next -> 'v'
+Token -> '-', 1
+Next -> 'k'
+Token -> '"', "b"
+Next -> '{'
+Next -> 'k'
+Token -> '_'
+Next -> 'v'
+Token -> '-', 2
+Next -> 'k'
+Token -> '_'
+Next -> '{'
+Next -> 'k'
+Token -> '"', "c"
+Next -> 'v'
+Token -> '-', 3
+Next -> 'k'
+Token -> '"', d
+Next -> 'v'
+Token -> '-', 4
+Next -> '}'
+Next -> '}'
+```
+
+## Example: Parsing XML
+
+The following XML:
+```xml
+<A><B>C</B>D<B>F</B></A>
+```
+
+can be presented as a Tree:
 ```haskell
-(Tree (KeyInt 1) Empty) `Concat` (Tree (KeyStr "a") (Tree (KeyInt 2) Empty))
+[
+    Node (String "A") [  
+        Node (String "B") [
+            Node (String "C") []
+        ],
+        Node (String "D") [],
+        Node (String "B") [
+            Node (String "F") []
+        ]
+    ]
+]
 ```
 
-In fact they are so similar, our regular expression based derivative model is unable to spot the difference between these two expressions and two inputs.
-It is hard to say what the `Elem` operator means without a `KeyPattern`.
-
-The `Tree` operator from the previous section has a trick.
-The `KeyPattern` allows the expression to indicate that we need to go down a level in the tree and validate its children.
-
-This why we propose having null keys for arrays.
-
-Given the following JSON:
-```json
-[1, {"a": 2}]
+Given this representation our pull-based parser would parse it as:
+```
+{"A": {"B": "C", "D", "B": "F"}}
 ```
 
-This would parse as:
+Or more verbosely:
 ```
-{null: 1, null: {"a": 2}}
-```
+Next -> '{'
+Next -> 'k'
+Token -> '"', "A"
+Next -> '{'
+Next -> 'k'
+Token -> '"', "B"
+Next -> 'v'
+Token -> '"', "C"
 
-which we can then validate with:
-```haskell
-(Tree KeyNull (Tree (KeyInt 1) Empty)) `Concat` (Tree KeyNull (Tree (KeyStr "a") (Tree (KeyInt 2) Empty)))
-```
+Next -> 'v'
+Token -> '"', "D"
 
-We can also decide to introduce the `Elem` operator that would now be equivalent to `Tree KeyNull`.
-
-### Possible viable idea (TODO)
-
-Given the following JSON:
-```json
-[1, {"a": 2}]
-```
-
-We could parse it as:
-```json
-{"array": [1, {"a": 2}]}
+Next -> 'k'
+Token -> '"', "E"
+Next -> 'v'
+Token -> '"', "F"
+Next -> '}'
+Next -> '}'
 ```
 
-which we can then validate with:
-```haskell
-(Tree KeyArray ((Tree (KeyInt 1) Empty) `Concat` (Tree (KeyStr "a") (Tree (KeyInt 2) Empty))))
-```
-
-### More Complex Algorithms
-
-The more dynamic the structure the more complex the algorithms that run out them need to be.
-
-For example if we want to calculate the length of rather the number of elements in a structure.
-
-If we have both maps and lists, we need to write the following code:
-
-```go
-length := 0
-hint, err := parser.Next()
-if err != nil {
-    return length, err
-}
-if hint != '{' && hint != '[' {
-    return length, errors.New("expected open array or map")
-}
-close := '}'
-if hint == '[' {
-    close = ']'
-}
-for {
-    hint, err := parser.Next()
-    if err != nil {
-        return length, err
-    }
-    if hint == close {
-        return length, nil
-    }
-    switch hint {
-    case '}', ']':
-        return 0, errors.New("unexpected close")
-    case '[', '{', 'k':
-        parser.Skip()
-        length++
-    case 'v':
-        length++
-    }
-}
-```
-
-If we only have key-value pairs, then we can write:
-
-```go
-length := 0
-hint, err := parser.Next()
-if err != nil {
-    return length, err
-}
-if hint != '{' {
-    return length, errors.New("expected open")
-}
-for {
-    hint, err := parser.Next()
-    if err != nil {
-        return length, err
-    }
-    if hint == '}' {
-        return length, nil
-    }
-    if hint != 'k' {
-        return 0, errors.New("expected key")
-    }
-    parser.Skip()
-    length++
-}
-```
-
-## Why are indexes represented as null
-
-Given the JSON list:
-```json
-[1,"b",{"a": 3}]
-```
-
-It will be parsed the same as if it was the following JSON:
-```
-{null: 1, null: "b", null: {"a": 3}}
-```
-
-But why `null` and not an index:
-```
-{0: 1, 1: "b", 2: {"a": 3}}
-```
-
-It is possible to write a parser that does this manipulation.
-
-For example when parsing:
-```json
-[1,"b",["a", 3]]
-```
-We need to keep track of two indices at a time:
-```
-{0: 1, 1: "b", 2: {0: "a", 1: 3}}
-```
-
-This means that it requires an extra stack to keep track of indexes for various arrays.
-This is requires a small amount of extra memory and performance to keep track of the index.
-
-The question is what do we gain?
-
-In case of a validator, there is no reason to validate the index of a specific element of a list.
-
-This parser has not been used in other use cases, but until then we have no reason to undergo this expense.
+Notice how "D" is returned as a value `v` in between the list of keys, since it as an `Node (String "D") []`.
