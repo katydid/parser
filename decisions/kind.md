@@ -16,7 +16,7 @@ We support a specific set of `Kind`s:
 
 ## Survey
 
-The decision was made by making a [survey of of the most common serialization formats](./survey/Readme.md).
+The decision was made by making a [survey of the most common serialization formats](./survey/Readme.md).
 We found that a limited amount of scalar types need to be supported:
 
 <table>

@@ -6,7 +6,7 @@ The parser interface has 3 methods:
 * `Skip : () -> (Error | EOF)?`
 * `Token : () -> ((Kind, value) | Error)`
 
-This documentation is an explanation of the top level interface decisions.
+This document is an explanation of the top level interface decisions.
 The design of the rest of interface is explained in:
 * [Hint](./hint.md)
 * [Kind](./kind.md)
@@ -20,6 +20,21 @@ This is one reason performance is important and why we recommend:
 * The parser only ever moves forward and does not do any backtracking.
 * The parser should avoid copying or allocating memory on the heap as much as possible.
 * The parser should only parse what truly needs parsing and skip as much as possible.
+
+## Pull-based
+
+The parser is a pull-based parser.
+This means it only pulls the next token, once the user asks for it.
+
+We do not want to parse the whole tree, since this would require allocating memory, which would not be as performant.
+
+Another solution to this would be to use a event-based parser.
+An event-based parser would use callback to ensure not having to keep the whole parse tree in memory at one time.
+It is also quite performant, since the event-based parser, allows the user to skip parsing parts of the parse tree.
+The user can do this by returning some parsing signal from the callback.
+
+A pull-based parser offers just a slightly higher level of control.
+For example, in an event-based parser, the parser would parse the token to the user, but the user might not have wanted that token to be tokenized.
 
 ## Sequential
 

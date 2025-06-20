@@ -1,0 +1,329 @@
+# Tree
+
+Our parser is a pull-based parser, but the parse tree still needs an underlying model of what we imagine the parse tree would look like, if we would parse it fully into memory.
+
+We have based our model on [Haskell's Data.Tree](https://hackage-content.haskell.org/package/containers-0.8/docs/src/Data.Tree.html#Tree).
+
+## Haskell Data.Tree
+
+The [Haskell Data.Tree](https://hackage-content.haskell.org/package/containers-0.8/docs/src/Data.Tree.html#Tree) type is defined as:
+
+```haskell
+data Tree a = Node {
+    rootLabel :: a,         -- ^ label value
+    subForest :: [Tree a]   -- ^ zero or more child trees
+}
+```
+
+*Note: Sometimes we will refer to the `rootLabel` as the `label` or `key` and refer to the `subForest` as `children` going forward.*
+
+The generic parameter `a` is mapped to a `Token`:
+
+```haskell
+data Token =
+  | Null -- '_'
+  | False -- 'f'
+  | True -- 't'
+  | Bytes ByteString -- 'x'
+  | String Text -- '"'
+  | Int64 Int64 -- '-'
+  | Float64 Double -- '.'
+  | Decimal Text -- '/'
+  | Nanoseconds Int64 -- '9'
+  | DateTime Text -- 'T'
+  | Tag Text -- '#'
+```
+
+This means that our parse tree can be thought of as a type: `Tree Token`.
+
+## Survey
+
+We conducted a [survey of the most common serialization formats](./survey/Readme.md) and found that all the compound types can be represented as trees.
+
+The survey found that the following common compound types:
+
+* Object
+* Map
+* Void
+* Union
+* List
+* Set
+* Pair (YAML only)
+
+Each of these can be mapped to a tree.
+
+## Object
+
+An Object is mapped to a tree, where each field name is a node: `Node (String fieldname) value`.
+If the `value` is a single value it is mapped to a singleton list of children `[Node value []]`.
+If the value is a object it is mapped to a list of fields.
+
+For example:
+```
+{
+    A: 1,
+    B: {
+        C: 2,
+        D: 3,
+    }
+}
+```
+
+is mapped to the following tree:
+```haskell
+[
+    Node (String "A") [Node (Int64 1) []],
+    Node (String "B") [
+        Node (String "C") [Node (Int64 2) []],
+        Node (String "D") [Node (Int64 3) []],
+    ]
+]
+```
+
+## Map
+
+A Map is the generalization of an Object.
+Fieldnames are called keys and they unlike fieldnames, keys are not all of type string.
+Each key-value pair is mapped to `Node key value`.
+
+For example:
+```
+{
+    1: "A",
+    2: {
+        "C": 2,
+        "D": 3,
+    }
+}
+```
+
+is mapped to the following tree:
+```haskell
+[
+    Node (Int64 1) [Node (String "A") []],
+    Node (Int64 2) [
+        Node (String "C") [Node (Int64 2) []],
+        Node (String "D") [Node (Int64 3) []],
+    ]
+]
+```
+
+## Void
+
+Void is represented as `Node Null []`.
+
+## Union
+
+There are two types of unions:
+* Tagged Unions
+* Untagged Unions
+
+A tagged union can be one of several values, but includes a tag to let you know which value was chosen.
+One common known tagged union is `Result`, where the result value can a successful result value or an error.
+If both the success value and the error is represented as a string, it isn't easy to tell which is which without a tag.
+Tagged unions are represented as `Node tag value`.
+
+For example:
+```
+Result.Ok "success"
+```
+
+is mapped to a tree:
+```
+Node (String "Ok") [Node (String "success") []]
+```
+
+while a:
+```
+Result.Err "404"
+```
+
+is mapped to a tree:
+```
+Node (String "Err") [Node (String "404) []]
+```
+
+An untagged union is just a value and is represented as the underlying value.
+
+For example, if union is an integer or string and the value is a string
+```
+"abc"
+```
+
+it is mapped to a tree:
+```
+Node (String "abc") []
+```
+
+## List
+
+A List's elements are eached indexed with a `Node Null [element]`.
+
+Here we provide an example of how a list is mapped to a tree.
+
+Given the JSON list:
+```json
+[1,"b",{"a": 3}]
+```
+
+it maps to the following tree:
+```
+[
+    Node Null [Node (Int64 1) []],
+    Node Null [Node (String "b") []],
+    Node Null [
+        Node (String "a") [
+            Node (Int64 3) []
+        ]
+    ]
+]
+```
+
+### Why are indexes represented as null
+
+Why `null` and not an index:
+```
+[
+    Node (Int64 0) [Node (Int64 1) []],
+    Node (Int64 1) [Node (String "b") []],
+    Node (Int64 2) [
+        Node (String "a") [
+            Node (Int64 3) []
+        ]
+    ]
+]
+```
+
+It is possible to write a parser that does this augmentation.
+
+For example, when parsing:
+```json
+[1,"b",["a", 3]]
+
+```
+
+The augmenter needs to keep track of two indices at a time:
+```
+[
+    Node (Int64 0) [Node (Int64 1) []],
+    Node (Int64 1) [Node (String "b") []],
+    Node (Int64 2) [
+        Node (Int64 0) [Node (String "a") []],
+        Node (Int64 1) [Node (Int64 3) []]
+    ]
+]
+```
+
+This means that it requires an extra stack to keep track of indexes for various arrays.
+This is requires a small amount of extra memory and performance to keep track of the index.
+We do not want the default parser to include this extra cost.
+
+We cannot see what we would gain for this extra cost.
+In case of a validator, there is no reason to validate the index of a specific element of a list.
+This parser has not been used in other use cases, but until then we have no reason to undergo this expense.
+If we do find there is this extra expense, we could create an augmenter to rather keep track of the index.
+
+## Set
+
+A Set is mapped to the same tree as a list.
+We do not need to worry about the items in the set being unique as that will be the problem of the serializer, not the parser.
+
+## Pair
+
+Out of all the serialization formats we surveyed, only YAML supports a pair.
+We can't gaurantee that the first element in the pair is a type that can be represented in a Node's label and since the Pair type is so rare, we err on the side of generality rather than conciseness and represent a pair as list of two elements.
+
+The pair:
+```
+(a, b)
+```
+
+is mapped to a tree:
+
+```haskell
+[
+    Node Null [Node (String "a") []],
+    Node Null [Node (String "b") []]
+]
+```
+
+## Why
+
+Why choose a model for a tree based on a Haskell data structure for a tree?
+
+The Katydid validator algorithm is based on Brzozowski's derivatives for regular expressions on strings.
+The Haskell data structure for a tree has a very close relationship to strings, which makes it a good fit for the validator algorithm.
+
+If we squint a list of trees is just a string, where each label is a character and each tree has no children.
+For example, we can encode the string "abc" as a list of trees also known as a forest:
+
+```haskell
+[Node 'a' [], Node 'b' [], Node 'c' []]
+```
+
+What is even better is that each Node encodes its children as a list of trees or `subForest`.
+This means we can apply the derivative algorithm recursively on the `subForest` or children of each `Node`.
+
+## Example: Parsing JSON
+
+We can imagine JSON would parse into our tree.
+
+Given the following JSON:
+```json
+{"a": 1, "b": [2, {"c:" 3, "d": 4}]}
+```
+
+It would parse into our parse tree as:
+```haskell
+[
+    Node (String "a") [
+        Node (Int64 1) []
+    ],
+    Node (String "b") [
+        Node Null [
+            Node (Int64 2) []
+        ],
+        Node Null [
+            Node (String "c") [
+                Node (Int64 3) []
+            ],
+            Node (String "d") [
+                Node (Int64 4) []
+            ]
+        ]
+    ]
+]
+```
+
+Notice that if we didn't add `Node Null` then we wouldn't be able to tell that `2` and `"c"` are not elements of the same list.
+
+## Example: Parsing XML
+
+The following XML:
+```xml
+<A><B>C</B>D<B>F</B></A>
+```
+
+can be presented as a Tree:
+```haskell
+[
+    Node (String "A") [  
+        Node (String "B") [
+            Node (String "C") []
+        ],
+        Node (String "D") [],
+        Node (String "B") [
+            Node (String "F") []
+        ]
+    ]
+]
+```
+
+We could have modeled XML as a list, with `Null` keys, but that would be overly verbose.
+
+We could also have given "D" a `Null` child: `Node (String "D") [Node Null []]`, so that it was a consistent list of key value pairs, but this would require some foresight.
+For example, if we parsed `<A>D<B>C</B></A>`, we cannot know that "D" needs to be a value of a key, before we saw the "B".
+
+It would be up to the specific parse implementation to decide how to represent `<D/>` as Tree, but we would also propose `Node (String "D") []`, since it has no children.
+In cases where it is necessary to also include the information whether the node is a text node or an element, we propose using custom [tags](./tags.md).
+
