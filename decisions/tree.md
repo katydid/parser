@@ -179,7 +179,57 @@ it maps to the following tree:
 ]
 ```
 
-### Why are indexes represented as Null
+### Why Null indexes
+
+Without Null indexes the following JSON:
+```json
+[1,"b",{"a": 3}, {"c": 4}]
+[1,"b",{"a": 3, "c": 4}]
+```
+
+would both map to the following tree:
+```haskell
+[
+    Node (Int64 1) [],
+    Node (String "b") [],
+    Node (String "a") [
+        Node (Int64 3) []
+    ],
+    Node (String "c") [
+        Node (Int64 4) []
+    ]
+]
+```
+
+This will make validation impossible for some use cases.
+
+For example:
+
+If we only want to find people with a moving date in the first half of the year in the last 10 years.
+
+The person, does not have a moving date in the last 10 years in the first half of the year, but they do have on in 1985:
+```json
+{"Moving Dates": [{"Month": 7, "Year": 2022}, {"Year": 1985, "Month": 4}, {"Year": 2020, "Month": 8}]}
+```
+
+If we cannot distinguish between these pairs being in different structures using some index, then we just have a list of months and years:
+
+```haskell
+[   
+    Node (String "Moving Dates") [
+        Node (String "Month") [Node (Int64 7) []],
+        Node (String "Year") [Node (Int64 2022) []],
+        Node (String "Year") [Node (Int64 1985) []],
+        Node (String "Month") [Node (Int64 4) []],
+        Node (String "Year") [Node (Int64 2020) []],
+        Node (String "Month") [Node (Int64 8) []],
+    ]
+]
+```
+
+Given this list we will get a false positive using a validator.
+
+### Why not proper indexes instead of Null
 
 Why Null and not an index:
 ```
