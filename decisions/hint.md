@@ -1,12 +1,12 @@
 # Hint
 
-Calling the `Next` method returns the `Hint`.
+In each pull-based parser implementation, calling the `Next` method returns a `Hint`.
 
 ```
 Next : () -> (Hint | error | EOF)
 ```
 
-The `Hint` provides a hint about the next token in [the parse tree](./tree.md).
+The `Hint` provides a hint about the next token in [the parse tree](./tree.md) is.
 The `Hint` is used to decide whether to `Skip`, parse the `Token` or move onto the `Next` element.
 
 In some implementation languages, `Hint` can be indicated with a single byte or ascii character:
@@ -18,89 +18,28 @@ In some implementation languages, `Hint` can be indicated with a single byte or 
 
 In other languages a sum type/enum is preferred to represent `Hint`.
 
-## Hint
+The `Next` methods does as little parsing as possible to provide the `Hint`.
 
-**TODO**
+## Converting our Tree model to Hints
+
+We model our internal representation on Haskell's Data.Tree:
+```haskell
+data Tree a = Node {
+    rootLabel :: a,         -- ^ label value
+    subForest :: [Tree a]   -- ^ zero or more child trees
+}
+```
+, where `a` is a `Token`.
+
+`Hint`s also compress the tree a little, for example we do not return empty lists of children as `{` and `}`.
 
 Our pull based parser would see every:
 
 * `Node v []` as a value and return a `Hint` = `v`
-* `Node k [Node v []]` as a value and return a `Hint` = `k` and Next a `Hint = v`.
-* Otherwise `Node k children` as a key and return a `Hint` = `k` with `Hint`s `{` and `}` surrounding the list of children.
+* `Node k [Node v []]` as a key-value pair and return a `Hint` = `k` and Next a `Hint = v`.
+* `Node k children`, where children does not match the two patterns above, as a key and return a `Hint` = `k` with `Hint`s `{` and `}` surrounding the list of children.
 
-Also Note: at the top (start) we start with a list of trees. These are not surrounded by `Hint`s `{` and `}`.
-
-## Why Next returns a Hint and not a Token
-
-tl;dr: performance
-
-The `Next` method returns a hint.
-
-```
-Next : () -> (Hint | error | EOF)
-```
-
-Using this `Hint` the user can decide to `Skip` or parse the `Token`.
-Only the `Token` method will parse the actual key or value:
-
-```
-Token: () -> ((Kind, value) | error)
-```
-
-The question is why would we want to separate this two methods and not just have a single `NextToken` method:
-
-```
-Token: () -> ((Kind, value) | error | EOF)
-```
-
-The answer is CPU and memory efficiency.
-We want the user to have as much control as possible over what actually gets parsed.
-This way the user can efficient call `Skip` or `Next` to skip over what does not need parsing.
-
-Note that tokenizing can be especially expensive as it can result in allocating memory, 
-for example when unquoting a JSON string.
-This means we should only tokenize values the user really cares about.
-
-The reason performance is important is that in validation languages that are optimized properly the parser becomes the bottleneck.
-When applying a validator as a filter through millions of record of serialized data, we want to have good reasons for being the bottleneck.
-
-## Why not Lists of Lists, like Lisp
-
-**TODO**
-
-An alternative would be to model everything as a list, like Lisp does.
-
-This would mean that an object:
-
-```json
-{"a": 1, "b": [1,2,3]}
-```
-
-would be modeled as:
-
-```json
-[["a", 1], ["b", [1,2,3]]]
-```
-
-This is a trade-off, since in this case key value are a level deeper, so slightly negatively impacted,
-while in our design, the list valueas are one level deeper, which means lists are slightly negatively impacted.
-In one case maps are first class and lists are second class citizens and on the other hand lists are first class and maps are second class.
-
-We are dealing with serialized data, which is usually encoded as some type of structure or key-value pairs,
-which is why we prefer to have first class key-value pairs over and second class lists.
-
-## Why not both Lists and Maps
-
-The second design of the parser included `Hint`s for both lists and key-value pairs:
-
-* '[': List Opened
-* ']': List Closed
-* '{': Map Opened
-* '}': Map Closed
-* 'k': Map Key
-* 'v': Map Value or List Element, that is not an Object or List.
-
-**TODO**
+Also Note: at the top (start) we start with a list of trees, but these are not surrounded by `Hint`s `{` and `}`.
 
 ## Example: Parsing JSON
 
@@ -220,3 +159,36 @@ Next -> '}'
 ```
 
 Notice how "D" is returned as a value `v` in between the list of keys, since it as an `Node (String "D") []`.
+
+## Why Next returns a Hint and not a Token
+
+tl;dr: performance
+
+The `Next` method returns a `Hint`.
+
+```
+Next : () -> (Hint | error | EOF)
+```
+
+Using this `Hint` the user can decide to `Skip` or parse the `Token`.
+Only the `Token` method will parse the actual key or value:
+
+```
+Token: () -> ((Kind, value) | error)
+```
+
+The question is why would we want to separate this two methods and not just have a single `NextToken` method:
+```
+NextToken: () -> ((Kind, value) | error | EOF)
+```
+
+The answer is CPU and memory efficiency.
+We want the user to have as much control as possible over what actually gets parsed.
+This way the user can efficient call `Skip` or `Next` to skip over what does not need parsing.
+
+Note that tokenizing can be especially expensive as it can result in allocating memory, 
+for example when unquoting a JSON string.
+This means we should only tokenize values the user really cares about.
+
+The reason performance is important is that in validation languages that are optimized properly the parser becomes the bottleneck.
+When applying a validator as a filter through millions of record of serialized data, we want to have good reasons for being the bottleneck.

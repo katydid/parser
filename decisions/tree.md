@@ -179,9 +179,9 @@ it maps to the following tree:
 ]
 ```
 
-### Why are indexes represented as null
+### Why are indexes represented as Null
 
-Why `null` and not an index:
+Why Null and not an index:
 ```
 [
     Node (Int64 0) [Node (Int64 1) []],
@@ -199,10 +199,9 @@ It is possible to write a parser that does this augmentation.
 For example, when parsing:
 ```json
 [1,"b",["a", 3]]
-
 ```
 
-The augmenter needs to keep track of two indices at a time:
+the augmenter needs to keep track of two indices at a time:
 ```
 [
     Node (Int64 0) [Node (Int64 1) []],
@@ -247,7 +246,7 @@ is mapped to a tree:
 ]
 ```
 
-## Why
+## Why Haskell's Data.Tree
 
 Why choose a model for a tree based on a Haskell data structure for a tree?
 
@@ -263,6 +262,28 @@ For example, we can encode the string "abc" as a list of trees also known as a f
 
 What is even better is that each Node encodes its children as a list of trees or `subForest`.
 This means we can apply the derivative algorithm recursively on the `subForest` or children of each `Node`.
+
+## Why not a binary tree, instead of a list of children.
+
+We can represent a list as a binary tree.
+
+For example, given a string "abcd" represented as a list:
+```
+Cons 'a' (Cons 'b' (Cons 'c' (Cons 'd' Nil)))
+```
+
+We can convert the list to a binary tree, with binarization:
+```
+Bin (Val 'a') (Bin (Val 'b') (Bin (Val 'c') (Val 'd')))
+```
+
+The values are assigned to the left nodes and the continuation of the list to the right node, until the last value, which is also assigned to the right node.
+This way we can convert all lists to trees.
+
+We can also convert a binary tree to a list.
+We just need to pick an order of traversal, in-order, pre-order or post-order.
+
+This will work, but it seems convoluted, given our derivative algorithm is built to run on lists, why wouldn't we just use a list.
 
 ## Example: Parsing JSON
 
@@ -327,3 +348,77 @@ For example, if we parsed `<A>D<B>C</B></A>`, we cannot know that "D" needs to b
 It would be up to the specific parse implementation to decide how to represent `<D/>` as Tree, but we would also propose `Node (String "D") []`, since it has no children.
 In cases where it is necessary to also include the information whether the node is a text node or an element, we propose using custom [tags](./tags.md).
 
+## Why not key-value pairs
+
+Given the XML example:
+```xml
+<A><B>C</B>D<B>F</B></A>
+```
+
+That parses into the tree:
+```haskell
+[
+    Node (String "A") [  
+        Node (String "B") [
+            Node (String "C") []
+        ],
+        Node (String "D") [],
+        Node (String "B") [
+            Node (String "F") []
+        ]
+    ]
+]
+```
+
+It shows that there is a key without a value, which is really just a value.
+The list of key-value pairs, does not offer this flexibility.
+
+We could attempt represent it as key-value pairs:
+```
+{A: {B: C, D: {}, B: F}}
+```
+But now `C` and `D` are treated inconsistently.
+
+We could treat them consistently:
+```
+{A: {B: {C: {}}, D: {}, B: {F: {}}}}
+```
+
+If we do this, it is exactly the same as the Haskell Data.Tree,
+except we have to explain that keys can be duplicates, which can be confusing to some.
+
+## Why not Lists of Lists, like Lisp
+
+An alternative would be to model everything as a list, like Lisp does.
+
+This would mean that an object:
+
+```json
+{"a": 1, "b": [1,2,3]}
+```
+
+would be modeled as:
+
+```json
+[["a", 1], ["b", [1,2,3]]]
+```
+
+This is a trade-off, since in this case the labels ("a", "b") are a level deeper, which means they are slightly negatively impacted.
+In our design, the list values are one level deeper, which means lists are slightly negatively impacted.
+In one case labels are first class and lists are second class citizens and on the other hand lists are first class and labels are second class.
+
+We are dealing with serialized data, which is usually encoded as some type of structure or key-value pairs,
+which is why we prefer to have first class key-value pairs over and second class lists.
+
+## Why not both Lists and Maps
+
+The second design of the parser included `Hint`s for both lists and maps:
+
+* '[': List Opened
+* ']': List Closed
+* '{': Map Opened
+* '}': Map Closed
+* 'k': Map Key
+* 'v': Map Value or List Element, that is not a Map or List, but just a basic value.
+
+**TODO**
