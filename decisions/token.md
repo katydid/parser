@@ -8,7 +8,8 @@ Token: () -> ((Kind, value) | error)
 
 Most `Kind`s of tokens include a value:
 
-* '_': Null (None)
+* '_': Void (also Null or Unit)
+* 'e': Elem (a list element)
 * 't': True (None)
 * 'f': False (None)
 * 'x': Bytes (Bytes)
@@ -51,8 +52,9 @@ In a language with sum types, we recommend declaring `Token` as a sum type and n
 ```
 GetToken : () -> (Token | error)
 
-type Token =
-  | Null
+data Token =
+  | Void
+  | Elem
   | False
   | True
   | Bytes bytes
@@ -73,7 +75,7 @@ Float64: () -> (float64 | error)
 Bytes: () -> ([]byte | error)
 ```
 We call the `Tokenize` method first, to get the `Kind` and then call the appropriate follow up method (`Int64`, `Float64` or `Bytes`) to get the value of the token, if required.
-We do not need a `Boolean` or `IsNull` method, since `true`, `false` and `null` is represented purely as the `Kind`.
+We do not need a `Boolean` or `IsVoid` method, since `true`, `false` and `void` is represented purely as the `Kind`.
 
 Some languages have specific optimizations available, for example in Go:
 ```go
