@@ -57,7 +57,8 @@ If the `Hint` was:
 
 The `Kind` represents the kind of the value:
 
-* '_': Null (Unit)
+* '_': Void (also Null or Unit)
+* 'e': Elem (a list element)
 * 't': True
 * 'f': False
 * 'x': Bytes (Bytes)

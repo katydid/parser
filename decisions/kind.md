@@ -2,7 +2,8 @@
 
 We support a specific set of `Kind`s:
 
-* '_': Null (Unit)
+* '_': Void (also Null or Unit)
+* 'e': Elem (a list element)
 * 't': True
 * 'f': False
 * 'x': Bytes (Bytes)
@@ -21,7 +22,7 @@ We found that a limited amount of scalar types need to be supported:
 
 <table>
 <tr><th>Surveyed</th><th>Supported as</th></tr>
-<tr><td>Null</td><td>Kind</td></tr>
+<tr><td>Null/Void/Unit</td><td>Kind</td></tr>
 <tr><td>Bool</td><td>Kind</td></tr>
 <tr><td>String</td><td>String</td></tr>
 <tr><td>Bytes</td><td>Bytes</td></tr>

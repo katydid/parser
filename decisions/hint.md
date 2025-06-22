@@ -57,10 +57,10 @@ It would parse into our parse tree as:
         Node (Int64 1) []
     ],
     Node (String "b") [
-        Node Null [
+        Node Elem [
             Node (Int64 2) []
         ],
-        Node Null [
+        Node Elem [
             Node (String "c") [
                 Node (Int64 3) []
             ],
@@ -77,7 +77,7 @@ while every `Node k children`, where `children != []`, would parse as a `Hint`: 
 
 This means our pull-based parser would parse it as:
 ```
-{"a": 1, "b": {null: 2, null: {"c": 3, "d": 4}}}
+{"a": 1, "b": {Elem: 2, Elem: {"c": 3, "d": 4}}}
 ```
 
 Or more verbosely:
@@ -91,11 +91,11 @@ Next -> 'k'
 Token -> '"', "b"
 Next -> '{'
 Next -> 'k'
-Token -> '_'
+Token -> 'e'
 Next -> 'v'
 Token -> '-', 2
 Next -> 'k'
-Token -> '_'
+Token -> 'e'
 Next -> '{'
 Next -> 'k'
 Token -> '"', "c"

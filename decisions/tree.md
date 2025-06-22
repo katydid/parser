@@ -21,7 +21,8 @@ The generic parameter `a` is mapped to a `Token`:
 
 ```haskell
 data Token =
-  | Null -- '_'
+  | Void -- '_'
+  | Elem -- 'e'
   | False -- 'f'
   | True -- 't'
   | Bytes ByteString -- 'x'
@@ -110,7 +111,7 @@ is mapped to the following tree:
 
 ## Void
 
-Void is represented as `Node Null []`.
+Void, null and Unit are represented as `Node Void []`.
 
 ## Union
 
@@ -157,7 +158,7 @@ Node (String "abc") []
 
 ## List
 
-A List's elements are eached indexed with a `Node Null [element]`.
+A List's elements are eached indexed with a `Node Elem [element]`.
 
 Here we provide an example of how a list is mapped to a tree.
 
@@ -169,9 +170,9 @@ Given the JSON list:
 it maps to the following tree:
 ```
 [
-    Node Null [Node (Int64 1) []],
-    Node Null [Node (String "b") []],
-    Node Null [
+    Node Elem [Node (Int64 1) []],
+    Node Elem [Node (String "b") []],
+    Node Elem [
         Node (String "a") [
             Node (Int64 3) []
         ]
@@ -179,9 +180,9 @@ it maps to the following tree:
 ]
 ```
 
-### Why Null indexes
+### Why does Elem exist
 
-Without Null indexes the following JSON:
+Without Elem the following JSON:
 ```json
 [1,"b",{"a": 3}, {"c": 4}]
 [1,"b",{"a": 3, "c": 4}]
@@ -229,9 +230,9 @@ If we cannot distinguish between these pairs being in different structures using
 
 Given this list we will get a false positive using a validator.
 
-### Why not proper indexes instead of Null
+### Why not proper indexes instead of Elem
 
-Why Null and not an index:
+Why Elem and not an index:
 ```
 [
     Node (Int64 0) [Node (Int64 1) []],
@@ -291,8 +292,8 @@ is mapped to a tree:
 
 ```haskell
 [
-    Node Null [Node (String "a") []],
-    Node Null [Node (String "b") []]
+    Node Elem [Node (String "a") []],
+    Node Elem [Node (String "b") []]
 ]
 ```
 
@@ -351,10 +352,10 @@ It would parse into our parse tree as:
         Node (Int64 1) []
     ],
     Node (String "b") [
-        Node Null [
+        Node Elem [
             Node (Int64 2) []
         ],
-        Node Null [
+        Node Elem [
             Node (String "c") [
                 Node (Int64 3) []
             ],
@@ -366,7 +367,7 @@ It would parse into our parse tree as:
 ]
 ```
 
-Notice that if we didn't add `Node Null` then we wouldn't be able to tell that `2` and `"c"` are not elements of the same list.
+Notice that if we didn't add `Node Elem` then we wouldn't be able to tell that `2` and `"c"` are not elements of the same list.
 
 ## Example: Parsing XML
 
@@ -390,9 +391,9 @@ can be presented as a Tree:
 ]
 ```
 
-We could have modeled XML as a list, with `Null` keys, but that would be overly verbose.
+We could have modeled XML as a list, with `Void` keys, but that would be overly verbose.
 
-We could also have given "D" a `Null` child: `Node (String "D") [Node Null []]`, so that it was a consistent list of key value pairs, but this would require some foresight.
+We could also have given "D" a `Void` child: `Node (String "D") [Node Void []]`, so that it was a consistent list of key value pairs, but this would require some foresight.
 For example, if we parsed `<A>D<B>C</B></A>`, we cannot know that "D" needs to be a value of a key, before we saw the "B".
 
 It would be up to the specific parse implementation to decide how to represent `<D/>` as Tree, but we would also propose `Node (String "D") []`, since it has no children.
