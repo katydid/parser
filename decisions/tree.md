@@ -180,9 +180,23 @@ it maps to the following tree:
 ]
 ```
 
+Prior art for this representation (wrapping each element in a node) can be found in [XML-RPC](https://en.wikipedia.org/wiki/XML-RPC), where an array is represented as a list of values:
+
+```xml
+<array>
+  <data>
+    <value><i4>1404</i4></value>
+    <value><string>Something here</string></value>
+    <value><i4>1</i4></value>
+  </data>
+</array>
+```
+
 ### Why does Elem exist
 
-Without Elem the following JSON:
+We chose to introduce a new `Kind`: `Elem`, instead of reusing `Void` to avoid confusion.
+
+Without `Elem` the following JSON:
 ```json
 [1,"b",{"a": 3}, {"c": 4}]
 [1,"b",{"a": 3, "c": 4}]
