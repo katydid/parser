@@ -41,7 +41,7 @@ For example, in an event-based parser, the parser would parse the token to the u
 The interface does sequential parsing, since the interface is optimized for parsing serialization formats.
 We did a [survey](./survey/Readme.md) of serialization formats and found that [most serialization formats are Sequential](./survey/comparison.md).
 
-This interface also has room for a non sequential, but forward moving method: `JumpTo (key): (Error|EOF)`, which could be added in future,
+This interface also has room for a non sequential, but forward moving method: `JumpTo (field): (Error|EOF)`, which could be added in future,
 to make sure we take advantage of some pointer based serialization format's optimizations.
 
 ## Minimal
@@ -52,5 +52,3 @@ This is the smallest interface that doesn't compromise speed that we could come 
 * `Next` parses over to the next token, but does not tokenize it if not necessary.
 * `Skip` is aware that this is a parse tree and skips the parsing of whole branches.
 * `Token` makes sure we only tokenize, which can allocate memory, when absolutely necessary (when the user asks).
-
-

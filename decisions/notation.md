@@ -25,6 +25,28 @@ The return paramter is in parenthesis `()` with composition either using a `|`, 
 * The `?` represents an `Optional`, which means that the `Skip` method returns an `Error` or an `EOF` signal or `None` (null).
 * The `,` represents a `Tuple`, which means that the `Token` method returns a (`Kind` and `Value`) or an `Error`.
 
+## Type Declarations
+
+We indicate a type with a name as:
+
+```
+type TypeName = ...
+```
+
+We mostly use this to declare types that can either be sum types or characters.
+For example `Hint`:
+
+```elm
+type Hint =
+    Enter -- '{'
+  | Leave -- '}'
+  ...
+```
+
+This describes a type `Hint` that can be constructed with either `Enter` or `Leave`.
+The `--` notation indicates the rest of the line is commented out, which we steal from [Elm](https://elmprogramming.com/comment.html) to get some code highlighting in the markdown.
+In the comments we can see that '{' indicates the character, which could be used in a language without sum types to represent this value.
+
 ## Implementation in a Functional language
 
 These signatures are not pure functions, but rather methods.

@@ -11,10 +11,10 @@ The `Hint` is used to decide whether to `Skip`, parse the `Token` or move onto t
 
 In some implementation languages, `Hint` can be indicated with a single byte or ascii character:
 
-* '{': Open
-* '}': Close
-* 'k': Key
-* 'v': Value
+* '{': Enter
+* '}': Leave
+* 'F': Field
+* 'V': Value
 
 In other languages a sum type/enum is preferred to represent `Hint`.
 
@@ -35,9 +35,9 @@ data Tree a = Node {
 
 Our pull based parser would see every:
 
-* `Node v []` as a value and return a `Hint` = `v`
-* `Node k [Node v []]` as a key-value pair and return a `Hint` = `k` and Next a `Hint = v`.
-* `Node k children`, where children does not match the two patterns above, as a key and return a `Hint` = `k` with `Hint`s `{` and `}` surrounding the list of children.
+* `Node v []` as a value and return a `Hint` = `V`
+* `Node f [Node v []]` as a field-value pair and return a `Hint` = `F` and Next a `Hint = V`.
+* `Node f children`, where children does not match the two patterns above, return a `Hint` = `F` with `Hint`s `{` and `}` surrounding the list of children.
 
 Also Note: at the top (start) we start with a list of trees, but these are not surrounded by `Hint`s `{` and `}`.
 
@@ -73,7 +73,7 @@ It would parse into our parse tree as:
 ```
 
 Remember every `Node v []` would parse as a `Hint`: `v`,
-while every `Node k children`, where `children != []`, would parse as a `Hint`: `k` with `{` and `}` `Hint`s surrounding the list of children.
+while every `Node f children`, where `children != []`, would parse as a `Hint`: `F` with `{` and `}` `Hint`s surrounding the list of children.
 
 This means our pull-based parser would parse it as:
 ```
@@ -83,27 +83,27 @@ This means our pull-based parser would parse it as:
 Or more verbosely:
 ```
 Next -> '{'
-Next -> 'k'
+Next -> 'F'
 Token -> '"', "a"
-Next -> 'v'
+Next -> 'V'
 Token -> '-', 1
-Next -> 'k'
+Next -> 'F'
 Token -> '"', "b"
 Next -> '{'
-Next -> 'k'
+Next -> 'F'
 Token -> 'e'
-Next -> 'v'
+Next -> 'V'
 Token -> '-', 2
-Next -> 'k'
+Next -> 'F'
 Token -> 'e'
 Next -> '{'
-Next -> 'k'
+Next -> 'F'
 Token -> '"', "c"
-Next -> 'v'
+Next -> 'V'
 Token -> '-', 3
-Next -> 'k'
+Next -> 'F'
 Token -> '"', d
-Next -> 'v'
+Next -> 'V'
 Token -> '-', 4
 Next -> '}'
 Next -> '}'
@@ -139,26 +139,26 @@ Given this representation our pull-based parser would parse it as:
 Or more verbosely:
 ```
 Next -> '{'
-Next -> 'k'
+Next -> 'F'
 Token -> '"', "A"
 Next -> '{'
-Next -> 'k'
+Next -> 'F'
 Token -> '"', "B"
-Next -> 'v'
+Next -> 'V'
 Token -> '"', "C"
 
-Next -> 'v'
+Next -> 'V'
 Token -> '"', "D"
 
-Next -> 'k'
+Next -> 'F'
 Token -> '"', "B"
-Next -> 'v'
+Next -> 'V'
 Token -> '"', "F"
 Next -> '}'
 Next -> '}'
 ```
 
-Notice how "D" is returned as a value `v` in between the list of keys, since it as an `Node (String "D") []`.
+Notice how "D" is returned as a `Hint` `V` in between the list of fields, since it as an `Node (String "D") []`.
 
 ## Why Next returns a Hint and not a Token
 
@@ -171,7 +171,7 @@ Next : () -> (Hint | error | EOF)
 ```
 
 Using this `Hint` the user can decide to `Skip` or parse the `Token`.
-Only the `Token` method will parse the actual key or value:
+Only the `Token` method will parse the actual field or value:
 
 ```
 Token: () -> ((Kind, value) | error)

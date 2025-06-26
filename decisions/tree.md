@@ -15,24 +15,24 @@ data Tree a = Node {
 }
 ```
 
-*Note: Sometimes we will refer to the `rootLabel` as the `label` or `key` and refer to the `subForest` as `children` going forward.*
+*Note: Sometimes we will refer to the `rootLabel` as the `label` or `field` and refer to the `subForest` as `children` going forward.*
 
 The generic parameter `a` is mapped to a `Token`:
 
-```haskell
-data Token =
-  | Void -- '_'
-  | Elem -- 'e'
+```elm
+type Token =
+  | Void -- '_' (also Null or Unit)
+  | Elem -- 'i' (a list element)
   | False -- 'f'
   | True -- 't'
-  | Bytes ByteString -- 'x'
-  | String Text -- '"'
-  | Int64 Int64 -- '-'
-  | Float64 Float64 -- '.'
-  | Decimal Text -- '/'
-  | Nanoseconds Int64 -- '9'
-  | DateTime Text -- 'T'
-  | Tag Text -- '#'
+  | Bytes Bytes -- 'x'
+  | String String -- '"'
+  | Int64 Int64 -- '-' (-1 * 2^63 ... 2^63 - 1)
+  | Float64 Float64 -- '.' (IEEE-754)
+  | Decimal String -- '/' (ISO 6093)
+  | Nanoseconds Int64 -- '9' (used for duration and time since the epoch)
+  | DateTime String -- 'z' (RFC3339)
+  | Tag String '#'
 ```
 
 This means that our parse tree can be thought of as a type: `Tree Token`.
@@ -405,10 +405,10 @@ can be presented as a Tree:
 ]
 ```
 
-We could have modeled XML as a list, with `Void` keys, but that would be overly verbose.
+We could have modeled XML as a list, with `Void` fields, but that would be overly verbose.
 
-We could also have given "D" a `Void` child: `Node (String "D") [Node Void []]`, so that it was a consistent list of key value pairs, but this would require some foresight.
-For example, if we parsed `<A>D<B>C</B></A>`, we cannot know that "D" needs to be a value of a key, before we saw the "B".
+We could also have given "D" a `Void` child: `Node (String "D") [Node Void []]`, so that it was a consistent list of field value pairs, but this would require some foresight.
+For example, if we parsed `<A>D<B>C</B></A>`, we cannot know that "D" needs to be a value of a field, before we saw the "B".
 
 It would be up to the specific parse implementation to decide how to represent `<D/>` as Tree, but we would also propose `Node (String "D") []`, since it has no children.
 In cases where it is necessary to also include the information whether the node is a text node or an element, we propose using custom [tags](./tags.md).
@@ -472,8 +472,8 @@ This is a trade-off, since in this case the labels ("a", "b") are a level deeper
 In our design, the list values are one level deeper, which means lists are slightly negatively impacted.
 In one case labels are first class and lists are second class citizens and on the other hand lists are first class and labels are second class.
 
-We are dealing with serialized data, which is usually encoded as some type of structure or key-value pairs,
-which is why we prefer to have first class key-value pairs over and second class lists.
+We are dealing with serialized data, which is usually encoded as some type of structure or field-value pairs,
+which is why we prefer to have first class fields over and second class lists.
 
 ## Why not both Lists and Maps
 

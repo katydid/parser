@@ -1,6 +1,6 @@
 # Error
 
-We decided to use a generic `Error` value in the description of the methods of the parser interface.
+We decided to use a generic `error` value in the description of the methods of the parser interface.
 We also include `EOF`, not as an Error, but as a separate value in the description.
 
 ## Error value vs Exception vs Result type
@@ -21,12 +21,12 @@ Examples of Error representations include:
 
 ## Opaque
 
-Also note that `Error` is opaque for a reason.
+Also note that `error` is opaque for a reason.
 The user can make decisions on whether an error occured, but not what error occured as this level of transparency is not part of the interface.
 
 ## EOF
 
 The `EOF` signal, is used to represent the end of the Parse.
 
-If `EOF` is represented as an `Error`, as in for example `Golang`, then this is the only error that may be distinguished from other errors.
+If `EOF` is represented as an `error`, as in for example `Golang`, then this is the only error that may be distinguished from other errors.
 
