@@ -8,7 +8,7 @@ We support a specific set of `Kind`s:
 * 'f': False
 * 'x': Bytes (Bytes)
 * '"': String (String)
-* '-': Int64 (Int64)
+* '-': Int (Int64)
 * '.': Float64 (Float64)
 * '/': Decimal (String)
 * '9': Nanoseconds (Int64) (used for duration and time)
