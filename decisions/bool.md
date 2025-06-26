@@ -16,8 +16,8 @@ In a language without sum types, we need to the multiple methods to tokenize the
 
 ```
 Tokenize : () -> (Kind | error)
-Int64: () -> (int64 | error)
 Float64: () -> (float64 | error)
+...
 Bytes: () -> ([]byte | error)
 ```
 
@@ -25,8 +25,9 @@ If `Kind` did not include 'f' and 't', then the interface would need another met
 
 ```
 Tokenize : () -> (Kind | error)
-Int64: () -> (int64 | error)
+Float64: () -> (float64 | error)
 ...
+Bytes: () -> ([]byte | error)
 Bool: () -> (bool | error)
 ```
 

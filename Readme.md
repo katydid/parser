@@ -1,6 +1,7 @@
 # Parser
 
-The Katydid Parser is a generic interface created to be implemented for many serialization formats in a variety of programming languages.
+The Katydid Parser is a generic interface created to be programming language agnostic and serialization format agnostic.
+This is so that it can be implemented for many serialization formats in a variety of programming languages.
 
 Our main use case is so that one schema language (for example, JSONSchema, but not limited to) can be applied to any serialization format.
 We will use JSON and XML in most examples, but this interface also supports Protobufs and other binary formats.
@@ -11,7 +12,7 @@ We describe the interface in a language agnostic way, so that this can be used b
 
 * `Next : () -> (Hint | error | EOF)`
 * `Skip : () -> (error | EOF)?`
-* `Token: () -> ((Kind, value) | error)`
+* `Token: () -> (Token | error)`
 
 ### Next
 
@@ -27,14 +28,15 @@ The `Next` method does as little work as possible to move onto the next token an
 
 The `Hint` provides a hint about the location in the structure.
 
-In some implementation languages, `Hint` can be indicated with a single byte or ascii character:
+In some implementation languages, `Hint` can be indicated with a single byte or ascii character, in others using a sum type:
 
-* '{': Open
-* '}': Close
-* 'k': Key
-* 'v': Value
-
-In other languages a sum type/enum is preferred to represent `Hint`.
+```haskell
+data Hint =
+    Enter -- '{'
+  | Leave -- '}'
+  | Label -- 'k'
+  | Value -- 'v'
+```
 
 ### Skip
 
@@ -48,36 +50,17 @@ The `Skip` method allows the user to skip over uninteresting parts of the parse 
 Based on the `Hint` skip has different intuitive behaviours. 
 
 If the `Hint` was:
-* '{': these key-value pairs are skipped, including the close `}`.
-* 'k': the key's value is skipped.
-* 'v': the rest of the key-value pairs are skipped, including the close `}`.
+* '{': these nodes are skipped, including `}`.
+* 'k': the label's children are skipped.
+* 'v': the rest of the siblings are skipped, including `}`.
 * '}': same as calling `Next` and ignoring the `Hint`.
-
-### Kind
-
-The `Kind` represents the kind of the value:
-
-* '_': Void (also Null or Unit)
-* 'e': Elem (a list element)
-* 't': True
-* 'f': False
-* 'x': Bytes (Bytes)
-* '"': String (String)
-* '-': Int64 (Int64)
-* '.': Float64 (Float64)
-* '/': Decimal (String)
-* '9': Nanoseconds (Int64) (used for duration and time since epoch)
-* 'T': Date Time ISO 8601 (String)
-* '#': Custom Tag (String)
-
-Note how each `Kind` is mapped to a value type, that will represent the value returned by the `Token` method.
 
 ### Token
 
-The `Token` method returns (a `Kind` and a value) or an error.
+The `Token` method returns a `Token` (which consists of a `Kind` and a value) or an error.
 
 ```
-Token: () -> ((Kind, value) | error)
+Token: () -> (Token | error)
 ```
 
 The value is represented as one of the following value types:
@@ -87,7 +70,31 @@ The value is represented as one of the following value types:
 * `Int64`
 * `Float64`
 
-See the mapping from `Kind` to value types in the previous section.
+The Token type maps each Kind to a value type:
+
+```haskell
+data Token =
+  | Void -- '_' (also Null or Unit)
+  | Elem -- 'e' (a list element)
+  | False -- 'f'
+  | True -- 't'
+  | Bytes Bytes -- 'x'
+  | String String -- '"'
+  | Int64 Int64 -- '-' (-1 * 2^63 ... 2^63 - 1)
+  | Float64 Float64 -- '.' (IEEE-754)
+  | Decimal String -- '/' (ISO 6093)
+  | Nanoseconds Int64 -- '9' (used for duration and time since the epoch)
+  | DateTime String -- 'T' (RFC3339)
+  | Tag String '#'
+```
+
+Note that `Void`, `Elem`, `False` and `True` have no associated values.
+
+In case your language does not support sum types, you can represent the Token method as a tuple of `Kind` and `value`, where the `Kind` is the character mentiond in the comments above:
+
+```
+Token: () -> ((Kind, value) | error)
+```
 
 ## Implementations
 

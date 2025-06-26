@@ -28,7 +28,7 @@ data Token =
   | Bytes ByteString -- 'x'
   | String Text -- '"'
   | Int64 Int64 -- '-'
-  | Float64 Double -- '.'
+  | Float64 Float64 -- '.'
   | Decimal Text -- '/'
   | Nanoseconds Int64 -- '9'
   | DateTime Text -- 'T'
