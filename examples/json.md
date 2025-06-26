@@ -1,5 +1,7 @@
 ## JSON
 
+**TODO: Update to new interface**
+
 Examples of Parsing JSON using Katydid's Parser interface.
 
 ## Basic Example
@@ -19,19 +21,19 @@ We expect the following from the parser:
 ```
 Next -> '{'
 
-Next -> 'k'
+Next -> 'F'
 Token -> ('"', "int")
-Next -> 'v'
+Next -> 'V'
 Token -> ('-', 1)
 
-Next -> 'k'
+Next -> 'F'
 Token -> ('"', "bool")
 Token -> 't'
 
-Next -> 'k'
+Next -> 'F'
 Token -> ('"', "arr")
 Next -> '['
-Next -> 'v'
+Next -> 'V'
 Token -> ('"', "elem")
 Next -> ']'
 
@@ -104,35 +106,35 @@ We expect the following from the parser:
 ```
 Next -> '{'
 
-Next -> 'k'
+Next -> 'F'
 Token -> ('"', "num")
-Next -> 'v'
+Next -> 'V'
 Token -> ('.', 3.14)
 
-Next -> 'k'
+Next -> 'F'
 Token -> ('"', "arr")
 Next -> '['
-Next -> 'v'
+Next -> 'V'
 Token -> '_'
-Next -> 'v'
+Next -> 'V'
 Token -> 't'
-Next -> 'v'
+Next -> 'V'
 Token -> 'f'
-Next -> 'v'
+Next -> 'V'
 Token -> 't'
-Next -> 'v'
+Next -> 'V'
 Token -> ('-', 1)
 Skip
 
-Next -> 'k'
+Next -> 'F'
 Token -> ('"', "obj")
 
 Next -> '{'
-Next -> 'k'
+Next -> 'F'
 Token -> ('"', "key")
-Next -> 'v'
+Next -> 'V'
 Token -> ('"', "val")
-Next -> 'k'
+Next -> 'F'
 Token -> ('"', "nums")
 Skip // skips the whole array in "nums"
 

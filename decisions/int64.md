@@ -1,5 +1,7 @@
 # Int64
 
+**TODO: cleanup**
+
 An Int64 is a range from:
 MIN: -1 * 2^63 = -9,223,372,036,854,775,808
 MAX: 2^63 - 1  =  9,223,372,036,854,775,807
@@ -15,6 +17,9 @@ There is no evidence that on modern processors `Float64` comparisons are slower 
 This means including an extra `Int64` base type is not necessary and we can simplify the interface by not including it.
 
 However the interface also supports the `Nanoseconds` `Kind` with an `Int64` value. Precisely representing nanoseconds up to 2^53 might be enough for durations, but is not enough to represent time since the epoch, as it only represents 1 January 1970 to about 15 April 1970, so only 3 and a half months, instead of 292 years.
+
+**TODO: it might still be necessary depending on nanosecond support in languages**
+**TODO: what about transcoding use case**
 
 ## References
 

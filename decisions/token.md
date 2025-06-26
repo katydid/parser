@@ -3,23 +3,24 @@
 The `Token` method returns a `Kind`, value or an error.
 
 ```
-Token: () -> ((Kind, value) | error)
+Token: () -> (Token | error)
 ```
 
-Most `Kind`s of tokens include a value:
-
-* '_': Void (also Null or Unit)
-* 'e': Elem (a list element)
-* 't': True (None)
-* 'f': False (None)
-* 'x': Bytes (Bytes)
-* '"': String (String)
-* '-': Int64 (Int64)
-* '.': Float64 (Float64)
-* '/': Decimal (String)
-* '9': Nanoseconds (Int64) (used for duration and time)
-* 'T': Date Time ISO 8601 (String)
-* '#': Custom Tag (String)
+```elm
+type Token =
+  | Void -- '_' (also Null or Unit)
+  | Elem -- 'i' (a list element)
+  | False -- 'f'
+  | True -- 't'
+  | Bytes Bytes -- 'x'
+  | String String -- '"'
+  | Int64 Int64 -- '-' (-1 * 2^63 ... 2^63 - 1)
+  | Float64 Float64 -- '.' (IEEE-754)
+  | Decimal String -- '/' (ISO 6093)
+  | Nanoseconds Int64 -- '9' (used for duration and time since the epoch)
+  | DateTime String -- 'z' (RFC3339)
+  | Tag String '#'
+```
 
 We try to keep the types of values limited to a minimum and to types found in most languages.
 
@@ -42,40 +43,29 @@ The following values are encoded as other values to keep the number of methods t
 
 ## Implementations in various languages
 
-The `Token` method is the only method that returns the value of a token.
+In languages without sum types we recommend representing a `Token` and as a `Kind` and a value:
+
+```
+Token: () -> ((Kind, value) | error)
+```
+
+Where [Kind](./kind.md) is a character.
+
 The `Token` method's design varies dependending on implementation language and some experimentation is still required.
 We will give some examples.
 
-In a dynamically typed language the above description of the `Token` method is sufficient.
+In a dynamically typed language the return type of a tuple of `Kind` and value is sufficient.
 
-In a language with sum types, we recommend declaring `Token` as a sum type and not using `Kind`:
-```
-GetToken : () -> (Token | error)
-
-data Token =
-  | Void
-  | Elem
-  | False
-  | True
-  | Bytes bytes
-  | String string
-  | Int64 int64
-  | Float64 float64
-  | Decimal string
-  | Nanoseconds int64
-  | DateTime string
-  | Tag String
-```
-
-In a language without sum types, we can use multiple methods:
+In strongly typed languages without sum types, we can use multiple methods:
 ```
 Tokenize : () -> (Kind | error)
 Int64: () -> (int64 | error)
 Float64: () -> (float64 | error)
-Bytes: () -> ([]byte | error)
+String: () -> (string | error)
+Bytes: () -> (list of byte | error)
 ```
 We call the `Tokenize` method first, to get the `Kind` and then call the appropriate follow up method (`Int64`, `Float64` or `Bytes`) to get the value of the token, if required.
-We do not need a `Boolean` or `IsVoid` method, since `true`, `false` and `void` is represented purely as the `Kind`.
+We do not need a `Boolean` or `IsVoid` method, since `True`, `False` and `Void` is represented purely as the `Kind`.
 
 Some languages have specific optimizations available, for example in Go:
 ```go

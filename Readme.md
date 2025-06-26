@@ -8,7 +8,7 @@ We will use JSON and XML in most examples, but this interface also supports Prot
 
 ## Interface
 
-We describe the interface in a language agnostic way, so that this can be used by for implementing a parser for any serialization in almost any programming language.
+We describe the [interface](./decisions/interface.md) in a language agnostic [notation](./decisions/notation.md):
 
 * `Next : () -> (Hint | error | EOF)`
 * `Skip : () -> (error | EOF)?`
@@ -16,26 +16,26 @@ We describe the interface in a language agnostic way, so that this can be used b
 
 ### Next
 
-The `Next` method, returns a `Hint`, an error or an `EOF` signal, when no more tokens are left:
+The `Next` method, returns a `Hint`, an [error](./decisions/error.md) or an [EOF signal](./decisions/eof.md), when no more tokens are left:
 
 ```
 Next : () -> (Hint | error | EOF)
 ```
 
-The `Next` method does as little work as possible to move onto the next token and to provide a hint about the kind of token is next.
+The `Next` method does as little work as possible to move onto the next token and to provide a `Hint` about what kind of token is next.
 
 ### Hint
 
-The `Hint` provides a hint about the location in the structure.
+The [Hint](./decisions/hint.md) provides a hint about the location in the structure.
 
 In some implementation languages, `Hint` can be indicated with a single byte or ascii character, in others using a sum type:
 
-```haskell
-data Hint =
+```elm
+type Hint =
     Enter -- '{'
   | Leave -- '}'
-  | Label -- 'k'
-  | Value -- 'v'
+  | Field -- 'F'
+  | Value -- 'V'
 ```
 
 ### Skip
@@ -51,13 +51,13 @@ Based on the `Hint` skip has different intuitive behaviours.
 
 If the `Hint` was:
 * '{': these nodes are skipped, including `}`.
-* 'k': the label's children are skipped.
-* 'v': the rest of the siblings are skipped, including `}`.
+* 'F': the label's children are skipped.
+* 'V': the rest of the siblings are skipped, including `}`.
 * '}': same as calling `Next` and ignoring the `Hint`.
 
 ### Token
 
-The `Token` method returns a `Token` (which consists of a `Kind` and a value) or an error.
+The [Token](./decisions/token.md) method returns a `Token` (which consists of a `Kind` and a value) or an error.
 
 ```
 Token: () -> (Token | error)
@@ -67,15 +67,15 @@ The value is represented as one of the following value types:
 
 * `Bytes`
 * `String`
-* `Int64`
-* `Float64`
+* [Int64](./decisions/int64.md)
+* [Float64](./decisions/float64.md)
 
 The Token type maps each Kind to a value type:
 
-```haskell
-data Token =
+```elm
+type Token =
   | Void -- '_' (also Null or Unit)
-  | Elem -- 'e' (a list element)
+  | Elem -- 'i' (a list element)
   | False -- 'f'
   | True -- 't'
   | Bytes Bytes -- 'x'
@@ -84,13 +84,13 @@ data Token =
   | Float64 Float64 -- '.' (IEEE-754)
   | Decimal String -- '/' (ISO 6093)
   | Nanoseconds Int64 -- '9' (used for duration and time since the epoch)
-  | DateTime String -- 'T' (RFC3339)
+  | DateTime String -- 'z' (RFC3339)
   | Tag String '#'
 ```
 
 Note that `Void`, `Elem`, `False` and `True` have no associated values.
 
-In case your language does not support sum types, you can represent the Token method as a tuple of `Kind` and `value`, where the `Kind` is the character mentiond in the comments above:
+In case your language does not support sum types, you can represent the `Token` method as a tuple of [Kind](./decisions/kind.md) and `value`, where the `Kind` is the character mentiond in the comments above:
 
 ```
 Token: () -> ((Kind, value) | error)

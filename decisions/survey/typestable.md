@@ -45,7 +45,7 @@ Composing these scalar types can be composed using compound types:
 * List (Also referred to as Sequence, Array, Vector, repeated or elements.)
 * Set
 * Union (Also referred to as Oneof or Choice.)
-* Object (These are key-value pairs, where the keys are limited to strings. Also referred to as Struct, Message, Record, Object or Table.)
+* Object (These are field-value pairs, where the fields are limited to strings. Also referred to as Struct, Message, Record, Object or Table.)
 * Map (Maps are key-value pairs, where the keys are not limited to strings.)
 
 Note: YAML also has `pairs`, which can be treated as lists of length 2.
