@@ -10,9 +10,7 @@
 
 ## Decimal
 
-> The standard library includes the additional numeric types fractions.Fraction, for rationals, and decimal.Decimal, for floating-point numbers with user-definable precision.
-
-**TODO: decimal.Decimal Decimal("1.234567890123456789E+10")**
+> Unlike hardware based binary floating point, the decimal module has a user alterable precision
 
 ## Time
 
@@ -38,3 +36,4 @@ numpy.datetime64('2016-06-10T21:42:24.76073899')
 * [ISO 8601 and Nanosecond Precision Across Languages](https://nickb.dev/blog/iso8601-and-nanosecond-precision-across-languages/)
 * [Proto DateTime Helpers](https://proto-plus-python.readthedocs.io/en/latest/reference/datetime_helpers.html)
 * [Numeric Types — int, float, complex](https://docs.python.org/3/library/stdtypes.html#typesnumeric)
+* [decimal](https://docs.python.org/3/library/decimal.html)

@@ -1,5 +1,7 @@
 # Tree
 
+**TODO: rewrite with labelled trees and add references**
+
 Our parser is a pull-based parser, but the parse tree still needs an underlying model of what we imagine the parse tree would look like, if we would parse it fully into memory.
 
 We have based our model on [Haskell's Data.Tree](https://hackage-content.haskell.org/package/containers-0.8/docs/src/Data.Tree.html#Tree).

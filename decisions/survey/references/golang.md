@@ -10,7 +10,9 @@
 
 ## Decimal
 
-**TODO: math/big (*big.Float) Use big.NewFloat().SetString("1.23E+10")**
+> Package big implements arbitrary-precision arithmetic (big numbers). The following numeric types are supported: ... Float ...
+
+The Float.Parse method seems to support arbitrary precision decimals.
 
 ## Time
 
@@ -21,3 +23,4 @@ Parses RFC 3339 via `time.RFC3339` and Nanoseconds via `time.RFC3339Nano`
 * [int64](https://pkg.go.dev/builtin#int64)
 * [float64](https://pkg.go.dev/builtin#float64)
 * [time package](https://pkg.go.dev/time)
+* [math/big](https://pkg.go.dev/math/big#Float.Parse)

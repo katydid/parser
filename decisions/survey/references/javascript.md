@@ -1,5 +1,13 @@
 # Javascript
 
+## Int64
+
+BigInt supports arbitrary precision integers
+
+## Float64
+
+> In JavaScript, Number is a numeric data type in the double-precision 64-bit floating point format (IEEE 754)
+
 ## Decimal
 
 **TODO: Use decimal.js or Big.js Native Number uses 64-bit float; use libraries for precision.**
@@ -32,6 +40,9 @@ jsjoda's ZonedDateTime seems to support RFC 9557 already:
 
 ## References
 
+* [BigInt](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
+* [bigint](https://developer.mozilla.org/en-US/docs/Glossary/BigInt)
+* [Number](https://developer.mozilla.org/en-US/docs/Glossary/Number)
 * [Date.parse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse)
 * [jsjoda OffsetDateTime](https://js-joda.github.io/js-joda/class/packages/core/src/OffsetDateTime.js~OffsetDateTime.html)
 * [jsjoda test parsing nanoseconds with OffsetDateTime](https://github.com/js-joda/js-joda/blob/52de68e9fe4e51b2191a2d2ebfe187bee8b9fdc8/packages/core/test/OffsetDateTimeTest.js#L265)

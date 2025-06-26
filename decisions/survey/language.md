@@ -24,6 +24,7 @@ This table shows which languages support the following types and functionality:
     <th>Time</th>
     <th>Nano</th>
     <th>NewTime</th>
+    <th>Char</th>
     <th>Bytes</th>
     <th>UTF8</th>
     <th>NativeUTF8</th>
@@ -31,12 +32,13 @@ This table shows which languages support the following types and functionality:
   </tr>
   <tr>
     <td>Javascript</td>
-    <td></td>
-    <td></td>
+    <td>✔️</td>
+    <td>✅</td>
     <td></td>
     <td>✅</td>
     <td>☑</td>
     <td>☑</td>
+    <td></td>
     <td></td>
     <td></td>
     <td></td>
@@ -44,12 +46,13 @@ This table shows which languages support the following types and functionality:
   </tr>
   <tr>
     <td>Python</td>
-    <td>✅</td>
+    <td>✔️</td>
     <td></td>
     <td>✅</td>
     <td>✅</td>
     <td>☑</td>
     <td>❌</td>
+    <td></td>
     <td></td>
     <td></td>
     <td></td>
@@ -67,6 +70,7 @@ This table shows which languages support the following types and functionality:
     <td></td>
     <td></td>
     <td></td>
+    <td></td>
   </tr>
   <tr>
     <td>C#</td>
@@ -80,14 +84,16 @@ This table shows which languages support the following types and functionality:
     <td></td>
     <td></td>
     <td></td>
+    <td></td>
   </tr>
   <tr>
     <td>C++</td>
     <td>✅</td>
     <td></td>
     <td></td>
-    <td></td>
-    <td></td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>✅</td>
     <td></td>
     <td></td>
     <td></td>
@@ -99,8 +105,9 @@ This table shows which languages support the following types and functionality:
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
-    <td></td>
+    <td>☑</td>
+    <td>❌</td>
+    <td>❌</td>
     <td></td>
     <td></td>
     <td></td>
@@ -119,18 +126,20 @@ This table shows which languages support the following types and functionality:
     <td></td>
     <td></td>
     <td></td>
+    <td></td>
   </tr>
   <tr>
     <td>Golang</td>
     <td>✅</td>
     <td>✅</td>
-    <td></td>
+    <td>✅</td>
     <td>✅</td>
     <td>✅</td>
     <td>❌</td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>✅</td>
     <td>❌</td>
   </tr>
   <tr>
@@ -141,6 +150,7 @@ This table shows which languages support the following types and functionality:
     <td>☑</td>
     <td>☑</td>
     <td>☑</td>
+    <td></td>
     <td></td>
     <td></td>
     <td></td>
@@ -158,6 +168,7 @@ This table shows which languages support the following types and functionality:
     <td></td>
     <td></td>
     <td></td>
+    <td></td>
   </tr>
   <tr>
     <td>Haskell</td>
@@ -170,6 +181,7 @@ This table shows which languages support the following types and functionality:
     <td></td>
     <td></td>
     <td></td>
+    <td></td>
     <td>✅</td>
   </tr>
   <tr>
@@ -177,8 +189,9 @@ This table shows which languages support the following types and functionality:
     <td></td>
     <td>❌</td>
     <td></td>
-    <td></td>
-    <td></td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>❌</td>
     <td></td>
     <td></td>
     <td></td>
@@ -190,8 +203,9 @@ This table shows which languages support the following types and functionality:
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
-    <td></td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>✅</td>
     <td></td>
     <td></td>
     <td></td>
@@ -203,6 +217,7 @@ This table shows which languages support the following types and functionality:
 The cell contents indicate the following:
 * ✅ = supported natively or via standard library
 * ☑ = supported via third party library
+* ✔️ = supported natively for our use case of parsing and comparison, but does not conform to other properties of the type. For example `bigint` in `Javascript` supports `int64` for comparison purposes, but not for addition, since bigint won't overflow like `int64` will.
 * ❌ = no support
 
 We didn't survey all languages, but we made some assumptions:
