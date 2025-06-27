@@ -31,10 +31,10 @@ This table shows which languages support the following types and functionality:
     <th>Sum</th>
   </tr>
   <tr>
-    <td>Javascript</td>
+    <td><a href="./references/javascript.md">Javascript</a></td>
     <td>✔️</td>
     <td>✅</td>
-    <td></td>
+    <td>☑</td>
     <td>✅</td>
     <td>☑</td>
     <td>☑</td>
@@ -45,7 +45,7 @@ This table shows which languages support the following types and functionality:
     <td></td>
   </tr>
   <tr>
-    <td>Python</td>
+    <td><a href="./references/python.md">Python</a></td>
     <td>✔️</td>
     <td></td>
     <td>✅</td>
@@ -59,7 +59,7 @@ This table shows which languages support the following types and functionality:
     <td></td>
   </tr>
   <tr>
-    <td>Java</td>
+    <td><a href="./references/java.md">Java</a></td>
     <td>✅</td>
     <td>✅</td>
     <td></td>
@@ -73,7 +73,7 @@ This table shows which languages support the following types and functionality:
     <td></td>
   </tr>
   <tr>
-    <td>C#</td>
+    <td><a href="./references/csharp.md">C#</a></td>
     <td>✅</td>
     <td></td>
     <td></td>
@@ -87,7 +87,7 @@ This table shows which languages support the following types and functionality:
     <td></td>
   </tr>
   <tr>
-    <td>C++</td>
+    <td><a href="./references/cpp.md">C++</a></td>
     <td>✅</td>
     <td></td>
     <td></td>
@@ -101,7 +101,7 @@ This table shows which languages support the following types and functionality:
     <td></td>
   </tr>
   <tr>
-    <td>C</td>
+    <td><a href="./references/c.md">C</a></td>
     <td></td>
     <td></td>
     <td></td>
@@ -115,7 +115,7 @@ This table shows which languages support the following types and functionality:
     <td></td>
   </tr>
   <tr>
-    <td>PHP</td>
+    <td><a href="./references/php.md">PHP</a></td>
     <td></td>
     <td></td>
     <td></td>
@@ -129,7 +129,7 @@ This table shows which languages support the following types and functionality:
     <td></td>
   </tr>
   <tr>
-    <td>Golang</td>
+    <td><a href="./references/golang.md">Golang</a></td>
     <td>✅</td>
     <td>✅</td>
     <td>✅</td>
@@ -143,7 +143,7 @@ This table shows which languages support the following types and functionality:
     <td>❌</td>
   </tr>
   <tr>
-    <td>Rust</td>
+    <td><a href="./references/rust.md">Rust</a></td>
     <td>✅</td>
     <td>✅</td>
     <td></td>
@@ -157,7 +157,7 @@ This table shows which languages support the following types and functionality:
     <td></td>
   </tr>
   <tr>
-    <td>Swift</td>
+    <td><a href="./references/swift.md">Swift</a></td>
     <td>✅</td>
     <td></td>
     <td></td>
@@ -171,7 +171,7 @@ This table shows which languages support the following types and functionality:
     <td></td>
   </tr>
   <tr>
-    <td>Haskell</td>
+    <td><a href="./references/haskell.md">Haskell</a></td>
     <td></td>
     <td></td>
     <td></td>
@@ -185,7 +185,7 @@ This table shows which languages support the following types and functionality:
     <td>✅</td>
   </tr>
   <tr>
-    <td>Erlang</td>
+    <td><a href="./references/erlang.md">Erlang</a></td>
     <td></td>
     <td>❌</td>
     <td></td>
@@ -199,7 +199,7 @@ This table shows which languages support the following types and functionality:
     <td>✅</td>
   </tr>
   <tr>
-    <td>Lean</td>
+    <td><a href="./references/lean.md">Lean</a></td>
     <td></td>
     <td></td>
     <td></td>

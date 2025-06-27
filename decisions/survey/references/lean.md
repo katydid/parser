@@ -2,7 +2,7 @@
 
 ## Time
 
-Thank you to Markus Himmel
+Thank you to Markus Himmel for providing an example of parsing RFC 3339
 
 ```
 import Std.Time
@@ -27,7 +27,22 @@ ofPlainDateTime
     { offset := { second := { val := Int.ofNat 0 } }, name := "+00:00", abbreviation := "+00:00", isDST := false })
 ```
 
-> Regarding your second question, at the moment we only parse either an offset or a time zone identifier. So you can write zoned("2022-07-08T00:14:07+01:00") to get a ZonedDateTime, or you can write zoned("2022-07-08T00:14:07[Europe/Paris]") which returns an IO ZonedDateTime that will look up the offset in the computer's time zone database.
+> Regarding your second question, at the moment we only parse either an offset or a time zone identifier. So you can write zoned("2022-07-08T00:14:07+01:00") to get a ZonedDateTime, or you can write zoned("2022-07-08T00:14:07[Europe/Paris]") which returns an IO ZonedDateTime that will look up the offset in the computer's time zone database. - Mark Himmel
+
+Thank you to Mark Himmel for providing a follow up example of parsing RFC 9557
+
+```
+import Std.Time
+
+open Std Time
+
+def rfc9557 : GenericFormat .any := datespec("uuuu-MM-dd'T'HH:mm:ssZZZZZ'['zzzz']'")
+
+#eval do
+  let date ← IO.ofExcept (rfc9557.parse "2022-07-08T00:14:07+01:00[Europe/Paris]")
+  IO.println s!"Zone offset is {date.timezone.offset.second} seconds"
+  IO.println s!"Zone name is {date.timezone.name}"
+```
 
 ## Reference
 

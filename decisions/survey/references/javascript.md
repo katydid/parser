@@ -10,7 +10,7 @@ BigInt supports arbitrary precision integers
 
 ## Decimal
 
-**TODO: Use decimal.js or Big.js Native Number uses 64-bit float; use libraries for precision.**
+decimal.js seems to support arbitrary precision decimals.
 
 ## Time
 
@@ -48,3 +48,4 @@ jsjoda's ZonedDateTime seems to support RFC 9557 already:
 * [jsjoda test parsing nanoseconds with OffsetDateTime](https://github.com/js-joda/js-joda/blob/52de68e9fe4e51b2191a2d2ebfe187bee8b9fdc8/packages/core/test/OffsetDateTimeTest.js#L265)
 * [jsjoda ZonedDateTime](https://js-joda.github.io/js-joda/class/packages/core/src/ZonedDateTime.js~ZonedDateTime.html)
 * [Proposal proposal-temporal Stage 3 Draft / June 23, 2025](https://tc39.es/proposal-temporal/#sec-temporal-parseisodatetime)
+* [decimal.js](https://github.com/MikeMcl/decimal.js)

@@ -14,6 +14,8 @@
 
 ## Time
 
+Python's datetime library has no support for nanoseconds.
+
 > Popular Python libraries don’t do much more with a lack of an intermediate format and simply truncate the trailing digits.
 
 This includes libraries such as pendulum and ciso8601.
@@ -27,9 +29,9 @@ numpy.datetime64('2016-06-10T21:42:24.76073899')
 # Created a datetime with nanosecond resolution
 ```
 
-`datetime64` does not handle timezones, so does not comply with RFC 3339.
+But `datetime64` does not handle timezones, so does not comply with RFC 3339.
 
-`proto.datetime_helpers.DatetimeWithNanoseconds`'s `from_rfc3339` method handles both nanoseconds and RFC 3339.
+Nanoseconds are only supported by a different third-party library: `proto.datetime_helpers.DatetimeWithNanoseconds`'s `from_rfc3339` method handles both nanoseconds and RFC 3339.
 
 ## References
 
@@ -37,3 +39,4 @@ numpy.datetime64('2016-06-10T21:42:24.76073899')
 * [Proto DateTime Helpers](https://proto-plus-python.readthedocs.io/en/latest/reference/datetime_helpers.html)
 * [Numeric Types — int, float, complex](https://docs.python.org/3/library/stdtypes.html#typesnumeric)
 * [decimal](https://docs.python.org/3/library/decimal.html)
+* [datetime module has no support for nanoseconds](https://github.com/python/cpython/issues/59648)

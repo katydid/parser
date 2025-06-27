@@ -6,6 +6,12 @@ This is so that it can be implemented for many serialization formats in a variet
 Our main use case is so that one schema language (for example, JSONSchema, but not limited to) can be applied to any serialization format.
 We will use JSON and XML in most examples, but this interface also supports Protobufs and other binary formats.
 
+## Use cases
+
+* Selective Parsing
+* Validation
+* Transcoding
+
 ## Interface
 
 We describe the [interface](./decisions/interface.md) in a language agnostic [notation](./decisions/notation.md):
