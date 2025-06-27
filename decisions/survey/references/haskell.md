@@ -51,6 +51,10 @@ main = do
 $ Parsed time: 2025-06-25 13:45:00.123456789 UTC
 ```
 
+## Char
+
+> The character type Char represents Unicode codespace and its elements are code points as in definitions D9 and D10 of the Unicode Standard.
+
 ## References
 
 * [Haskell Double](https://hackage.haskell.org/package/base-4.21.0.0/docs/Prelude.html#t:Double)
@@ -59,3 +63,4 @@ $ Parsed time: 2025-06-25 13:45:00.123456789 UTC
 * [Numeric.Floating.IEEE](https://hackage.haskell.org/package/fp-ieee-0.1.0.5/docs/Numeric-Floating-IEEE.html)
 * [Stack Overflow: Set precision in Haskell](https://stackoverflow.com/questions/28516337/set-precision-in-haskell)
 * [Data.Scientific](https://github.com/basvandijk/scientific)
+* [Data.Char](https://hackage.haskell.org/package/base-4.21.0.0/docs/Data-Char.html)

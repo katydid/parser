@@ -44,6 +44,10 @@ fn main() {
 
 And there is also a crate for RFC 9557: ixdtf
 
+## Char
+
+> The char type represents a single character. 
+
 ## Sum
 
 ```rust
@@ -63,3 +67,4 @@ enum IpAddr {
 * [astro-float](https://github.com/stencillogic/astro-float)
 * [rust-decimal](https://github.com/paupino/rust-decimal)
 * [Defining an Enum](https://doc.rust-lang.org/book/ch06-01-defining-an-enum.html)
+* [Primitive Type char](https://doc.rust-lang.org/std/primitive.char.html)

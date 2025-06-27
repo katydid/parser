@@ -42,6 +42,21 @@ if let date = formatter.date(from: dateString) {
 $ Seconds: 32.123000000
 ```
 
+## Char
+
+```swift
+let exclamationMark: Character = "!"
+```
+
+> String values can be constructed by passing an array of Character values as an argument to its initializer:
+
+```swift
+let catCharacters: [Character] = ["C", "a", "t", "!", "🐱"]
+let catString = String(catCharacters)
+print(catString)
+// Prints "Cat!🐱"
+```
+
 ## Sum
 
 ```swift
@@ -60,3 +75,4 @@ enum Barcode {
 * [FloatingPoint](https://developer.apple.com/documentation/swift/floatingpoint)
 * [BigDecimal](https://github.com/mgriebling/BigDecimal)
 * [Associated Values](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/enumerations/#Associated-Values)
+* [Strings and Characters](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/stringsandcharacters/)

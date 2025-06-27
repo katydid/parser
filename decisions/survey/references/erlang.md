@@ -36,6 +36,11 @@ $ System time (nanoseconds since Unix epoch): 1517498278123456789
 
 > $char: ASCII value or unicode code-point of the character char.
 
+```erlang
+> $\n.
+10
+```
+
 ## References
 
 * [Erlang Data Types](https://erlang.org/documentation/doc-15.0-rc1/doc/system/data_types.html)

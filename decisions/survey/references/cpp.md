@@ -197,6 +197,10 @@ int main() {
 //   ChangeColor 1 2 3
 ```
 
+## Char
+
+> The char data type is used to store a single character.
+
 ## References
 
 * [Nanoseconds & RFC3339 Timestamp C++](https://gist.github.com/Ujang360/4a52f736b59be4724f6db4ebfeaf1413)
@@ -211,3 +215,4 @@ int main() {
 * [How to check if C++ compiler uses IEEE 754 floating point standard](https://stackoverflow.com/questions/5777484/how-to-check-if-c-compiler-uses-ieee-754-floating-point-standard)
 * [Boost.Multiprecision](https://github.com/boostorg/multiprecision)
 * [Stack Overflow: C++ equivalent of Rust enums](https://stackoverflow.com/questions/64017982/c-equivalent-of-rust-enums)
+* [C++ Character Data Types](https://www.w3schools.com/cpp/cpp_data_types_char.asp)

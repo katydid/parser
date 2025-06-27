@@ -39,6 +39,17 @@ But `datetime64` does not handle timezones, so does not comply with RFC 3339.
 
 Nanoseconds are only supported by a different third-party library: `proto.datetime_helpers.DatetimeWithNanoseconds`'s `from_rfc3339` method handles both nanoseconds and RFC 3339.
 
+## Char
+
+> No. Python does not have a character or char type. All single characters are strings with length one.
+
+> There is a bytes type which may be analogous depending on why you are asking.
+
+```python
+>>> b'a'
+=> b'a'
+```
+
 ## Sum
 
 It seems to be possible using dataclasses
@@ -90,3 +101,4 @@ Tree = Branch | None
 * [decimal](https://docs.python.org/3/library/decimal.html)
 * [datetime module has no support for nanoseconds](https://github.com/python/cpython/issues/59648)
 * [How can I define algebraic data types in Python?](https://stackoverflow.com/questions/16258553/how-can-i-define-algebraic-data-types-in-python)
+* [Does python support character type?](https://stackoverflow.com/questions/47310929/does-python-support-character-type)

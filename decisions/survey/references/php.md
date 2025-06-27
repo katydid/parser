@@ -88,6 +88,10 @@ private function parseTimeString($timestamp)
 }
 ```
 
+## Char
+
+> chr — Generate a single-byte string from a number
+
 ## Sum
 
 PHP has a RFC for tagged unions that is still in draft status.
@@ -104,3 +108,4 @@ PHP also has unions types, but not tagged unions.
 * [BcMath\Number::div](https://www.php.net/manual/en/bcmath-number.div.php)
 * [PHP RFC: Tagged Unions](https://wiki.php.net/rfc/tagged_unions)
 * [PHP 8.0: Union Types](https://php.watch/versions/8.0/union-types)
+* [chr](https://www.php.net/manual/en/function.chr.php)

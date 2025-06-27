@@ -58,8 +58,21 @@ def rfc9557 : GenericFormat .any := datespec("uuuu-MM-dd'T'HH:mm:ssZZZZZ'['zzzz'
   IO.println s!"Zone name is {date.timezone.name}"
 ```
 
+## Char
+
+> Characters are represented by the type Char, which may be any Unicode scalar value.
+
+## UTF8Funcs
+
+**TODO**
+
+## UTF8Strings
+
+> While strings are UTF-8-encoded arrays of bytes.
+
 ## Reference
 
 * [Zulip Chat](https://leanprover.zulipchat.com/#narrow/channel/113488-general/topic/parsing.20DateTime.20in.20format.20RFC.203339.20including.20nanoseconds/with/525924778.01)
 * [Int64](https://lean-lang.org/doc/reference/latest//Basic-Types/Fixed-Precision-Integers/#fixed-ints)
 * [Float](https://lean-lang.org/doc/reference/latest//Basic-Types/Floating-Point-Numbers/#Float)
+* [Characters](https://lean-lang.org/doc/reference/latest//Basic-Types/Characters/)

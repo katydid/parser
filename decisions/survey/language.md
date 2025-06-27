@@ -11,8 +11,8 @@ This table shows which languages support the following types and functionality:
 * TimeZone: Parsing the new Time format, Internet Extended Date/Time Format RFC 9557 that includes named timezones.
 * Char: A Char type that can represent visible ascii chars including: '_', 'a'-'z', 'A'-'Z', '"', '-', '.', '/', '0'-'9', '#', '{', '}', '(', ')', '[', ']'
 * Bytes: A sequence of 8-bit bytes.
-* UTF8: Supports UTF-8 string functions like eqFold, contains, hasSuffix, hasPrefix, toLower, toUpper.
-* NativeUTF8: Strings are encoded as UTF8 and can convert a sequence of bytes into a UTF-8 string type.
+* UTF8Funcs: Supports UTF-8 string functions like eqFold, contains, hasSuffix, hasPrefix, toLower, toUpper.
+* UTF8Strings: Strings are encoded as UTF8 and can convert a sequence of bytes into a UTF-8 string type.
 * Sum: Sum Types or Tagged Unions with exhaustive pattern matching.
 
 **TODO: Double check that decimal libraries actually support parsing**
@@ -28,8 +28,8 @@ This table shows which languages support the following types and functionality:
     <th>TimeZone</th>
     <th>Char</th>
     <th>Bytes</th>
-    <th>UTF8</th>
-    <th>NativeUTF8</th>
+    <th>UTF8Funcs</th>
+    <th>UTF8Strings</th>
     <th>Sum</th>
   </tr>
   <tr>
@@ -40,7 +40,7 @@ This table shows which languages support the following types and functionality:
     <td>✅</td>
     <td>☑</td>
     <td>☑</td>
-    <td></td>
+    <td>❌</td>
     <td></td>
     <td></td>
     <td></td>
@@ -54,7 +54,7 @@ This table shows which languages support the following types and functionality:
     <td>✅</td>
     <td>☑</td>
     <td>❌</td>
-    <td></td>
+    <td>✔️</td>
     <td></td>
     <td></td>
     <td></td>
@@ -68,7 +68,7 @@ This table shows which languages support the following types and functionality:
     <td>✅</td>
     <td>✅</td>
     <td>✅</td>
-    <td></td>
+    <td>✅</td>
     <td></td>
     <td></td>
     <td></td>
@@ -82,7 +82,7 @@ This table shows which languages support the following types and functionality:
     <td>✅</td>
     <td>✅</td>
     <td>❌</td>
-    <td></td>
+    <td>✅</td>
     <td></td>
     <td></td>
     <td></td>
@@ -96,7 +96,7 @@ This table shows which languages support the following types and functionality:
     <td>✅</td>
     <td>✅</td>
     <td>✅</td>
-    <td></td>
+    <td>✅</td>
     <td></td>
     <td></td>
     <td></td>
@@ -110,7 +110,7 @@ This table shows which languages support the following types and functionality:
     <td>☑</td>
     <td>❌</td>
     <td>❌</td>
-    <td></td>
+    <td>✅</td>
     <td></td>
     <td></td>
     <td></td>
@@ -124,7 +124,7 @@ This table shows which languages support the following types and functionality:
     <td>✅</td>
     <td>☑</td>
     <td>❌</td>
-    <td></td>
+    <td>✅</td>
     <td></td>
     <td></td>
     <td></td>
@@ -152,7 +152,7 @@ This table shows which languages support the following types and functionality:
     <td>☑</td>
     <td>☑</td>
     <td>☑</td>
-    <td></td>
+    <td>✅</td>
     <td></td>
     <td></td>
     <td></td>
@@ -166,7 +166,7 @@ This table shows which languages support the following types and functionality:
     <td>✅</td>
     <td>❌</td>
     <td>❌</td>
-    <td></td>
+    <td>✅</td>
     <td></td>
     <td></td>
     <td></td>
@@ -180,7 +180,7 @@ This table shows which languages support the following types and functionality:
     <td>✅</td>
     <td>✅</td>
     <td>❌</td>
-    <td></td>
+    <td>✅</td>
     <td></td>
     <td></td>
     <td></td>
@@ -194,7 +194,7 @@ This table shows which languages support the following types and functionality:
     <td>✅</td>
     <td>✅</td>
     <td>❌</td>
-    <td></td>
+    <td>✔️</td>
     <td></td>
     <td></td>
     <td></td>
@@ -208,10 +208,10 @@ This table shows which languages support the following types and functionality:
     <td>✅</td>
     <td>✅</td>
     <td>✅</td>
+    <td>✅</td>
     <td></td>
     <td></td>
-    <td></td>
-    <td></td>
+    <td>✅</td>
     <td>✅</td>
   </tr>
 </table>

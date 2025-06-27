@@ -56,6 +56,10 @@ int main() {
 
 https://github.com/Bnz-0/rfc3339timestamp/issues/2#issuecomment-3012362789
 
+## Char
+
+> The char data type is used to store a single character.
+
 ## References
 
 * [C library that supports parsing RFC 3339](https://github.com/Bnz-0/rfc3339timestamp/issues/2)
@@ -64,3 +68,4 @@ https://github.com/Bnz-0/rfc3339timestamp/issues/2#issuecomment-3012362789
 * [Floating Representations](https://www.gnu.org/software/c-intro-and-ref/manual/html_node/Floating-Representations.html)
 * [C Floating-Point Types](https://www.zetcode.com/clang/float-type/)
 * [C Programming/stdint.h](https://en.wikibooks.org/wiki/C_Programming/stdint.h)
+* [C Character Data Types](https://www.w3schools.com/c/c_data_types_characters.php)

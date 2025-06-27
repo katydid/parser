@@ -33,6 +33,15 @@ Looks like Java also supports RFC 9557 via ZonedDateTime
 
 > static ZonedDateTime	parse(CharSequence text) Obtains an instance of ZonedDateTime from a text string such as 2007-12-03T10:15:30+01:00[Europe/Paris].
 
+## Char
+
+> The char keyword is a data type that is used to store a single character.
+
+```java
+char myGrade = 'B';
+System.out.println(myGrade);
+```
+
 ## References
 
 * [Stackoverflow: How do I parse RFC 3339 datetimes with Java?](https://stackoverflow.com/questions/6038136/how-do-i-parse-rfc-3339-datetimes-with-java)
@@ -43,3 +52,4 @@ Looks like Java also supports RFC 9557 via ZonedDateTime
 * [long](https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html)
 * [Primitive Data Types](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)
 * [BigDecimal](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/math/BigDecimal.html)
+* [Java char Keyword](https://www.w3schools.com/java/ref_keyword_char.asp)

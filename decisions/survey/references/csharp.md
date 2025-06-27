@@ -22,6 +22,10 @@ OffsetDateTime
 RFC 3339 pattern (extended ISO but with offset in form +/-HH:mm or Z), optional calendar
 `<value calendar="Gregorian 3">2013-07-26T16:45:20.123456789+01:00</value>`
 
+## Char
+
+> The char type keyword is an alias for the .NET System.Char structure type that represents a Unicode UTF-16 code unit, typically a UTF-16 character.
+
 ## Sum
 
 > Now that I have defined the different variants of our Payment type, I now define the Payment type using the OneOf library as shown below.
@@ -60,3 +64,4 @@ public static Amount GetAmount(Payment payment)
 * [BigDecimal](https://github.com/AdamWhiteHat/BigDecimal)
 * [Oneof](https://github.com/mcintyre321/OneOf)
 * [Algebraic Data Types in C#](https://kasozivincent.hashnode.dev/algebraic-data-types-in-c)
+* [char (C# reference)](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/char)
