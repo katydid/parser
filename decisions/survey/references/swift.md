@@ -42,6 +42,15 @@ if let date = formatter.date(from: dateString) {
 $ Seconds: 32.123000000
 ```
 
+## Sum
+
+```swift
+enum Barcode {
+    case upc(Int, Int, Int, Int)
+    case qrCode(String)
+}
+```
+
 ## References
 
 * [Apple Developer DateFormatter](https://developer.apple.com/documentation/foundation/dateformatter)
@@ -50,3 +59,4 @@ $ Seconds: 32.123000000
 * [Unraveling Int16, Int32, and Int64 in Swift](https://appmakers.substack.com/p/differences-int16-int32-int64-swift)
 * [FloatingPoint](https://developer.apple.com/documentation/swift/floatingpoint)
 * [BigDecimal](https://github.com/mgriebling/BigDecimal)
+* [Associated Values](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/enumerations/#Associated-Values)

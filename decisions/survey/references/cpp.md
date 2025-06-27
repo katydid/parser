@@ -154,6 +154,49 @@ Output =
 2021-10-08 02:00:01.218456789 = ...ns
 ```
 
+## Sum
+
+> This is what std::variant is for.
+
+```cpp
+struct Quit {};
+struct Move { int32_t x; int32_t y; };
+struct Write { std::string s; };
+struct ChangeColor { int32_t r; int32_t g; int32_t b; };
+using Message = std::variant<Quit, Move, Write, ChangeColor>;
+
+// Utility to allow overloading lambdas for use in std::visit
+template<class... Ts>
+struct overload : Ts... {
+    using Ts::operator()...;
+};
+template<class... Ts>
+overload(Ts...) -> overload<Ts...>;
+
+int main() {
+    auto visitor = overload{
+        [](const Quit& q)        { std::cout << "Quit\n"; },
+        [](const Move& m)        { std::cout << "Move " << m.x << " " << m.y << "\n"; },
+        [](const Write& w)       { std::cout << "Write " << w.s << "\n"; },
+        [](const ChangeColor& c) { std::cout << "ChangeColor " << c.r << " " << c.g << " " << c.b << "\n"; }
+    };
+
+    Message m1{Quit{}};
+    Message m2{Move{1, 2}};
+    Message m3{Write{"a"}};
+    Message m4{ChangeColor{1, 2, 3}};
+    std::visit(visitor, m1);
+    std::visit(visitor, m2);
+    std::visit(visitor, m3);
+    std::visit(visitor, m4);
+}
+// This prints:
+//   Quit
+//   Move 1 2
+//   Write a
+//   ChangeColor 1 2 3
+```
+
 ## References
 
 * [Nanoseconds & RFC3339 Timestamp C++](https://gist.github.com/Ujang360/4a52f736b59be4724f6db4ebfeaf1413)
@@ -167,3 +210,4 @@ Output =
 * [Ensuring C++ doubles are 64 bits](https://stackoverflow.com/questions/752309/ensuring-c-doubles-are-64-bits/753018#753018)
 * [How to check if C++ compiler uses IEEE 754 floating point standard](https://stackoverflow.com/questions/5777484/how-to-check-if-c-compiler-uses-ieee-754-floating-point-standard)
 * [Boost.Multiprecision](https://github.com/boostorg/multiprecision)
+* [Stack Overflow: C++ equivalent of Rust enums](https://stackoverflow.com/questions/64017982/c-equivalent-of-rust-enums)

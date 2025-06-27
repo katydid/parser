@@ -13,7 +13,7 @@ This table shows which languages support the following types and functionality:
 * Bytes: A sequence of 8-bit bytes.
 * UTF8: Supports UTF-8 string functions like eqFold, contains, hasSuffix, hasPrefix, toLower, toUpper.
 * NativeUTF8: Strings are encoded as UTF8 and can convert a sequence of bytes into a UTF-8 string type.
-* Sum: Sum Types or Tagged Unions
+* Sum: Sum Types or Tagged Unions with exhaustive pattern matching.
 
 **TODO: Double check that decimal libraries actually support parsing**
 
@@ -44,7 +44,7 @@ This table shows which languages support the following types and functionality:
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>❌</td>
   </tr>
   <tr>
     <td><a href="./references/python.md">Python</a></td>
@@ -58,7 +58,7 @@ This table shows which languages support the following types and functionality:
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>✅</td>
   </tr>
   <tr>
     <td><a href="./references/java.md">Java</a></td>
@@ -72,7 +72,7 @@ This table shows which languages support the following types and functionality:
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>❌</td>
   </tr>
   <tr>
     <td><a href="./references/csharp.md">C#</a></td>
@@ -86,7 +86,7 @@ This table shows which languages support the following types and functionality:
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>☑</td>
   </tr>
   <tr>
     <td><a href="./references/cpp.md">C++</a></td>
@@ -100,7 +100,7 @@ This table shows which languages support the following types and functionality:
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>✅</td>
   </tr>
   <tr>
     <td><a href="./references/c.md">C</a></td>
@@ -114,7 +114,7 @@ This table shows which languages support the following types and functionality:
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>❌</td>
   </tr>
   <tr>
     <td><a href="./references/php.md">PHP</a></td>
@@ -128,7 +128,7 @@ This table shows which languages support the following types and functionality:
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>❌</td>
   </tr>
   <tr>
     <td><a href="./references/golang.md">Golang</a></td>
@@ -156,7 +156,7 @@ This table shows which languages support the following types and functionality:
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>✅</td>
   </tr>
   <tr>
     <td><a href="./references/swift.md">Swift</a></td>
@@ -170,7 +170,7 @@ This table shows which languages support the following types and functionality:
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
+    <td>✅</td>
   </tr>
   <tr>
     <td><a href="./references/haskell.md">Haskell</a></td>
@@ -198,7 +198,7 @@ This table shows which languages support the following types and functionality:
     <td></td>
     <td></td>
     <td></td>
-    <td>✅</td>
+    <td>❌</td>
   </tr>
   <tr>
     <td><a href="./references/lean.md">Lean</a></td>
@@ -223,9 +223,9 @@ The cell contents indicate the following:
 * ❌ = no support
 
 We didn't survey all languages, but we made some assumptions:
-* We assume Kotlin, Clojure and Scala has access to everything that Java has and possibly more, like sum types.
+* We assume Kotlin, Clojure and Scala has access to everything that Java has and possibly more, for example we know Kotlin and Scala have access to sum types.
 * We assume Elixir has access to everything Erlang has.
-* We assume Typescript has access to everything that Javascript has.
+* We assume Typescript has access to everything that Javascript has and more, for example Typescript has support for sum types.
 
 Please help us add more languages: Clojure, Cobol, Dart, Delphi, Elixir, Elm, Idris, Julia, Kotlin, Lua, Lisp, Matlab, Objective-C, OCaml, Perl, Prolog, R, Ruby, Scala, TypeScript, Visual Basic, Zig
 
@@ -240,3 +240,4 @@ Top 15 Programming Languages: JS, Python, Typescript, Java, C#, C++, C, PHP, Go,
 List of Programming Languages: C, C++, C#, Clojure, Cobol, Dart, Delphi, Elixir, Elm, Erlang, F#, Forth, Fortran, Go, Haskell, Idris, Java, JavaScript, Julia, Kotlin, Lean, Lua, Lisp, Matlab, Objective-C, OCaml, Perl, PHP, Prolog, Python, R, Ruby, Rust, Scala, Swift, TypeScript, Visual Basic, Zig - https://survey.stackoverflow.co/2024/technology#most-popular-technologies-language
 
 * [rfc9557](https://datatracker.ietf.org/doc/html/rfc9557#name-internet-extended-date-time)
+* [Larry Garfield's enum-comparison](https://github.com/Crell/enum-comparison)

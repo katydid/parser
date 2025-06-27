@@ -44,6 +44,15 @@ fn main() {
 
 And there is also a crate for RFC 9557: ixdtf
 
+## Sum
+
+```rust
+enum IpAddr {
+    V4(String),
+    V6(String),
+}
+```
+
 ## References
 
 * [Rust f64](https://doc.rust-lang.org/std/primitive.f64.html)
@@ -53,3 +62,4 @@ And there is also a crate for RFC 9557: ixdtf
 * [Crate ixdtf](https://docs.rs/ixdtf/latest/ixdtf/index.html)
 * [astro-float](https://github.com/stencillogic/astro-float)
 * [rust-decimal](https://github.com/paupino/rust-decimal)
+* [Defining an Enum](https://doc.rust-lang.org/book/ch06-01-defining-an-enum.html)

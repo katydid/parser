@@ -39,6 +39,47 @@ But `datetime64` does not handle timezones, so does not comply with RFC 3339.
 
 Nanoseconds are only supported by a different third-party library: `proto.datetime_helpers.DatetimeWithNanoseconds`'s `from_rfc3339` method handles both nanoseconds and RFC 3339.
 
+## Sum
+
+It seems to be possible using dataclasses
+
+```python
+from dataclasses import dataclass
+
+@dataclass
+class Point:
+    x: float
+    y: float
+
+@dataclass
+class Circle:
+    x: float
+    y: float
+    r: float
+
+@dataclass
+class Rectangle:
+    x: float
+    y: float
+    w: float
+    h: float
+
+Shape = Point | Circle | Rectangle
+```
+
+```python
+from __future__ import annotations
+from dataclasses import dataclass
+
+@dataclass
+class Branch:
+    value: int
+    left: Tree
+    right: Tree
+
+Tree = Branch | None
+```
+
 ## References
 
 * [ISO 8601 and Nanosecond Precision Across Languages](https://nickb.dev/blog/iso8601-and-nanosecond-precision-across-languages/)
@@ -48,3 +89,4 @@ Nanoseconds are only supported by a different third-party library: `proto.dateti
 * [Stack Overflow: on what systems does Python not use IEEE-754 double precision floats](https://stackoverflow.com/questions/70184494/on-what-systems-does-python-not-use-ieee-754-double-precision-floats)
 * [decimal](https://docs.python.org/3/library/decimal.html)
 * [datetime module has no support for nanoseconds](https://github.com/python/cpython/issues/59648)
+* [How can I define algebraic data types in Python?](https://stackoverflow.com/questions/16258553/how-can-i-define-algebraic-data-types-in-python)

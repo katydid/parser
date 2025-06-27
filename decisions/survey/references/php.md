@@ -88,6 +88,12 @@ private function parseTimeString($timestamp)
 }
 ```
 
+## Sum
+
+PHP has a RFC for tagged unions that is still in draft status.
+
+PHP also has unions types, but not tagged unions.
+
 ## References
 
 * [google-cloud-php TimeTrait](https://github.com/googleapis/google-cloud-php/blob/main/Core/src/TimeTrait.php)
@@ -96,3 +102,5 @@ private function parseTimeString($timestamp)
 * [Floating point numbers](https://www.php.net/manual/en/language.types.float.php)
 * [The BcMath\Number class](https://www.php.net/manual/en/class.bcmath-number.php)
 * [BcMath\Number::div](https://www.php.net/manual/en/bcmath-number.div.php)
+* [PHP RFC: Tagged Unions](https://wiki.php.net/rfc/tagged_unions)
+* [PHP 8.0: Union Types](https://php.watch/versions/8.0/union-types)
