@@ -67,6 +67,28 @@ Europe/Paris
 7200s
 ```
 
+Thanks to Howard E. Hinnant for providing an [updated example of parsing RFC 9557](https://stackoverflow.com/q/79681175/576911)
+
+```cpp
+int
+main()
+{
+    std::string s = "2022-07-08T00:14:07.123456789+02:00[Europe/Paris]";
+    auto zt = parse_RFC_9557<std::chrono::nanoseconds>(s);
+    auto  s2 = format_RFC_9557(zt);
+    std::cout << s << '\n';
+    std::cout << s2 << '\n';
+    std::cout << zt << '\n';
+}
+```
+
+Output:
+```
+2022-07-08T00:14:07.123456789+02:00[Europe/Paris]
+2022-07-08T00:14:07.123456789+02:00[Europe/Paris]
+2022-07-08 00:14:07.123456789 CEST
+```
+
 ### Previous Attempts
 
 > For parsing and comparing RFC3339 formated dates, you can use Howard Hinnant's date library.
@@ -121,3 +143,4 @@ Output =
 * [HowardHinnant's Unit Test with some basic nanosecond test](https://github.com/HowardHinnant/date/blob/6d7739e7e8e8864dc5eb79e42b6c2675cd7733ca/test/date_test/make_time.pass.cpp#L42-L50)
 * [Stack Overflow: Definition of Int64](https://stackoverflow.com/questions/13604137/definition-of-int64-t#13604190)
 * [Godbolt playground](https://gcc.godbolt.org/z/z5n5KGKrs)
+* [Stack Overflow: How can I parse and format RFC-9557 date times with time zones in C++?](https://stackoverflow.com/q/79681175/576911)
