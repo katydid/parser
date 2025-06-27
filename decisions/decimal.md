@@ -4,6 +4,13 @@
 
 The `Decimal` strings returned by the Parser interface will be formatted in ISO 6093 format.
 
+For example:
+
+```
+1.23456789123456789123456789
+-1.23E100
+```
+
 ## ISO 6093
 
 There is a preexisting standard for this: ISO 6093:1985 "Information processing — Representation of numerical values in character strings for information interchange."

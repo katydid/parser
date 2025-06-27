@@ -1,8 +1,16 @@
 # Erlang
 
+## Int64
+
+**TODO**
+
 ## Float64
 
 > Please also note that Erlang's floats do not exactly match IEEE 754 floats, in that neither Inf nor NaN are supported in Erlang. Any operation that would result in NaN, +Inf, or -Inf, will instead raise a badarith exception.
+
+## Decimal
+
+**TODO**
 
 ## Time
 
@@ -24,8 +32,13 @@ main(_) ->
 $ System time (nanoseconds since Unix epoch): 1517498278123456789
 ```
 
+## Char
+
+> $char: ASCII value or unicode code-point of the character char.
+
 ## References
 
 * [Erlang Data Types](https://erlang.org/documentation/doc-15.0-rc1/doc/system/data_types.html)
 * [Erlang Playground Testing out parsing code](https://www.mycompiler.io/view/A7Lq1y0D6nR)
 * [Erlang calendar](https://www.erlang.org/doc/apps/stdlib/calendar.html#rfc3339_to_system_time/2)
+* [Erlang Data Types](https://www.erlang.org/doc/system/data_types.html#number)

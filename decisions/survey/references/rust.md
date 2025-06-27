@@ -10,7 +10,13 @@
 
 ## Decimal
 
-**TODO: rust_decimal or bigdecimal crate**
+rust-decimal:
+
+> Decimal number implementation written in pure Rust suitable for financial and fixed-precision calculations.
+
+astro-float: 
+
+> Astro-float (astronomically large floating-point numbers) is an arbitrary precision floating-point numbers library designed for performance, portability, and implemented purely in Rust.
 
 ## Time
 
@@ -45,3 +51,5 @@ And there is also a crate for RFC 9557: ixdtf
 * [ISO 8601 and Nanosecond Precision Across Languages](https://nickb.dev/blog/iso8601-and-nanosecond-precision-across-languages/)
 * [Github chrono](https://github.com/chronotope/chrono/blob/bab97905ccfa5aa7ceae1ee131b41b7113ea4f6a/src/datetime/mod.rs#L676)
 * [Crate ixdtf](https://docs.rs/ixdtf/latest/ixdtf/index.html)
+* [astro-float](https://github.com/stencillogic/astro-float)
+* [rust-decimal](https://github.com/paupino/rust-decimal)

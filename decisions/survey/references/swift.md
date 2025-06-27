@@ -6,7 +6,13 @@
 
 ## Float64
 
-**TODO**
+> Types that conform to the FloatingPoint protocol provide most basic (clause 5) operations of the IEEE 754 specification. The base, precision, and exponent range are not fixed in any way by this protocol, but it enforces the basic requirements of any IEEE 754 floating-point type.
+
+## Decimal
+
+BigDecimal:
+
+> Arbitrary-precision decimal arithmetic in Swift with full math functions and fixed-precision Decimal 32-, 64-, and 128-bit types.
 
 ## Time
 
@@ -42,3 +48,5 @@ $ Seconds: 32.123000000
 * [Swift Fiddle DateFormatter](https://swiftfiddle.com/p42py4ojxbb7zpi2zofcmiuada)
 * [Swift withfractionalseconds option](https://developer.apple.com/documentation/foundation/iso8601dateformatter/options/withfractionalseconds)
 * [Unraveling Int16, Int32, and Int64 in Swift](https://appmakers.substack.com/p/differences-int16-int32-int64-swift)
+* [FloatingPoint](https://developer.apple.com/documentation/swift/floatingpoint)
+* [BigDecimal](https://github.com/mgriebling/BigDecimal)

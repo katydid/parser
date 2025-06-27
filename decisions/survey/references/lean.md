@@ -1,5 +1,19 @@
 # Lean
 
+## Int64
+
+> The smallest number that Int64 can represent: -2^63 = -9223372036854775808.
+
+> The largest number that Int64 can represent: 2^63 - 1 = 9223372036854775807.
+
+## Float64
+
+> Float corresponds to the IEEE 754 binary64 format (double in C or f64 in Rust).
+
+## Decimal
+
+**TODO**
+
 ## Time
 
 Thank you to Markus Himmel for providing an example of parsing RFC 3339
@@ -47,3 +61,5 @@ def rfc9557 : GenericFormat .any := datespec("uuuu-MM-dd'T'HH:mm:ssZZZZZ'['zzzz'
 ## Reference
 
 * [Zulip Chat](https://leanprover.zulipchat.com/#narrow/channel/113488-general/topic/parsing.20DateTime.20in.20format.20RFC.203339.20including.20nanoseconds/with/525924778.01)
+* [Int64](https://lean-lang.org/doc/reference/latest//Basic-Types/Fixed-Precision-Integers/#fixed-ints)
+* [Float](https://lean-lang.org/doc/reference/latest//Basic-Types/Floating-Point-Numbers/#Float)

@@ -5,15 +5,17 @@ A Survey of the 10 most popular plus a few additional ones.
 This table shows which languages support the following types and functionality:
 * Int64: A 64 bit integer with range MIN: -1 * 2^63 (-9,223,372,036,854,775,808) and MAX: 2^63 - 1 (9,223,372,036,854,775,807)
 * Float64: binary64 defined in IEEE-754
-* Decimal: Supports parsing of abitrary precision decimals in ISO 6093 format and preserving the precision.
-* Time: Parsing Time RFC 3339
-* Nano: Parsing Time according to RFC 3339 while perserving and not truncating nanoseconds
-* NewTime: Parsing the new Time format, Internet Extended Date/Time Format RFC 9557
+* Decimal: Supports parsing of arbitrary precision decimals in ISO 6093 format while preserving the precision.
+* TimeOffset: Parsing Time RFC 3339 which includes offsets.
+* TimeNano: Parsing Time according to RFC 3339 while perserving and not truncating nanoseconds.
+* TimeZone: Parsing the new Time format, Internet Extended Date/Time Format RFC 9557 that includes named timezones.
 * Char: A Char type that can represent visible ascii chars including: '_', 'a'-'z', 'A'-'Z', '"', '-', '.', '/', '0'-'9', '#', '{', '}', '(', ')', '[', ']'
 * Bytes: A sequence of 8-bit bytes.
 * UTF8: Supports UTF-8 string functions like eqFold, contains, hasSuffix, hasPrefix, toLower, toUpper.
 * NativeUTF8: Strings are encoded as UTF8 and can convert a sequence of bytes into a UTF-8 string type.
 * Sum: Sum Types or Tagged Unions
+
+**TODO: Double check that decimal libraries actually support parsing**
 
 <table>
   <tr>
@@ -21,9 +23,9 @@ This table shows which languages support the following types and functionality:
     <th>Int64</th>
     <th>Float64</th>
     <th>Decimal</th>
-    <th>Time</th>
-    <th>Nano</th>
-    <th>NewTime</th>
+    <th>TimeOffset</th>
+    <th>TimeNano</th>
+    <th>TimeZone</th>
     <th>Char</th>
     <th>Bytes</th>
     <th>UTF8</th>
@@ -47,7 +49,7 @@ This table shows which languages support the following types and functionality:
   <tr>
     <td><a href="./references/python.md">Python</a></td>
     <td>✔️</td>
-    <td></td>
+    <td>✅</td>
     <td>✅</td>
     <td>✅</td>
     <td>☑</td>
@@ -62,7 +64,7 @@ This table shows which languages support the following types and functionality:
     <td><a href="./references/java.md">Java</a></td>
     <td>✅</td>
     <td>✅</td>
-    <td></td>
+    <td>✅</td>
     <td>✅</td>
     <td>✅</td>
     <td>✅</td>
@@ -75,8 +77,8 @@ This table shows which languages support the following types and functionality:
   <tr>
     <td><a href="./references/csharp.md">C#</a></td>
     <td>✅</td>
-    <td></td>
-    <td></td>
+    <td>✅</td>
+    <td>☑</td>
     <td>✅</td>
     <td>✅</td>
     <td>❌</td>
@@ -89,8 +91,8 @@ This table shows which languages support the following types and functionality:
   <tr>
     <td><a href="./references/cpp.md">C++</a></td>
     <td>✅</td>
-    <td></td>
-    <td></td>
+    <td>✅</td>
+    <td>☑</td>
     <td>✅</td>
     <td>✅</td>
     <td>✅</td>
@@ -102,9 +104,9 @@ This table shows which languages support the following types and functionality:
   </tr>
   <tr>
     <td><a href="./references/c.md">C</a></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>✅</td>
     <td>☑</td>
     <td>❌</td>
     <td>❌</td>
@@ -116,9 +118,9 @@ This table shows which languages support the following types and functionality:
   </tr>
   <tr>
     <td><a href="./references/php.md">PHP</a></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>☑</td>
     <td>✅</td>
     <td>☑</td>
     <td>❌</td>
@@ -146,7 +148,7 @@ This table shows which languages support the following types and functionality:
     <td><a href="./references/rust.md">Rust</a></td>
     <td>✅</td>
     <td>✅</td>
-    <td></td>
+    <td>☑</td>
     <td>☑</td>
     <td>☑</td>
     <td>☑</td>
@@ -159,8 +161,8 @@ This table shows which languages support the following types and functionality:
   <tr>
     <td><a href="./references/swift.md">Swift</a></td>
     <td>✅</td>
-    <td></td>
-    <td></td>
+    <td>✅</td>
+    <td>☑</td>
     <td>✅</td>
     <td>❌</td>
     <td>❌</td>
@@ -172,9 +174,9 @@ This table shows which languages support the following types and functionality:
   </tr>
   <tr>
     <td><a href="./references/haskell.md">Haskell</a></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>☑</td>
     <td>✅</td>
     <td>✅</td>
     <td>❌</td>
@@ -200,8 +202,8 @@ This table shows which languages support the following types and functionality:
   </tr>
   <tr>
     <td><a href="./references/lean.md">Lean</a></td>
-    <td></td>
-    <td></td>
+    <td>✅</td>
+    <td>✅</td>
     <td></td>
     <td>✅</td>
     <td>✅</td>

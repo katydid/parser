@@ -8,11 +8,31 @@
 
 ## Float64
 
+There are at least two ways to check that C++ is using IEEE 754
 
+The first way:
+
+> Actually you have an easier way to achieve this in C++. From the C++ standard 18.2.1.1 the class numeric_limits exists within std. In order to access said static member you simply do this:
+
+```cpp
+std::numeric_limits<double>::is_iec559;
+```
+
+> Which should return true if IEEE 754 is in use, false otherwise.
+
+The second way:
+
+> In C99, you can just check if the preprocessor symbol __STDC_IEC_559__ is defined. If it is, then you are guaranteed that a double will be an 8-byte value represented with IEEE 754 (also known as IEC 60559) format. See the C99 standard, Annex F. I'm not sure if this symbol is available in C++, though.
+
+```cpp
+#ifndef __STDC_IEC_559__
+#error "Requires IEEE 754 floating point!"
+#endif
+```
 
 ## Decimal
 
-**TODO: Boost.Multiprecision Standard double isn’t precise; use multiprecision libs.**
+> Boost.Multiprecision is a C++ library that provides integer, rational, floating-point, complex and interval number types having more range and precision than the language's ordinary built-in types.
 
 ## Time
 
@@ -144,3 +164,6 @@ Output =
 * [Stack Overflow: Definition of Int64](https://stackoverflow.com/questions/13604137/definition-of-int64-t#13604190)
 * [Godbolt playground](https://gcc.godbolt.org/z/z5n5KGKrs)
 * [Stack Overflow: How can I parse and format RFC-9557 date times with time zones in C++?](https://stackoverflow.com/q/79681175/576911)
+* [Ensuring C++ doubles are 64 bits](https://stackoverflow.com/questions/752309/ensuring-c-doubles-are-64-bits/753018#753018)
+* [How to check if C++ compiler uses IEEE 754 floating point standard](https://stackoverflow.com/questions/5777484/how-to-check-if-c-compiler-uses-ieee-754-floating-point-standard)
+* [Boost.Multiprecision](https://github.com/boostorg/multiprecision)

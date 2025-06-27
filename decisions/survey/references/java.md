@@ -11,7 +11,9 @@
 
 ## Decimal
 
-**TODO BigDecimal new BigDecimal("1.2345E+10")**
+BigDecimal:
+
+> Immutable, arbitrary-precision signed decimal numbers.
 
 ## Time
 
@@ -40,3 +42,4 @@ Looks like Java also supports RFC 9557 via ZonedDateTime
 * [ISO 8601 and Nanosecond Precision Across Languages](https://nickb.dev/blog/iso8601-and-nanosecond-precision-across-languages/)
 * [long](https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html)
 * [Primitive Data Types](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)
+* [BigDecimal](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/math/BigDecimal.html)

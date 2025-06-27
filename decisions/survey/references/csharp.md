@@ -6,11 +6,15 @@
 
 ## Float64
 
-**TODO**
+> C# has IEEE 754 single and double precision types supported by keywords:
 
 ## Decimal
 
-**TODO: decimal or BigInteger decimal.Parse(..., CultureInfo.InvariantCulture)**
+> C# has a 128 bit limited-precision decimal type denoted by the keyword decimal
+
+BigDecimal is a github project:
+
+> An arbitrary-precision decimal (base 10) floating-point number class. Over 4.5 million downloads on NuGet!
 
 ## Time
 
@@ -22,3 +26,5 @@ RFC 3339 pattern (extended ISO but with offset in form +/-HH:mm or Z), optional 
 
 * [nodatime](https://nodatime.org/3.2.x/userguide/serialization)
 * [W3Schools csharp data types](https://www.w3schools.com/cs/cs_data_types.php)
+* [Floating-point cheat sheet for C#](https://floating-point-gui.de/languages/csharp/)
+* [BigDecimal](https://github.com/AdamWhiteHat/BigDecimal)

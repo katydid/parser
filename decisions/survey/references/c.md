@@ -1,6 +1,20 @@
 # C
 
+## Int64
 
+> int64_t	Signed	64	8	−2^63 which equals −9,223,372,036,854,775,808	2^63 − 1 which equals 9,223,372,036,854,775,807
+
+## Float64
+
+> GNU C uses the floating-point representations specified by the IEEE 754-2008 Standard for Floating-Point Arithmetic.
+
+> Standard C floating-point types follow IEEE 754 specifications (where supported): float: 32-bit single precision (24-bit mantissa), double: 64-bit double precision (53-bit mantissa),  long double: Implementation-dependent (80-bit on x86)
+
+## Decimal
+
+arbitraire:
+
+> An arbitrary precision mathematics library. 
 
 ## Time
 
@@ -46,3 +60,7 @@ https://github.com/Bnz-0/rfc3339timestamp/issues/2#issuecomment-3012362789
 
 * [C library that supports parsing RFC 3339](https://github.com/Bnz-0/rfc3339timestamp/issues/2)
 * [Asked on Stackoverflow](https://stackoverflow.com/questions/79680826/is-there-a-library-to-parse-time-rfc-3339-in-pure-c?noredirect=1#comment140544984_79680826)
+* [arbitraire](https://github.com/hlibc/arbitraire)
+* [Floating Representations](https://www.gnu.org/software/c-intro-and-ref/manual/html_node/Floating-Representations.html)
+* [C Floating-Point Types](https://www.zetcode.com/clang/float-type/)
+* [C Programming/stdint.h](https://en.wikibooks.org/wiki/C_Programming/stdint.h)

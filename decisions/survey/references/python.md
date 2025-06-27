@@ -8,6 +8,12 @@
 
 > Floating-point numbers are usually implemented using double in C; information about the precision and internal representation of floating-point numbers for the machine on which your program is running is available in sys.float_info.
 
+> CPython versions 3.11 and later now require that the platform C double follows the IEEE 754 binary64 format.
+
+Packing and unpacking of floats with IEEE 754 binary64 is supported via the struct package.
+
+> For the 'f', 'd' and 'e' conversion codes, the packed representation uses the IEEE 754 binary32, binary64 or binary16 format (for 'f', 'd' or 'e' respectively), regardless of the floating-point format used by the platform.
+
 ## Decimal
 
 > Unlike hardware based binary floating point, the decimal module has a user alterable precision
@@ -38,5 +44,7 @@ Nanoseconds are only supported by a different third-party library: `proto.dateti
 * [ISO 8601 and Nanosecond Precision Across Languages](https://nickb.dev/blog/iso8601-and-nanosecond-precision-across-languages/)
 * [Proto DateTime Helpers](https://proto-plus-python.readthedocs.io/en/latest/reference/datetime_helpers.html)
 * [Numeric Types — int, float, complex](https://docs.python.org/3/library/stdtypes.html#typesnumeric)
+* [struct](https://docs.python.org/3/library/struct.html)
+* [Stack Overflow: on what systems does Python not use IEEE-754 double precision floats](https://stackoverflow.com/questions/70184494/on-what-systems-does-python-not-use-ieee-754-double-precision-floats)
 * [decimal](https://docs.python.org/3/library/decimal.html)
 * [datetime module has no support for nanoseconds](https://github.com/python/cpython/issues/59648)
