@@ -41,9 +41,32 @@ $ System time (nanoseconds since Unix epoch): 1517498278123456789
 10
 ```
 
+## Bytes
+
+We infer that `binary` is a sequence of bytes, since otherwise how would they be optimized.
+
+binary:
+
+> While most of these functions could be implemented using the bit syntax, the functions in this module are highly optimized and are expected to either execute faster or consume less memory, or both, compared to equivalent implementations written in pure Erlang.
+
+## UTF8Str
+
+> A string in this module is represented by unicode:chardata/0, that is, a list of codepoints, binaries with UTF-8-encoded codepoints (UTF-8 binaries), or a mix of the two.
+
+## UTF8Func
+
+equal(A, B, IgnoreCase, Norm):
+
+> If IgnoreCase is true the function does casefolding on the fly before the equality test.
+
+> If Norm is not none the function applies normalization on the fly before the equality test. There are four available normalization forms: nfc, nfd, nfkc, and nfkd.
+
 ## References
 
 * [Erlang Data Types](https://erlang.org/documentation/doc-15.0-rc1/doc/system/data_types.html)
 * [Erlang Playground Testing out parsing code](https://www.mycompiler.io/view/A7Lq1y0D6nR)
 * [Erlang calendar](https://www.erlang.org/doc/apps/stdlib/calendar.html#rfc3339_to_system_time/2)
 * [Erlang Data Types](https://www.erlang.org/doc/system/data_types.html#number)
+* [string](https://www.erlang.org/doc/apps/stdlib/string.html)
+* [binary](https://www.erlang.org/doc/apps/stdlib/binary.html)
+* [equal](https://www.erlang.org/doc/apps/stdlib/string.html#equal/4)

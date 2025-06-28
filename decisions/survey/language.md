@@ -12,7 +12,7 @@ This table shows which languages support the following types and functionality:
 * Char: A Char type that can represent visible ascii chars including: '_', 'a'-'z', 'A'-'Z', '"', '-', '.', '/', '0'-'9', '#', '{', '}', '(', ')', '[', ']'
 * Bytes: A sequence of 8-bit bytes.
 * UTF8Str: Strings are encoded as UTF8 and can convert a sequence of bytes into a UTF-8 string type.
-* UTF8Func: Supports UTF-8 string functions like [eqFold (case folding)](https://www.unicode.org/L2/L2000/00261-tr25-0d1.html), contains, hasSuffix, hasPrefix, toLower, toUpper.
+* UTF8Func: Supports UTF-8 string functions for [case folding](https://www.unicode.org/L2/L2000/00261-tr25-0d1.html) and normalization (nfc, nfd, nfkc, and nfkd).
 * Sum: Sum Types or Tagged Unions with exhaustive pattern matching.
 
 **TODO: Double check that decimal libraries actually support parsing**
@@ -195,9 +195,9 @@ This table shows which languages support the following types and functionality:
     <td>✅</td>
     <td>❌</td>
     <td>✔️</td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>✅</td>
     <td>❌</td>
   </tr>
   <tr>
@@ -211,7 +211,7 @@ This table shows which languages support the following types and functionality:
     <td>✅</td>
     <td>✅</td>
     <td>✅</td>
-    <td></td>
+    <td>❌</td>
     <td>✅</td>
   </tr>
 </table>
