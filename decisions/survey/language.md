@@ -6,13 +6,13 @@ This table shows which languages support the following types and functionality:
 * Int64: A 64 bit integer with range MIN: -1 * 2^63 (-9,223,372,036,854,775,808) and MAX: 2^63 - 1 (9,223,372,036,854,775,807)
 * Float64: binary64 defined in IEEE-754
 * Decimal: Supports parsing of arbitrary precision decimals in ISO 6093 format while preserving the precision.
-* TimeOffset: Parsing Time RFC 3339 which includes offsets.
-* TimeNano: Parsing Time according to RFC 3339 while perserving and not truncating nanoseconds.
-* TimeZone: Parsing the new Time format, Internet Extended Date/Time Format RFC 9557 that includes named timezones.
+* Time: Parsing Time RFC 3339 which includes offsets.
+* Nano: Parsing Time according to RFC 3339 while perserving and not truncating nanoseconds.
+* Zone: Parsing the new Time format, Internet Extended Date/Time Format RFC 9557 that includes named timezones.
 * Char: A Char type that can represent visible ascii chars including: '_', 'a'-'z', 'A'-'Z', '"', '-', '.', '/', '0'-'9', '#', '{', '}', '(', ')', '[', ']'
 * Bytes: A sequence of 8-bit bytes.
-* UTF8Funcs: Supports UTF-8 string functions like eqFold, contains, hasSuffix, hasPrefix, toLower, toUpper.
-* UTF8Strings: Strings are encoded as UTF8 and can convert a sequence of bytes into a UTF-8 string type.
+* UTF8Str: Strings are encoded as UTF8 and can convert a sequence of bytes into a UTF-8 string type.
+* UTF8Func: Supports UTF-8 string functions like [eqFold (case folding)](https://www.unicode.org/L2/L2000/00261-tr25-0d1.html), contains, hasSuffix, hasPrefix, toLower, toUpper.
 * Sum: Sum Types or Tagged Unions with exhaustive pattern matching.
 
 **TODO: Double check that decimal libraries actually support parsing**
@@ -23,13 +23,13 @@ This table shows which languages support the following types and functionality:
     <th>Int64</th>
     <th>Float64</th>
     <th>Decimal</th>
-    <th>TimeOffset</th>
-    <th>TimeNano</th>
-    <th>TimeZone</th>
+    <th>Time</th>
+    <th>Nano</th>
+    <th>Zone</th>
     <th>Char</th>
     <th>Bytes</th>
-    <th>UTF8Funcs</th>
-    <th>UTF8Strings</th>
+    <th>UTF8Str</th>
+    <th>UTF8Func</th>
     <th>Sum</th>
   </tr>
   <tr>
@@ -153,8 +153,8 @@ This table shows which languages support the following types and functionality:
     <td>☑</td>
     <td>☑</td>
     <td>✅</td>
-    <td></td>
-    <td></td>
+    <td>✅</td>
+    <td>✅</td>
     <td></td>
     <td>✅</td>
   </tr>
@@ -190,7 +190,7 @@ This table shows which languages support the following types and functionality:
     <td><a href="./references/erlang.md">Erlang</a></td>
     <td></td>
     <td>❌</td>
-    <td></td>
+    <td>❌</td>
     <td>✅</td>
     <td>✅</td>
     <td>❌</td>
@@ -209,9 +209,9 @@ This table shows which languages support the following types and functionality:
     <td>✅</td>
     <td>✅</td>
     <td>✅</td>
-    <td></td>
-    <td></td>
     <td>✅</td>
+    <td>✅</td>
+    <td></td>
     <td>✅</td>
   </tr>
 </table>
@@ -224,7 +224,7 @@ The cell contents indicate the following:
 
 We didn't survey all languages, but we made some assumptions:
 * We assume Kotlin, Clojure and Scala has access to everything that Java has and possibly more, for example we know Kotlin and Scala have access to sum types.
-* We assume Elixir has access to everything Erlang has.
+* We assume Elixir has access to everything Erlang has and more, for example arbitrary precision [decimals](https://github.com/ericmj/decimal).
 * We assume Typescript has access to everything that Javascript has and more, for example Typescript has support for sum types.
 
 Please help us add more languages: Clojure, Cobol, Dart, Delphi, Elixir, Elm, Idris, Julia, Kotlin, Lua, Lisp, Matlab, Objective-C, OCaml, Perl, Prolog, R, Ruby, Scala, TypeScript, Visual Basic, Zig

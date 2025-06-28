@@ -48,6 +48,14 @@ And there is also a crate for RFC 9557: ixdtf
 
 > The char type represents a single character. 
 
+## Bytes
+
+> A Bytes handle can be created directly from an existing byte store (such as &[u8] or Vec<u8>)
+
+## UTF8Str
+
+> A UTF-8–encoded, growable string.
+
 ## Sum
 
 ```rust
@@ -68,3 +76,5 @@ enum IpAddr {
 * [rust-decimal](https://github.com/paupino/rust-decimal)
 * [Defining an Enum](https://doc.rust-lang.org/book/ch06-01-defining-an-enum.html)
 * [Primitive Type char](https://doc.rust-lang.org/std/primitive.char.html)
+* [bytes](https://docs.rs/bytes/latest/bytes/)
+* [String](https://doc.rust-lang.org/std/string/struct.String.html)

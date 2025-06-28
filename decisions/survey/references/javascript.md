@@ -38,6 +38,10 @@ jsjoda's ZonedDateTime seems to support RFC 9557 already:
 
 > public static parse(text: string, formatter: DateTimeFormatter): ZonedDateTime Obtains an instance of ZonedDateTime from a text string such as 2007-12-03T10:15:30+01:00[Europe/Paris].
 
+## Char
+
+Single characters seem to be represented using strings of length one.
+
 ## References
 
 * [BigInt](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt)

@@ -62,11 +62,19 @@ def rfc9557 : GenericFormat .any := datespec("uuuu-MM-dd'T'HH:mm:ssZZZZZ'['zzzz'
 
 > Characters are represented by the type Char, which may be any Unicode scalar value.
 
-## UTF8Funcs
+## Bytes
+
+> Lean's arrays are dynamic arrays, which are blocks of continuous memory with a defined capacity
+
+> UInt8 : Type, Unsigned 8-bit integers. This type has special support in the compiler so it can be represented by an unboxed 8-bit value rather than wrapping a BitVec 8.
+
+Looks like `Array UInt8` is represented as a sequence of bytes.
+
+## UTF8Func
 
 **TODO**
 
-## UTF8Strings
+## UTF8Str
 
 > While strings are UTF-8-encoded arrays of bytes.
 
@@ -76,3 +84,5 @@ def rfc9557 : GenericFormat .any := datespec("uuuu-MM-dd'T'HH:mm:ssZZZZZ'['zzzz'
 * [Int64](https://lean-lang.org/doc/reference/latest//Basic-Types/Fixed-Precision-Integers/#fixed-ints)
 * [Float](https://lean-lang.org/doc/reference/latest//Basic-Types/Floating-Point-Numbers/#Float)
 * [Characters](https://lean-lang.org/doc/reference/latest//Basic-Types/Characters/)
+* [Arrays](https://lean-lang.org/doc/reference/latest/Basic-Types/Arrays/)
+* [Uint8](https://lean-lang.org/doc/reference/latest//Basic-Types/Fixed-Precision-Integers/#UInt8___ofBitVec)
