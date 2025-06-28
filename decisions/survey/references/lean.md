@@ -12,7 +12,7 @@
 
 ## Decimal
 
-**TODO**
+Rat implements OfScientific class (which parses Decimals) in the batteries package.
 
 ## Time
 
@@ -70,19 +70,16 @@ def rfc9557 : GenericFormat .any := datespec("uuuu-MM-dd'T'HH:mm:ssZZZZZ'['zzzz'
 
 Looks like `Array UInt8` is represented as a sequence of bytes.
 
-## UTF8Func
-
-**TODO**
-
 ## UTF8Str
 
 > While strings are UTF-8-encoded arrays of bytes.
 
 ## Reference
 
-* [Zulip Chat](https://leanprover.zulipchat.com/#narrow/channel/113488-general/topic/parsing.20DateTime.20in.20format.20RFC.203339.20including.20nanoseconds/with/525924778.01)
+* [Zulip Chat Time](https://leanprover.zulipchat.com/#narrow/channel/113488-general/topic/parsing.20DateTime.20in.20format.20RFC.203339.20including.20nanoseconds/with/525924778.01)
 * [Int64](https://lean-lang.org/doc/reference/latest//Basic-Types/Fixed-Precision-Integers/#fixed-ints)
 * [Float](https://lean-lang.org/doc/reference/latest//Basic-Types/Floating-Point-Numbers/#Float)
 * [Characters](https://lean-lang.org/doc/reference/latest//Basic-Types/Characters/)
 * [Arrays](https://lean-lang.org/doc/reference/latest/Basic-Types/Arrays/)
 * [Uint8](https://lean-lang.org/doc/reference/latest//Basic-Types/Fixed-Precision-Integers/#UInt8___ofBitVec)
+* [Zulip Chat Decimal](https://leanprover.zulipchat.com/#narrow/channel/113488-general/topic/.E2.9C.94.20parsing.20of.20arbitrary.20precision.20decimals.20in.20ISO.206093.20format/with/526208159)

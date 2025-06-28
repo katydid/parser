@@ -204,7 +204,7 @@ This table shows which languages support the following types and functionality:
     <td><a href="./references/lean.md">Lean</a></td>
     <td>✅</td>
     <td>✅</td>
-    <td></td>
+    <td>☑</td>
     <td>✅</td>
     <td>✅</td>
     <td>✅</td>
