@@ -12,6 +12,8 @@
 
 ## Decimal
 
+Thank you Aaron Liu:
+
 Rat implements OfScientific class (which parses Decimals) in the batteries package.
 
 ## Time
@@ -76,7 +78,7 @@ Looks like `Array UInt8` is represented as a sequence of bytes.
 
 ## Reference
 
-* [Zulip Chat Time](https://leanprover.zulipchat.com/#narrow/channel/113488-general/topic/parsing.20DateTime.20in.20format.20RFC.203339.20including.20nanoseconds/with/525924778.01)
+* [Zulip Chat Time](https://leanprover.zulipchat.com/#narrow/channel/113488-general/topic/.E2.9C.94.20parsing.20DateTime.20in.20format.20RFC.203339.20including.20nanoseconds/with/525925329)
 * [Int64](https://lean-lang.org/doc/reference/latest//Basic-Types/Fixed-Precision-Integers/#fixed-ints)
 * [Float](https://lean-lang.org/doc/reference/latest//Basic-Types/Floating-Point-Numbers/#Float)
 * [Characters](https://lean-lang.org/doc/reference/latest//Basic-Types/Characters/)
