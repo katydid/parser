@@ -23,7 +23,7 @@ We conducted a survey of a few common serialization formats:
 We found that these formats have a lot in common.
 Not all formats support all scalar types, but we found there is a lot of overlap between the following scalar types:
 
-* Null/Void/Unit
+* Null
 * Boolean
 * String (UTF-8)
 * Bytes
@@ -56,7 +56,7 @@ Other types are not supported by all formats and for that it is worth studying t
 <table>
 <tr>
 <th></th>
-<th>Null/Unit/Void</th>
+<th>Null</th>
 <th>Void</th>
 <th>Bool</th>
 <th>String</th>
