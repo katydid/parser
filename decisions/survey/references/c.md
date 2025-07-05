@@ -56,7 +56,7 @@ int main() {
 
 https://github.com/Bnz-0/rfc3339timestamp/issues/2#issuecomment-3012362789
 
-After enquiring with various C libraries one decided to implement rfc3339 parsing with nanoseconds
+After [enquiring](https://github.com/ianjray/rfc3339/issues/1) with various C libraries one decided to implement rfc3339 parsing with nanoseconds
 
 https://github.com/ianjray/rfc3339/commit/843a505f18bce5c2d134cbd11d027877c12b7c48
 
@@ -75,3 +75,4 @@ Thank you github user: ianjray
 * [C Floating-Point Types](https://www.zetcode.com/clang/float-type/)
 * [C Programming/stdint.h](https://en.wikibooks.org/wiki/C_Programming/stdint.h)
 * [C Character Data Types](https://www.w3schools.com/c/c_data_types_characters.php)
+* [C library that supportfs RFC3339 parsing with nanoseconds](https://github.com/ianjray/rfc3339/commit/843a505f18bce5c2d134cbd11d027877c12b7c48)
