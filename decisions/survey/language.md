@@ -108,7 +108,7 @@ This table shows which languages support the following types and functionality:
     <td>✅</td>
     <td>✅</td>
     <td>☑</td>
-    <td>❌</td>
+    <td>☑</td>
     <td>❌</td>
     <td>✅</td>
     <td></td>

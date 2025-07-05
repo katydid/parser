@@ -56,6 +56,12 @@ int main() {
 
 https://github.com/Bnz-0/rfc3339timestamp/issues/2#issuecomment-3012362789
 
+After enquiring with various C libraries one decided to implement rfc3339 parsing with nanoseconds
+
+https://github.com/ianjray/rfc3339/commit/843a505f18bce5c2d134cbd11d027877c12b7c48
+
+Thank you github user: ianjray
+
 ## Char
 
 > The char data type is used to store a single character.
