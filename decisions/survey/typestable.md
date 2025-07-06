@@ -378,18 +378,18 @@ Other types are not supported by all formats and for that it is worth studying t
 
 <tr>
 <td>Parquet</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>✅</td>
-<td>✅</td>
-<td>✅</td>
 <td>✅</td>
 <td>❌</td>
 <td>✅</td>
 <td>✅</td>
 <td>✅</td>
-<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
 <td>✅</td>
 <td>✅</td>
 <td>❌</td>
