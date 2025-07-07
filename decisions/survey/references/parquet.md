@@ -98,6 +98,20 @@ These are not encoded or should be treated as not encoded
 * GEOMETRY
 * GEOGRAPHY
 
+### Additional Notes
+
+Parquet supports `null`, `null` values are not encoded in the data but in the definition levels
+
+> Nullity is encoded in the definition levels (which is run-length encoded). NULL values are not encoded in the data. For example, in a non-nested schema, a column with 1000 NULLs would be encoded with run-length encoding (0, 1000 times) for the definition levels and nothing else. https://github.com/apache/parquet-format#nulls
+
+Parquet supports `Uint64`, it would be annotated as `INT(64, false)`
+
+> INT(8, false), INT(16, false), and INT(32, false) must annotate an `int32` primitive type and INT(64, false) must annotate an `int64` primitive type. https://github.com/apache/parquet-format/blob/master/LogicalTypes.md#unsigned-integers
+
+The equivalent for DURATION in Parquet is `INTERVAL`
+
+> https://github.com/apache/parquet-format/blob/master/LogicalTypes.md#interval
+
 ### References
 
 * https://parquet.apache.org/docs/file-format/types/
