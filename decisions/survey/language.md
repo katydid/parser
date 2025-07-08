@@ -188,7 +188,7 @@ This table shows which languages support the following types and functionality:
   </tr>
   <tr>
     <td><a href="./references/erlang.md">Erlang</a></td>
-    <td></td>
+    <td>✔️</td>
     <td>❌</td>
     <td>❌</td>
     <td>✅</td>

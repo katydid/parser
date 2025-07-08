@@ -2,7 +2,12 @@
 
 ## Int64
 
-**TODO**
+Thank you to Michał Muskała for help in finding these limits
+
+Erlang ints are parsed into at least one word (8 bytes on 64 bit architectures, but only 60 bits is used for the number, probably one bit to say that only one word is used). 
+When the int >=576460752303423488 or <= -576460752303423489 then it is parsed as a big int, which uses at least 3 words, probably a first word to say that more than one word is used and the number of words used.
+
+But it will extend to use more and more words until a maximum of ((1 << 16)-1) or ((1 << 17)-1) words is used, after which it will return an error, see [BIG_ARITY_MAX]( https://github.com/erlang/otp/blob/0615afaa9e93a1c12529c9632764b7e125cd7feb/erts/emulator/beam/erl_term.h#L440)
 
 ## Float64
 
@@ -70,3 +75,6 @@ equal(A, B, IgnoreCase, Norm):
 * [string](https://www.erlang.org/doc/apps/stdlib/string.html)
 * [binary](https://www.erlang.org/doc/apps/stdlib/binary.html)
 * [equal](https://www.erlang.org/doc/apps/stdlib/string.html#equal/4)
+* [BIG_ARITY_MAX]( https://github.com/erlang/otp/blob/0615afaa9e93a1c12529c9632764b7e125cd7feb/erts/emulator/beam/erl_term.h#L440)
+* [small integer vs large integer](https://www.erlang.org/doc/system/memory.html)
+* [integer size was decreased to avoid DoS vulnerability](https://github.com/erlang/otp/pull/7426)
