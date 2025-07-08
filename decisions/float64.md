@@ -11,7 +11,8 @@ data Token =
   ...
 ```
 
-**TODO** is this supported by all programming languages?
+We also found that all programming languages we [surveyed](./survey/language.md) supports IEEE-754 floats.
+The one exception is Erlang, which supports IEEE-754, except for `NaN` and `Inf`.
 
 ## Comparing NaN
 

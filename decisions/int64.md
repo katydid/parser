@@ -20,6 +20,7 @@ However the interface also supports the `Nanoseconds` `Kind` with an `Int64` val
 
 **TODO: it might still be necessary depending on nanosecond support in languages**
 **TODO: what about transcoding use case**
+**TODO: What about Little Endian vs Big Endian**
 
 ## References
 

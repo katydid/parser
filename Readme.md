@@ -8,12 +8,12 @@ We will use JSON and XML in most examples, but this interface also supports Prot
 
 ## Use cases
 
-* Selective Parsing
+* Selective Parsing (deserialization)
 * Validation
 * Transcoding
 
 Selective parsing does at little work as possible to only get the information out of the serialized data that you need.
-For example, only getting the value of a specific field in a JSON structure.
+For example, only getting the value of a specific field in a JSON structure or only deserializing the fields that your data structure has declared.
 
 Validation is what schema languages do, they validate that serlialized data conforms to specific schema.
 This can also be used to filter through serialized on disk without allocating memory (if the parser is implemented efficiently) or unnecessarily using network traffic (if predicate pushdown is implemented), which is Katydid's initial main use case.
