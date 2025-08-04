@@ -18,6 +18,8 @@ arbitraire:
 
 ## Time
 
+### Bnz-0/rfc3339timestamp
+
 Seems there is a third-party library that supports parsing RFC 3339
 https://github.com/Bnz-0/rfc3339timestamp
 
@@ -55,6 +57,14 @@ int main() {
 ```
 
 https://github.com/Bnz-0/rfc3339timestamp/issues/2#issuecomment-3012362789
+
+After enquiring this library now also supports nanoseconds:
+
+https://github.com/Bnz-0/rfc3339timestamp/issues/3#issuecomment-3090755150
+
+Thank you Matteo Benzi 
+
+### ianjray/rfc3339
 
 After [enquiring](https://github.com/ianjray/rfc3339/issues/1) with various C libraries one decided to implement rfc3339 parsing with nanoseconds
 
