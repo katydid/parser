@@ -112,9 +112,12 @@ The equivalent for DURATION in Parquet is `INTERVAL`
 
 > https://github.com/apache/parquet-format/blob/master/LogicalTypes.md#interval
 
+Thank you Elphas Tori
+
 ### References
 
 * https://parquet.apache.org/docs/file-format/types/
 * https://github.com/apache/parquet-format/blob/master/README.md
 * https://github.com/apache/parquet-format/blob/ae5b9d70a7cb9adf2048947f1b7e5d8fdea8564a/LogicalTypes.md?plain=1#L863
 * https://github.com/apache/iceberg/blob/main/format/spec.md#crs
+
