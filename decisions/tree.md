@@ -143,7 +143,7 @@ Result.Err "404"
 
 is mapped to a tree:
 ```
-Node (String "Err") [Node (String "404) []]
+Node (String "Err") [Node (String "404") []]
 ```
 
 An untagged union is just a value and is represented as the underlying value.
