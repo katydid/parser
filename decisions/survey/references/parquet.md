@@ -112,7 +112,15 @@ The equivalent for DURATION in Parquet is `INTERVAL`
 
 > https://github.com/apache/parquet-format/blob/master/LogicalTypes.md#interval
 
-Thank you Elphas Tori
+#### Apache Iceberg
+
+Apache Iceberg tables have a [`write.format.default`](https://iceberg.apache.org/docs/nightly/configuration/#write-properties) configuration property that defaults to `parquet`. Engines like Spark, Flink, and Trino honor this setting, so creating an Iceberg table without specifying a format will produce Parquet data files.
+
+The Iceberg table-level format [`write.format.default`](https://iceberg.apache.org/docs/nightly/configuration/#write-properties) and the Spark writer-level format [`write-format`](https://iceberg.apache.org/docs/nightly/spark-configuration/#write-options) are separate configurations. By default, `write-format` uses the value of `write.format.default`.
+
+For example, in a streaming workload you might keep the table's `write.format.default` as `parquet` but set the streaming writer's `write-format` to `avro`, since Avro is row-based and faster to write. Regular compaction then merges the small Avro files into larger Parquet files (governed by `write.format.default`), giving you fast writes and efficient columnar reads.
+
+Note that while data files (the actual rows and values) are Parquet (or Avro/ORC), Iceberg uses Avro for its manifest files, which are metadata describing the data files.
 
 ### References
 
@@ -120,4 +128,7 @@ Thank you Elphas Tori
 * https://github.com/apache/parquet-format/blob/master/README.md
 * https://github.com/apache/parquet-format/blob/ae5b9d70a7cb9adf2048947f1b7e5d8fdea8564a/LogicalTypes.md?plain=1#L863
 * https://github.com/apache/iceberg/blob/main/format/spec.md#crs
-
+* https://iceberg.apache.org/docs/nightly/configuration/#write-properties
+* https://iceberg.apache.org/docs/nightly/spark-configuration/#write-options
+* https://docs.aws.amazon.com/prescriptive-guidance/latest/apache-iceberg-on-aws/best-practices-write.html#write-file-format
+* https://iceberg.apache.org/spec/#manifests
