@@ -123,17 +123,17 @@ Token: () -> ((Kind, value) | error)
 </tr>
 
 <tr>
-<td><a href="https://github.com/katydid/parser-go">Golang</a></td>
-<td><a href="https://github.com/katydid/parser-go-xml">✅*</a></td>
-<td><a href="https://github.com/katydid/parser-go-json">✅*</a></td>
-<td><a href="https://github.com/katydid/parser-go-proto">✅*</a></td>
+<td><a href="https://git.katydid.org.za/parser-go">Golang</a></td>
+<td><a href="https://git.katydid.org.za/parser-go-xml">✅*</a></td>
+<td><a href="https://git.katydid.org.za/parser-go-json">✅*</a></td>
+<td><a href="https://git.katydid.org.za/parser-go-proto">✅*</a></td>
 </tr>
 
 <tr>
-<td><a href="https://github.com/katydid/katydid-haskell">Haskell</a></td>
-<td><a href="https://github.com/katydid/katydid-haskell/blob/master/src/Data/Katydid/Parser/Xml.hs">✅*</a></td>
-<td><a href="https://github.com/katydid/katydid-haskell/blob/master/src/Data/Katydid/Parser/Json.hs">✅*</a></td>
-<td><a href="https://github.com/katydid/katydid-haskell/blob/master/src/Data/Katydid/Parser/Protobuf/Protobuf.hs">✅*</a></td>
+<td><a href="https://git.katydid.org.za/katydid-haskell">Haskell</a></td>
+<td><a href="https://git.katydid.org.za/katydid-haskell/blob/master/src/Data/Katydid/Parser/Xml.hs">✅*</a></td>
+<td><a href="https://git.katydid.org.za/katydid-haskell/blob/master/src/Data/Katydid/Parser/Json.hs">✅*</a></td>
+<td><a href="https://git.katydid.org.za/katydid-haskell/blob/master/src/Data/Katydid/Parser/Protobuf/Protobuf.hs">✅*</a></td>
 </tr>
 
 <tr>
